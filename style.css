@@ -1,11 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-}
-
-#map {
-    width: 80%;
-    height: 500px;
-    margin: 20px auto;
-    border: 2px solid #333;
-}
+  }
+  
+  h1 {
+    margin: 16px;
+  }
+  
+  #map {
+    height: 90vh;
+    width: 100%;
+  }
+    
