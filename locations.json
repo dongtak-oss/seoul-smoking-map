@@ -1,45 +1,59 @@
 [
-    {
-      "lat": 37.553149,
-      "lng": 126.968881,
-      "title": "서울역 15번 출구 흡연구역",
-      "image": "images/IMG_6207.jpg",
-      "description": "서울역 15번 출구 앞 광장에 위치한 흡연구역입니다."
-    },
-    {
-      "lat": 37.55376,
-      "lng": 126.969662,
-      "title": "서울역 1번 출구 흡연구역",
-      "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
-      "description": "1번 출구 옆 공터에 위치한 흡연구역입니다."
-    },
-    {
-        "lat": 37.63965447,
-        "lng": 127.0651318,
-        "title": "중계근린공원 주차장 흡연구역",
-        "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
-        "description": "중계근린공원 주차장에 위치한 흡연구역입니다."
-      },
-      {
-        "lat": 37.64044018,
-        "lng": 127.0676933,
-        "title": "등나무문화공원 주차장 흡연구역",
-        "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
-        "description": "등나무문화공원 주차장에 위치한 흡연구역입니다."
-      },
-      {
-        "lat": 37.49821257,
-        "lng": 126.8670887,
-        "title": "고척 돔구장 흡연구역",
-        "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
-        "description": "고척 돔구장에 위치한 흡연구역입니다."
-      },
-      {
-        "lat": 37.6334650,
-        "lng": 127.1156738,
-        "title": "갈매동 흡연구역",
-        "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
-        "description": "갈매역 맞은편에 위치한 흡연구역입니다."
-      } 
-  ]
-  
+  {
+    "lat": 37.5665,
+    "lng": 126.9780,
+    "title": "서울 시청 근처 흡연구역",
+    "description": "서울 시청 앞 공원에 위치한 지정 흡연구역",
+    "image": "https://example.com/image1.jpg"
+  },
+  {
+    "lat": 37.5703,
+    "lng": 126.9920,
+    "title": "명동 흡연구역",
+    "description": "명동 쇼핑 거리 안쪽 골목 흡연구역",
+    "image": "https://example.com/image2.jpg"
+  },
+  {
+    "lat": 37.553149,
+    "lng": 126.968881,
+    "title": "서울역 15번 출구 흡연구역",
+    "description": "서울역 15번 출구 앞 광장에 위치한 흡연구역입니다.",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "lat": 37.55376,
+    "lng": 126.969662,
+    "title": "서울역 1번 출구 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "1번 출구 옆 공터에 위치한 흡연구역입니다."
+  },
+  {
+    "lat": 37.63965447,
+    "lng": 127.0651318,
+    "title": "중계근린공원 주차장 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "중계근린공원 주차장에 위치한 흡연구역입니다."
+  },
+  {
+    "lat": 37.64044018,
+    "lng": 127.0676933,
+    "title": "등나무문화공원 주차장 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "등나무문화공원 주차장에 위치한 흡연구역입니다."
+  },
+  {
+    "lat": 37.49821257,
+    "lng": 126.8670887,
+    "title": "고척 돔구장 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "고척 돔구장에 위치한 흡연구역입니다."
+  },
+  {
+    "lat": 37.6334650,
+    "lng": 127.1156738,
+    "title": "갈매동 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "갈매역 맞은편에 위치한 흡연구역입니다."
+  }
+]
+
