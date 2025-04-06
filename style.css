@@ -15,7 +15,7 @@ h1 {
 
 #findMe {
   position: absolute;
-  bottom: 70px; /* findNearby보다 위쪽 */
+  top: 80px;
   left: 10px;
   z-index: 1000;
   padding: 10px 15px;
@@ -34,7 +34,7 @@ h1 {
 
 #findNearby {
   position: absolute;
-  bottom: 10px; /* 맨 아래 */
+  top: 130px; /* findMe 아래로 배치 */
   left: 10px;
   z-index: 1000;
   padding: 10px 15px;
@@ -50,6 +50,10 @@ h1 {
 #findNearby:hover {
   background-color: #1e7e34;
 }
+
+
+
+
 
 
   
