@@ -74,7 +74,7 @@
 
     #findNearby {
       position: absolute;
-      top: 170px; /* #findMe 아래 */
+      top: 170px;
       left: 10px;
       z-index: 1000;
       padding: 10px 15px;
@@ -87,6 +87,10 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
 
+    #findNearby.active {
+      background-color: #dc3545;
+    }
+
     #findNearby:hover {
       background-color: #1e7e34;
     }
@@ -95,7 +99,6 @@
 <body>
   <h1>서울 흡연구역 지도</h1>
 
-  <!-- 🔻 마커 색상 설명 박스 -->
   <div id="legend">
     <div class="legend-item"><span class="legend-icon red"></span>공공 흡연구역</div>
     <div class="legend-item"><span class="legend-icon yellow"></span>건물 내 흡연구역</div>
@@ -103,23 +106,15 @@
     <div class="legend-item"><span class="legend-icon blue"></span>현재 내 위치</div>
   </div>
 
-  <!-- 내 위치 찾기 버튼 -->
   <button id="findMe">내 위치 찾기</button>
-
-  <!-- 내 근처 흡연구역 찾기 버튼 -->
   <button id="findNearby">내 근처 흡연구역 보기</button>
 
-  <!-- 지도 표시 -->
   <div id="map"></div>
 
-  <!-- 스크립트 로드 -->
   <script src="script.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Ceuoqm4nbAlGr-Kf9jPHhSYXqbefjwA&callback=initMap"
-    async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Ceuoqm4nbAlGr-Kf9jPHhSYXqbefjwA&callback=initMap" async defer></script>
 </body>
 </html>
-
 
 
 
