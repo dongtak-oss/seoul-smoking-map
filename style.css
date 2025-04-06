@@ -13,48 +13,72 @@ h1 {
   width: 100%;
 }
 
-#findMe {
-  position: absolute;
-  top: 80px;
-  left: 10px;
-  z-index: 1000;
+#legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
   padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin: 0 10px 10px 10px;
+  border-radius: 8px;
   font-size: 14px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  justify-content: center;
 }
 
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red { background-color: red; }
+.yellow { background-color: gold; }
+.green { background-color: green; }
+.blue { background-color: blue; }
+
+/* ✅ 버튼을 왼쪽 하단에 정렬하는 컨테이너 */
+.map-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+/* ✅ 버튼의 기본 스타일 */
+.map-buttons button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+#findMe {
+  background-color: #007bff;
+}
 #findMe:hover {
   background-color: #0056b3;
 }
 
 #findNearby {
-  position: absolute;
-  top: 130px; /* findMe 아래로 배치 */
-  left: 10px;
-  z-index: 1000;
-  padding: 10px 15px;
   background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
-
 #findNearby:hover {
   background-color: #1e7e34;
 }
-
-
-
-
-
-
-  
-    
+#findNearby.active {
+  background-color: #dc3545;
+}
