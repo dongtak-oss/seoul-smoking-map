@@ -8,6 +8,12 @@ function initMap() {
     zoom: 12,
   });
 
+  const iconUrls = {
+    public: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+    cafe: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+    building: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+  };
+
   // 흡연구역 마커 불러오기
   fetch("locations.json")
     .then(response => response.json())
@@ -17,7 +23,7 @@ function initMap() {
           position: { lat: location.lat, lng: location.lng },
           map: map,
           title: location.title,
-          icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png" // 흡연구역 마커 아이콘
+          icon: iconUrls[location.type] || iconUrls.public
         });
 
         const contentString = `
@@ -58,7 +64,7 @@ function initMap() {
             position: userLocation,
             map: map,
             title: "내 위치",
-            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" // 내 위치는 파란색 아이콘으로 구분
+            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
           });
         },
         () => {
@@ -70,4 +76,5 @@ function initMap() {
     }
   });
 }
+
 

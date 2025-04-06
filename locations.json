@@ -24,8 +24,7 @@
     "lat": 37.55376,
     "lng": 126.969662,
     "title": "서울역 1번 출구 흡연구역",
-    "image": "https://via.placeholder.com/200x120?text=흡연구역"
-,
+    "image": "https://via.placeholder.com/200x120?text=흡연구역",
     "description": "1번 출구 옆 공터에 위치한 흡연구역입니다."
   },
   {
@@ -33,7 +32,8 @@
     "lng": 127.0651318,
     "title": "중계근린공원 주차장 흡연구역",
     "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
-    "description": "중계근린공원 주차장에 위치한 흡연구역입니다."
+    "description": "중계근린공원 주차장에 위치한 흡연구역입니다.",
+    "type": "public"
   },
   {
     "lat": 37.64044018,
@@ -55,6 +55,22 @@
     "title": "갈매동 흡연구역",
     "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
     "description": "갈매역 맞은편에 위치한 흡연구역입니다."
+  },
+  {
+    "lat": 37.5809,
+    "lng": 127.0885,
+    "title": "탐앤탐스 사가정역점",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "사가정역 2번 출구 앞에 위치한 탐앤탐스입니다.",
+    "type": "cafe"
+  },
+  {
+    "lat": 37.529492,
+    "lng": 126.964318,
+    "title": "아이파크몰 8층 옥상 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "아이파크몰 8층 옥상에 위치한 흡연구역입니다.",
+    "type": "building"
   }
 ]
 
