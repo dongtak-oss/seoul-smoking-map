@@ -17,6 +17,37 @@
       margin: 20px 0;
     }
 
+    #legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      margin: 0 10px 10px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      justify-content: center;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-icon {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .red { background-color: red; }
+    .yellow { background-color: gold; }
+    .green { background-color: green; }
+    .blue { background-color: blue; }
+
     #map {
       width: 100%;
       height: 80vh;
@@ -24,7 +55,7 @@
 
     #findMe {
       position: absolute;
-      top: 80px;
+      top: 120px;
       left: 10px;
       z-index: 1000;
       padding: 10px 15px;
@@ -40,13 +71,43 @@
     #findMe:hover {
       background-color: #0056b3;
     }
+
+    #findNearby {
+      position: absolute;
+      top: 170px; /* #findMe 아래 */
+      left: 10px;
+      z-index: 1000;
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #findNearby:hover {
+      background-color: #1e7e34;
+    }
   </style>
 </head>
 <body>
   <h1>서울 흡연구역 지도</h1>
 
+  <!-- 🔻 마커 색상 설명 박스 -->
+  <div id="legend">
+    <div class="legend-item"><span class="legend-icon red"></span>공공 흡연구역</div>
+    <div class="legend-item"><span class="legend-icon yellow"></span>건물 내 흡연구역</div>
+    <div class="legend-item"><span class="legend-icon green"></span>흡연실이 있는 카페</div>
+    <div class="legend-item"><span class="legend-icon blue"></span>현재 내 위치</div>
+  </div>
+
   <!-- 내 위치 찾기 버튼 -->
   <button id="findMe">내 위치 찾기</button>
+
+  <!-- 내 근처 흡연구역 찾기 버튼 -->
+  <button id="findNearby">내 근처 흡연구역 보기</button>
 
   <!-- 지도 표시 -->
   <div id="map"></div>
@@ -58,6 +119,7 @@
     async defer></script>
 </body>
 </html>
+
 
 
 
