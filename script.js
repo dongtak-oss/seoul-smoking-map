@@ -15,6 +15,7 @@ const iconUrls = {
   current: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 };
 
+// ✅ Kakao Maps SDK가 로드된 후 실행되도록 보장
 document.addEventListener("DOMContentLoaded", function () {
   kakao.maps.load(initMapApp);
 });
@@ -27,8 +28,7 @@ function initMapApp() {
   };
   map = new kakao.maps.Map(container, options);
 
-  // 마커 불러오기
-  fetch("locations.json")
+  fetch("./locations.json")
     .then(response => response.json())
     .then(locations => {
       locations.forEach(location => {
@@ -44,7 +44,7 @@ function initMapApp() {
           map: map,
           title: location.title,
           image: markerImage,
-          draggable: isAdmin // ✅ 관리자만 드래그 가능
+          draggable: isAdmin
         });
 
         const infoContent = `
@@ -66,7 +66,6 @@ function initMapApp() {
           currentInfoWindow = infoWindow;
         });
 
-        // ✅ 드래그 끝났을 때 좌표 출력 (관리자일 경우)
         if (isAdmin) {
           kakao.maps.event.addListener(marker, 'dragend', function () {
             const newPos = marker.getPosition();
@@ -82,7 +81,6 @@ function initMapApp() {
     })
     .catch(err => console.error("마커 데이터를 불러오는 중 오류 발생:", err));
 
-  // 내 위치 찾기 버튼
   document.getElementById("findMe").addEventListener("click", () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(pos => {
@@ -110,7 +108,6 @@ function initMapApp() {
     }
   });
 
-  // 내 근처 흡연구역 보기 버튼
   document.getElementById("findNearby").addEventListener("click", () => {
     if (!navigator.geolocation) {
       alert("이 브라우저는 위치 정보를 지원하지 않습니다.");
@@ -134,7 +131,7 @@ function initMapApp() {
   });
 }
 
-// 거리 계산
+// 거리 계산 함수
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const dLat = deg2rad(lat2 - lat1);
@@ -151,10 +148,11 @@ function deg2rad(deg) {
   return deg * (Math.PI / 180);
 }
 
-// 정보창 닫기 함수
+// 정보창 닫기
 window.closeInfoWindow = function () {
   if (currentInfoWindow) currentInfoWindow.close();
 };
+
 
 
 
