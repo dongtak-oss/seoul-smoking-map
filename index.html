@@ -85,12 +85,12 @@
       background-color: #28a745;
     }
 
-    #findNearby.active {
-      background-color: #dc3545;
-    }
-
     #findNearby:hover {
       background-color: #1e7e34;
+    }
+
+    #findNearby.active {
+      background-color: #dc3545;
     }
   </style>
 </head>
@@ -111,14 +111,14 @@
 
   <div id="map"></div>
 
-  <!-- Kakao Maps SDK: autoload=false 필수! -->
+  <!-- ✅ Kakao Maps SDK (자동 로딩 방식) -->
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bd5ad6d3034dbd38379e6f449abf0cdc&libraries=services"></script>
 
-
-  <!-- script.js는 defer로 실행 -->
+  <!-- ✅ JavaScript defer 로딩 -->
   <script src="script.js" defer></script>
 </body>
 </html>
+
 
 
 
