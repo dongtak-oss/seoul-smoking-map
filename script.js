@@ -1,13 +1,10 @@
 let map;
 let currentInfoWindow = null;
 let markers = [];
-let nearbyMode = false;
 let allMarkers = [];
-
-// ✅ 관리자 여부 설정
+let nearbyMode = false;
 const isAdmin = true;
 
-// 타입별 마커 색상 (Google Maps 아이콘 사용)
 const iconUrls = {
   public: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
   building: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
@@ -15,8 +12,7 @@ const iconUrls = {
   current: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 };
 
-// ✅ Kakao Maps SDK가 로드된 후 실행되도록 보장
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   kakao.maps.load(initMapApp);
 });
 
@@ -29,19 +25,18 @@ function initMapApp() {
   map = new kakao.maps.Map(container, options);
 
   fetch("./locations.json")
-    .then(response => response.json())
+    .then(res => res.json())
     .then(locations => {
       locations.forEach(location => {
         const position = new kakao.maps.LatLng(location.lat, location.lng);
-
         const markerImage = new kakao.maps.MarkerImage(
           iconUrls[location.type] || iconUrls.public,
           new kakao.maps.Size(32, 32)
         );
 
         const marker = new kakao.maps.Marker({
-          position: position,
-          map: map,
+          position,
+          map,
           title: location.title,
           image: markerImage,
           draggable: isAdmin
@@ -50,14 +45,13 @@ function initMapApp() {
         const infoContent = `
           <div style="max-width:200px; position:relative;">
             <div style="text-align:right;">
-              <button onclick="closeInfoWindow()" style="border:none; background:none; font-size:16px; cursor:pointer;">✖</button>
+              <button onclick="closeInfoWindow()" style="border:none;background:none;font-size:16px;cursor:pointer;">✖</button>
             </div>
             <h3>${location.title}</h3>
             ${location.image ? `<img src="${location.image}" style="width:100%; border-radius:8px;" />` : ''}
             ${location.description ? `<p>${location.description}</p>` : ''}
           </div>
         `;
-
         const infoWindow = new kakao.maps.InfoWindow({ content: infoContent });
 
         kakao.maps.event.addListener(marker, 'click', () => {
@@ -67,11 +61,11 @@ function initMapApp() {
         });
 
         if (isAdmin) {
-          kakao.maps.event.addListener(marker, 'dragend', function () {
-            const newPos = marker.getPosition();
-            console.log(`🧭 '${location.title}' 위치 수정됨`);
-            console.log(`lat: ${newPos.getLat()}, lng: ${newPos.getLng()}`);
-            alert(`'${location.title}'의 위치가 수정되었습니다:\nlat: ${newPos.getLat()}, lng: ${newPos.getLng()}`);
+          kakao.maps.event.addListener(marker, 'dragend', () => {
+            const pos = marker.getPosition();
+            console.log(`[관리자] '${location.title}' 위치 수정됨`);
+            console.log(`lat: ${pos.getLat()}, lng: ${pos.getLng()}`);
+            alert(`'${location.title}' 위치가 수정되었습니다:\nlat: ${pos.getLat()}, lng: ${pos.getLng()}`);
           });
         }
 
@@ -79,59 +73,49 @@ function initMapApp() {
         allMarkers.push({ marker, data: location });
       });
     })
-    .catch(err => console.error("마커 데이터를 불러오는 중 오류 발생:", err));
+    .catch(err => console.error("흡연구역 데이터 로딩 실패:", err));
 
   document.getElementById("findMe").addEventListener("click", () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(pos => {
-        const lat = pos.coords.latitude;
-        const lng = pos.coords.longitude;
-        const userLoc = new kakao.maps.LatLng(lat, lng);
+    if (!navigator.geolocation) return alert("위치 정보 지원 안 함");
 
-        map.setCenter(userLoc);
-        map.setLevel(4);
+    navigator.geolocation.getCurrentPosition(pos => {
+      const userLoc = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+      map.setCenter(userLoc);
+      map.setLevel(4);
 
-        const markerImage = new kakao.maps.MarkerImage(
-          iconUrls.current,
-          new kakao.maps.Size(32, 32)
-        );
+      const markerImage = new kakao.maps.MarkerImage(
+        iconUrls.current, new kakao.maps.Size(32, 32)
+      );
 
-        new kakao.maps.Marker({
-          position: userLoc,
-          map: map,
-          title: "내 위치",
-          image: markerImage
-        });
-      }, () => alert("위치 정보를 가져올 수 없습니다."));
-    } else {
-      alert("이 브라우저는 위치 정보를 지원하지 않습니다.");
-    }
+      new kakao.maps.Marker({
+        position: userLoc,
+        map: map,
+        title: "내 위치",
+        image: markerImage
+      });
+    }, () => alert("위치 정보를 가져올 수 없습니다."));
   });
 
   document.getElementById("findNearby").addEventListener("click", () => {
-    if (!navigator.geolocation) {
-      alert("이 브라우저는 위치 정보를 지원하지 않습니다.");
-      return;
-    }
+    if (!navigator.geolocation) return alert("위치 정보 지원 안 함");
 
     navigator.geolocation.getCurrentPosition(pos => {
-      const lat = pos.coords.latitude;
-      const lng = pos.coords.longitude;
+      const userLat = pos.coords.latitude;
+      const userLng = pos.coords.longitude;
 
       allMarkers.forEach(({ marker, data }) => {
-        const distance = haversine(lat, lng, data.lat, data.lng);
-        marker.setMap(nearbyMode ? map : (distance <= 1 ? map : null));
+        const dist = haversine(userLat, userLng, data.lat, data.lng);
+        marker.setMap(nearbyMode ? map : (dist <= 1 ? map : null));
       });
 
       nearbyMode = !nearbyMode;
       const btn = document.getElementById("findNearby");
-      btn.textContent = nearbyMode ? "전체 흡연구역 보기" : "내 근처 흡연구역 보기";
       btn.classList.toggle("active", nearbyMode);
-    }, () => alert("위치 정보를 가져올 수 없습니다."));
+      btn.textContent = nearbyMode ? "전체 흡연구역 보기" : "내 근처 흡연구역 보기";
+    });
   });
 }
 
-// 거리 계산 함수
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const dLat = deg2rad(lat2 - lat1);
@@ -148,10 +132,11 @@ function deg2rad(deg) {
   return deg * (Math.PI / 180);
 }
 
-// 정보창 닫기
-window.closeInfoWindow = function () {
+window.closeInfoWindow = () => {
   if (currentInfoWindow) currentInfoWindow.close();
 };
+
+
 
 
 

@@ -104,7 +104,6 @@
     <div class="legend-item"><span class="legend-icon blue"></span>현재 내 위치</div>
   </div>
 
-  <!-- 버튼 묶음 -->
   <div class="map-buttons">
     <button id="findMe">내 위치 찾기</button>
     <button id="findNearby">내 근처 흡연구역 보기</button>
@@ -112,14 +111,15 @@
 
   <div id="map"></div>
 
-  <!-- ✅ 1. Kakao Maps SDK (자동 로딩 안 함) -->
+  <!-- Kakao Maps SDK: autoload=false 필수! -->
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bd5ad6d3034dbd38379e6f449abf0cdc&autoload=false&libraries=services"></script>
 
-  <!-- ✅ 2. script.js defer로 불러오기 -->
-  <script src="./script.js" defer></script>
-
+  <!-- script.js는 defer로 실행 -->
+  <script src="script.js" defer></script>
 </body>
 </html>
+
+
 
 
 
