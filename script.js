@@ -15,7 +15,9 @@ const iconUrls = {
   current: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 };
 
-document.addEventListener("DOMContentLoaded", initMapApp);
+document.addEventListener("DOMContentLoaded", function () {
+  kakao.maps.load(initMapApp);
+});
 
 function initMapApp() {
   const container = document.getElementById('map');
@@ -153,6 +155,7 @@ function deg2rad(deg) {
 window.closeInfoWindow = function () {
   if (currentInfoWindow) currentInfoWindow.close();
 };
+
 
 
 
