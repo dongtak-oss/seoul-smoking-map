@@ -48,8 +48,8 @@
     "type":"public"
   },
   {
-    "lat": 37.5809,
-    "lng": 127.0885,
+    "lat": 37.581239,
+    "lng": 127.0882184,
     "title": "탐앤탐스 사가정역점",
     "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
     "description": "사가정역 2번 출구 앞에 위치한 탐앤탐스입니다.",
@@ -109,8 +109,8 @@
   {
     "address": "서울특별시 성동구 행당동 1-182 (왕십리역 6번 출구 뒤)",
     "title": "왕십리역 6번 출구 뒤 흡연구역",
-    "lat": 37.56116240000001,
-    "lng": 127.039268,
+    "lat": 37.561234,
+    "lng": 127.039169,
     "type": "public",
     "description": "왕십리역 6번 출구 뒤 흡연구역입니다.",
     "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
@@ -176,6 +176,42 @@
     "lng": 127.0362995,
     "type": "public",
     "description": "강북문화정보도서관 흡연구역입니다. ",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 광진구 강변역로50",
+    "title": "동서울종합터미널 앞 흡연구역",
+    "lat": 37.53402163,
+    "lng": 127.0935966,
+    "type": "public",
+    "description": "동서울종합터미널 앞 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 동작구 노량진동 148-87",
+    "title": "노량진 컵밥거리 흡연구역",
+    "lat": 37.5134622,
+    "lng": 127.9452938,
+    "type": "public",
+    "description": "노량진 컵밥거리 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울 중랑구 신내동 565-1",
+    "title": "탐앤탐스 중랑구청점",
+    "lat": 37.605552,
+    "lng": 127.096092,
+    "type": "cafe",
+    "description": "흡연실이 있는 탐앤탐스 중랑구청점입니다. ",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 송파구 신천동 30",
+    "title": "롯데월드몰 잔디광장 흡연구역",
+    "lat": 37.513104,
+    "lng": 127.105134,
+    "type": "public",
+    "description": "롯데월드몰 잔디광장에 위치한 흡연구역입니다. ",
     "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
   }
 ]

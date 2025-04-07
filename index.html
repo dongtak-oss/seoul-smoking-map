@@ -112,11 +112,22 @@
 
   <div id="map"></div>
 
-  <script src="script.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-Ceuoqm4nbAlGr-Kf9jPHhSYXqbefjwA&callback=initMap" async defer></script>
+  <!-- Kakao Maps SDK (defer 없이!) -->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bd5ad6d3034dbd38379e6f449abf0cdc&autoload=false&libraries=services"></script>
+
+<!-- script.js는 defer 유지 -->
+<script src="script.js" defer></script>
+
 </body>
 </html>
 
+
+
+
+  
+
+
+  
 
 
 
