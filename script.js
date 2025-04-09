@@ -17,14 +17,13 @@ const iconUrls = {
 document.addEventListener("DOMContentLoaded", () => {
   kakao.maps.load(initMapApp);
 
-  // 🔸 타입 필터 클릭 이벤트
-  ["public", "building", "cafe"].forEach(type => {
-    const item = document.querySelector(`.legend-item[data-type="${type}"]`);
-    if (item) {
-      item.addEventListener("click", () => {
-        // 🔸 기존 정보창 닫기
+  // 🔸 상단 필터 클릭 이벤트 처리
+  ["filter-cafe-top", "filter-public-top", "filter-building-top"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("click", () => {
+        const type = id.split("-")[1];
         if (currentInfoWindow) currentInfoWindow.close();
-
         if (activeType === type) {
           activeType = null;
           allMarkers.forEach(({ marker }) => marker.setMap(map));
@@ -113,7 +112,6 @@ function initMapApp() {
     })
     .catch(err => console.error("마커 데이터를 불러오는 중 오류:", err));
 
-  // 내 위치 찾기
   document.getElementById("findMe").addEventListener("click", () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(pos => {
@@ -138,7 +136,6 @@ function initMapApp() {
     }
   });
 
-  // 내 근처 보기
   document.getElementById("findNearby").addEventListener("click", () => {
     if (!navigator.geolocation) {
       alert("이 브라우저는 위치 정보를 지원하지 않습니다.");

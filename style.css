@@ -1,11 +1,16 @@
 body {
+
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  padding: 0;
   text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 h1 {
-  margin: 16px;
+    margin: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
 }
 
 #map {
@@ -96,3 +101,6 @@ h1 {
   transform: scale(1.2);
   border: 2px solid #888;
 }
+
+
+
