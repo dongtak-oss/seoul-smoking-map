@@ -82,3 +82,17 @@ h1 {
 #findNearby.active {
   background-color: #dc3545;
 }
+/* 🔘 마커 필터 아이콘을 버튼처럼 보이게 */
+.legend-item img {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 2px;
+  background: white;
+  cursor: pointer;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.legend-item img:hover {
+  transform: scale(1.2);
+  border: 2px solid #888;
+}
