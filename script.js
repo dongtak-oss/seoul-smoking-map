@@ -4,6 +4,7 @@ let markers = [];
 let nearbyMode = false;
 let allMarkers = [];
 let activeType = null;
+let userMarker = null; // ✅ 내 위치 마커 저장용
 
 const isAdmin = true;
 
@@ -124,7 +125,10 @@ function initMapApp() {
           new kakao.maps.Size(32, 32)
         );
 
-        new kakao.maps.Marker({
+        // ✅ 기존 마커 제거 후 새 마커 표시
+        if (userMarker) userMarker.setMap(null);
+
+        userMarker = new kakao.maps.Marker({
           position: userLoc,
           map,
           title: "내 위치",
