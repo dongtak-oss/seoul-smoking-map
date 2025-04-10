@@ -102,5 +102,31 @@ h1 {
   border: 2px solid #888;
 }
 
+/* ✅ 출처 보기 버튼 컨테이너: 우측 하단 고정 */
+.source-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 1000;
+}
+
+/* ✅ 버튼 스타일 기존과 동일하게 유지 */
+.source-button-container button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #6c757d; /* 회색 계열 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.source-button-container button:hover {
+  background-color: #5a6268;
+}
+
+
+
 
 
