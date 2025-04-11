@@ -132,21 +132,28 @@
 
   <div id="map"></div>
 
-    <!-- ✅ 하단 고정 버튼 바 -->
-    <div class="bottom-buttons">
-      <button id="findMe">내 위치 찾기</button>
-      <button id="findNearby">근처 흡연구역 보기</button>
-      <button onclick="location.href='source.html'">출처 보기</button>
-      <button onclick="window.open('https://docs.google.com/forms/d/1cCBZkqha49EoA29QeUFeHatisZHMwY8XONgYV7sEsWw/viewform', '_blank')">
-        제보하기
-      </button>
-      
-  
-    <!-- ✅ script.js는 defer로 로드해야 kakao SDK 이후에 실행됨 -->
-    <script src="/seoul-smoking-map/script.js" defer></script>
+  <!-- ✅ 하단 고정 버튼 바 -->
+  <div class="bottom-buttons">
+    <button id="findMe">내 위치 찾기</button>
+    <button id="findNearby">근처 흡연구역 보기</button>
+    <button onclick="location.href='source.html'">출처 보기</button>
+    <button onclick="window.open('https://docs.google.com/forms/d/1cCBZkqha49EoA29QeUFeHatisZHMwY8XONgYV7sEsWw/viewform', '_blank')">
+      제보하기
+    </button>
+  </div>
 
-  </body>
-  </html>
+  <!-- ✅ script.js 자동 경로 로딩 (로컬 & 배포 둘 다 지원) -->
+  <script>
+    const script = document.createElement('script');
+    const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    script.src = isLocal ? 'script.js' : '/seoul-smoking-map/script.js';
+    script.defer = true;
+    document.body.appendChild(script);
+  </script>
+
+</body>
+</html>
+
   
 
 
