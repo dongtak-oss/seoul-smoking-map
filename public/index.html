@@ -11,7 +11,6 @@
   <!-- ✅ Kakao Maps SDK (반드시 autoload=false 추가!) -->
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bd5ad6d3034dbd38379e6f449abf0cdc&autoload=false&libraries=services"></script>
 
-  <!-- ✅ 스타일 -->
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
@@ -102,6 +101,10 @@
       background-color: #6c757d;
     }
 
+    .bottom-buttons button:nth-child(4) {
+      background-color: #dc3545;
+    }
+
     .bottom-buttons button:hover {
       opacity: 0.85;
     }
@@ -129,21 +132,20 @@
 
   <div id="map"></div>
 
- <!-- ✅ 하단 고정 버튼 바 -->
-<div class="bottom-buttons">
-  <button id="findMe">내 위치 찾기</button>
-  <button id="findNearby">근처 흡연구역 보기</button>
-  <button onclick="location.href='source.html'">출처 보기</button>
-  <button onclick="window.open('https://docs.google.com/forms/d/1cCBZkqha49EoA29QeUFeHatisZHMwY8XONgYV7sEsWw/edit', '_blank')">제보하기</button>
-
+    <!-- ✅ 하단 고정 버튼 바 -->
+    <div class="bottom-buttons">
+      <button id="findMe">내 위치 찾기</button>
+      <button id="findNearby">근처 흡연구역 보기</button>
+      <button onclick="location.href='source.html'">출처 보기</button>
+      <button onclick="window.open('https://docs.google.com/forms/...', '_blank')">제보하기</button>
+    </div> <!-- ✅ 누락된 닫기 -->
   
-</div>
+    <!-- ✅ script.js는 defer로 로드해야 kakao SDK 이후에 실행됨 -->
+    <script src="./script.js" defer></script>
+  </body>
+  </html>
+  
 
-
-  <!-- ✅ script.js는 defer로 로드해야 kakao SDK 이후에 실행됨 -->
-  <script src="./script.js" defer></script>
-</body>
-</html>
 
 
 
