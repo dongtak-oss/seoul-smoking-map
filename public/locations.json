@@ -1,0 +1,217 @@
+[
+  {
+    "lat": 37.553149,
+    "lng": 126.968881,
+    "title": "서울역 15번 출구 흡연구역",
+    "description": "서울역 15번 출구 앞 광장에 위치한 흡연구역입니다.",
+    "image": "images/IMG_6207.jpg",
+    "type": "public"
+  },
+  {
+    "lat": 37.55376,
+    "lng": 126.969662,
+    "title": "서울역 1번 출구 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=흡연구역",
+    "description": "1번 출구 옆 공터에 위치한 흡연구역입니다.",
+    "type": "public"
+  },
+  {
+    "lat": 37.638988592390746,
+    "lng": 127.06541089577844,
+    "title": "중계근린공원 주차장 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "중계근린공원 주차장에 위치한 흡연구역입니다.",
+    "type": "public"
+  },
+  {
+    "lat": 37.63949836366099,
+    "lng": 127.06812772733437,
+    "title": "등나무문화공원 주차장 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "등나무문화공원 주차장에 위치한 흡연구역입니다.",
+    "type": "public"
+  },
+  {
+    "lat": 37.49821257,
+    "lng": 126.8670887,
+    "title": "고척 돔구장 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "고척 돔구장에 위치한 흡연구역입니다.",
+    "type": "building"
+  },
+  {
+    "lat": 37.581239,
+    "lng": 127.0882184,
+    "title": "탐앤탐스 사가정역점",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "사가정역 2번 출구 앞에 위치한 탐앤탐스입니다.",
+    "type": "cafe"
+  },
+  {
+    "lat": 37.529492,
+    "lng": 126.964318,
+    "title": "아이파크몰 8층 옥상 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "아이파크몰 8층 옥상에 위치한 흡연구역입니다.",
+    "type": "building"
+  },
+  {
+    "lat": 37.50904,
+    "lng": 126.8912,
+    "title": "신도림역 2번 출구 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "신도림역 2번 출구에 위한 흡연구역입니다.",
+    "type": "public"
+  },
+  {
+    "lat": 37.5225,
+    "lng": 126.9238,
+    "title": "여의도역 3번 출구 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "여의도역 3번 출구에 위치한 흡연구역입니다.",
+    "type": "public"
+  },
+  {
+    "address": "서울특별시 성동구 성수동1가 686-709 (디타워 앞)",
+    "title": "디타워 앞 흡연구역",
+    "lat": 37.5436099,
+    "lng": 127.0428194,
+    "type": "public",
+    "description": "디타워 앞 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 성동구 성수동1가 656-3 (서울숲 포휴 앞)",
+    "title": "서울숲 포휴 앞 흡연구역",
+    "lat": 37.5426627,
+    "lng": 127.0451987,
+    "type": "public",
+    "description": "서울숲 포휴 앞 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 성동구 성수동2가 280 (SKV1 화양사거리)",
+    "title": " SKV1 화양사거리 흡연구역",
+    "lat": 37.5468653,
+    "lng": 127.0514978,
+    "type": "public",
+    "description": " SKV1 화양사거리 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 성동구 행당동 1-182 (왕십리역 6번 출구 뒤)",
+    "title": "왕십리역 6번 출구 뒤 흡연구역",
+    "lat": 37.561234,
+    "lng": 127.039169,
+    "type": "public",
+    "description": "왕십리역 6번 출구 뒤 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 성동구 도선동 58-1 (세신빌딩 뒤)",
+    "title": "세신빌딩 뒤 흡연구역",
+    "lat": 37.5627152,
+    "lng": 127.0338928,
+    "type": "public",
+    "description": "세신빌딩 뒤 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 성동구 성수동2가 276-5 (성수역 3번 출구)",
+    "title": "성수역 3번 출구 흡연구역",
+    "lat": 37.5434322,
+    "lng": 127.0573165,
+    "type": "public",
+    "description": "성수역 3번 출구 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 성동구 성수동2가 325-2 (한라시그마밸리 뒤)",
+    "title": "한라시그마벨리 뒤 흡연구역",
+    "lat": 37.539893,
+    "lng": 127.055188,
+    "type": "public",
+    "description": "한라시그마벨리 뒤 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 성동구 성수동2가 277-43 (아크밸리 앞)",
+    "title": "아크밸리 앞 흡연구역",
+    "lat": 37.54388369999999,
+    "lng": 127.0613025,
+    "type": "public",
+    "description": "아크밸리 앞 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 성동구 성수동2가 315-61 (성수역 SKV1타워 앞)",
+    "title": "성수역 SKV1타워 앞 흡연구역",
+    "lat": 37.5433863,
+    "lng": 127.0554176,
+    "type": "public",
+    "description": "성수역 SKV1타워 앞 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 성동구 성수동1가 13-164 (서울숲IT밸리 앞)",
+    "title": "서울숲IT밸리 앞 흡연구역",
+    "lat": 37.547478,
+    "lng": 127.0498957,
+    "type": "public",
+    "description": "서울숲IT밸리 앞 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 강북구 오현로 145",
+    "title": "강북문화정보도서관 흡연구역",
+    "lat": 37.6252184,
+    "lng": 127.0362995,
+    "type": "public",
+    "description": "강북문화정보도서관 흡연구역입니다. ",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 광진구 강변역로50",
+    "title": "동서울종합터미널 앞 흡연구역",
+    "lat": 37.53402163,
+    "lng": 127.0935966,
+    "type": "public",
+    "description": "동서울종합터미널 앞 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 동작구 노량진동 148-87",
+    "title": "노량진 컵밥거리 흡연구역",
+    "lat": 37.787351078033225,
+    "lng": 127.74418096302898,
+    "type": "public",
+    "description": "노량진 컵밥거리 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울 중랑구 신내동 565-1",
+    "title": "탐앤탐스 중랑구청점",
+    "lat": 37.605552,
+    "lng": 127.096092,
+    "type": "cafe",
+    "description": "흡연실이 있는 탐앤탐스 중랑구청점입니다. ",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "address": "서울특별시 송파구 신천동 30",
+    "title": "롯데월드몰 잔디광장 흡연구역",
+    "lat": 37.513104,
+    "lng": 127.105134,
+    "type": "public",
+    "description": "롯데월드몰 잔디광장에 위치한 흡연구역입니다. ",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+  },
+  {
+    "lat": 37.633465,
+    "lng": 127.1156738,
+    "title": "갈매동 흡연구역",
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "description": "갈매역 맞은편에 위치한 흡연구역입니다.",
+    "type": "public"
+  }
+]
