@@ -1,15 +1,45 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const cors = require("cors"); // ✅ 모듈 방식으로 CORS 사용
+const cors = require("cors");
 
 const app = express();
 const PORT = 3000;
 
-app.use(cors()); // ✅ 모든 출처 허용
-app.use(express.json()); // ✅ JSON 요청 바디 파싱
+const filePath = path.join(__dirname, "locations.json");
 
-// ✅ 마커 위치 업데이트 API
+
+
+// ✅ 정적 파일 제공 (public 폴더)
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use(cors());
+app.use(express.json());
+
+// ✅ index.html 렌더링 - 안전한 경로 지정
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html")); // ✅ 수정 포인트!
+});
+
+// ✅ 위치 목록 가져오기 API
+app.get("/locations", (req, res) => {
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      console.error("📁 위치 데이터 읽기 실패:", err);
+      return res.status(500).json({ message: "위치 데이터를 읽을 수 없습니다." });
+    }
+
+    try {
+      const locations = JSON.parse(data);
+      res.json(locations);
+    } catch (parseErr) {
+      console.error("🧾 위치 데이터 파싱 실패:", parseErr);
+      res.status(500).json({ message: "위치 데이터 파싱 실패" });
+    }
+  });
+});
+
+// ✅ 위치 업데이트 API
 app.post("/update-location", (req, res) => {
   const { title, lat, lng } = req.body;
 
@@ -17,9 +47,6 @@ app.post("/update-location", (req, res) => {
     return res.status(400).json({ message: "❌ 잘못된 요청입니다." });
   }
 
-  const filePath = path.join(__dirname, "locations.json");
-
-  // ✅ locations.json 읽기
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
       console.error("📁 파일 읽기 실패:", err);
@@ -40,11 +67,9 @@ app.post("/update-location", (req, res) => {
       return res.status(404).json({ message: "해당 위치를 찾을 수 없습니다." });
     }
 
-    // ✅ 위치 정보 수정
     locations[index].lat = lat;
     locations[index].lng = lng;
 
-    // ✅ 다시 저장
     fs.writeFile(filePath, JSON.stringify(locations, null, 2), "utf8", err => {
       if (err) {
         console.error("📄 파일 쓰기 실패:", err);
@@ -61,6 +86,11 @@ app.post("/update-location", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 서버 실행 중: http://localhost:${PORT}`);
 });
+
+
+
+
+
 
 
 

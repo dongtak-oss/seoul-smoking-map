@@ -8,6 +8,10 @@
   <!-- ✅ 웹폰트 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
 
+  <!-- ✅ Kakao Maps SDK (반드시 autoload=false 추가!) -->
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bd5ad6d3034dbd38379e6f449abf0cdc&autoload=false&libraries=services"></script>
+
+  <!-- ✅ 스타일 -->
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
@@ -24,7 +28,6 @@
       text-align: center;
     }
 
-    /* ✅ 상단 필터 바 */
     .filter-bar {
       display: flex;
       overflow-x: auto;
@@ -68,7 +71,6 @@
       margin-top: 10px;
     }
 
-    /* ✅ 하단 고정 버튼 바 */
     .bottom-buttons {
       position: fixed;
       bottom: 0;
@@ -109,21 +111,17 @@
 <body>
   <!-- ✅ 상단 필터 바 -->
   <div class="filter-bar">
-    <div class="filter-item" id="filter-cafe-top">
-      <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="카페" />
-      <span>흡연실이 있는 카페</span>
-    </div>
     <div class="filter-item" id="filter-public-top">
       <img src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="공공" />
       <span>공공 흡연구역</span>
     </div>
+    <div class="filter-item" id="filter-cafe-top">
+      <img src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" alt="카페" />
+      <span>흡연실이 있는 카페</span>
+    </div>
     <div class="filter-item" id="filter-building-top">
       <img src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="건물" />
       <span>건물 내 흡연구역</span>
-    </div>
-    <div class="filter-item" style="cursor: default;">
-      <img src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt="내 위치" />
-      <span>현재 내 위치</span>
     </div>
   </div>
 
@@ -131,22 +129,20 @@
 
   <div id="map"></div>
 
-  <!-- ✅ 하단 고정 버튼 바 -->
-  <div class="bottom-buttons">
+ <!-- ✅ 하단 고정 버튼 바 -->
+<div class="bottom-buttons">
   <button id="findMe">내 위치 찾기</button>
   <button id="findNearby">근처 흡연구역 보기</button>
   <button onclick="location.href='source.html'">출처 보기</button>
+  <button onclick="window.open('https://docs.google.com/forms/d/1cCBZkqha49EoA29QeUFeHatisZHMwY8XONgYV7sEsWw/edit', '_blank')">제보하기</button>
 </div>
 
-    </a>
-    
-  </div>
 
-  <!-- ✅ Kakao Maps SDK -->
-  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bd5ad6d3034dbd38379e6f449abf0cdc&libraries=services"></script>
-  <script src="script.js"></script>
+  <!-- ✅ script.js는 defer로 로드해야 kakao SDK 이후에 실행됨 -->
+  <script src="script.js" defer></script>
 </body>
 </html>
+
 
 
 

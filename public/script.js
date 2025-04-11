@@ -1,12 +1,25 @@
+// ✅ 관리자 여부 자동 구분 (localhost일 때만 true)
+const isAdmin = location.hostname === "localhost" && location.port === "3000";
+const fetchPath = isAdmin ? "/locations" : "./locations.json";
+
+console.log("✅ script.js 실행 확인");
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("✅ script.js 실행됨");
+
+  kakao.maps.load(() => {
+    console.log("✅ kakao.maps.load 안의 initMapApp 실행됨");
+    initMapApp();
+  });
+});
+
 let map;
 let currentInfoWindow = null;
 let markers = [];
-let nearbyMode = false;
 let allMarkers = [];
+let userMarker = null;
+let nearbyMode = false;
 let activeType = null;
-let userMarker = null; // ✅ 내 위치 마커 저장용
-
-const isAdmin = true;
 
 const iconUrls = {
   public: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
@@ -14,30 +27,6 @@ const iconUrls = {
   cafe: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
   current: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-  kakao.maps.load(initMapApp);
-
-  // 🔸 상단 필터 클릭 이벤트 처리
-  ["filter-cafe-top", "filter-public-top", "filter-building-top"].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener("click", () => {
-        const type = id.split("-")[1];
-        if (currentInfoWindow) currentInfoWindow.close();
-        if (activeType === type) {
-          activeType = null;
-          allMarkers.forEach(({ marker }) => marker.setMap(map));
-        } else {
-          activeType = type;
-          allMarkers.forEach(({ marker, data }) => {
-            marker.setMap(data.type === type ? map : null);
-          });
-        }
-      });
-    }
-  });
-});
 
 function initMapApp() {
   const container = document.getElementById('map');
@@ -47,20 +36,19 @@ function initMapApp() {
   };
   map = new kakao.maps.Map(container, options);
 
-  fetch("locations.json")
-    .then(response => response.json())
+  fetch(fetchPath)
+    .then(res => res.json())
     .then(locations => {
       locations.forEach(location => {
         const position = new kakao.maps.LatLng(location.lat, location.lng);
-
         const markerImage = new kakao.maps.MarkerImage(
           iconUrls[location.type] || iconUrls.public,
           new kakao.maps.Size(32, 32)
         );
 
         const marker = new kakao.maps.Marker({
-          position,
           map,
+          position,
           title: location.title,
           image: markerImage,
           draggable: isAdmin
@@ -88,7 +76,7 @@ function initMapApp() {
         if (isAdmin) {
           kakao.maps.event.addListener(marker, 'dragend', () => {
             const newPos = marker.getPosition();
-            fetch("http://localhost:3000/update-location", {
+            fetch("/update-location", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
@@ -110,8 +98,7 @@ function initMapApp() {
         markers.push(marker);
         allMarkers.push({ marker, data: location });
       });
-    })
-    .catch(err => console.error("마커 데이터를 불러오는 중 오류:", err));
+    });
 
   document.getElementById("findMe").addEventListener("click", () => {
     if (navigator.geolocation) {
@@ -125,7 +112,6 @@ function initMapApp() {
           new kakao.maps.Size(32, 32)
         );
 
-        // ✅ 기존 마커 제거 후 새 마커 표시
         if (userMarker) userMarker.setMap(null);
 
         userMarker = new kakao.maps.Marker({
@@ -150,16 +136,44 @@ function initMapApp() {
       const lat = pos.coords.latitude;
       const lng = pos.coords.longitude;
 
+      let nearbyCount = 0;
+
       allMarkers.forEach(({ marker, data }) => {
         const distance = haversine(lat, lng, data.lat, data.lng);
-        marker.setMap(nearbyMode ? map : (distance <= 1 ? map : null));
+        const isNearby = distance <= 1;
+
+        if (isNearby) nearbyCount++;
+        marker.setMap(nearbyMode ? map : (isNearby ? map : null));
       });
+
+      if (!nearbyMode && nearbyCount === 0) {
+        alert("근처에 흡연구역이 없습니다.");
+      }
 
       nearbyMode = !nearbyMode;
       const btn = document.getElementById("findNearby");
       btn.textContent = nearbyMode ? "전체 흡연구역 보기" : "내 근처 흡연구역 보기";
       btn.classList.toggle("active", nearbyMode);
     });
+  });
+
+  ["filter-cafe-top", "filter-public-top", "filter-building-top"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("click", () => {
+        const type = id.split("-")[1];
+        if (currentInfoWindow) currentInfoWindow.close();
+        if (activeType === type) {
+          activeType = null;
+          allMarkers.forEach(({ marker }) => marker.setMap(map));
+        } else {
+          activeType = type;
+          allMarkers.forEach(({ marker, data }) => {
+            marker.setMap(data.type === type ? map : null);
+          });
+        }
+      });
+    }
   });
 }
 
@@ -181,6 +195,10 @@ function deg2rad(deg) {
 window.closeInfoWindow = function () {
   if (currentInfoWindow) currentInfoWindow.close();
 };
+
+
+
+
 
 
 
