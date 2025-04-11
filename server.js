@@ -6,17 +6,18 @@ const cors = require("cors");
 const app = express();
 const PORT = 3000;
 
-// ✅ 정적 파일 제공 - 루트 기준
-app.use(express.static(__dirname));
 app.use(cors());
 app.use(express.json());
 
-// ✅ 루트 요청시 index.html 제공
+// ✅ 정적 파일 서빙 (script.js, style.css 등)
+app.use(express.static(__dirname));
+
+// ✅ index.html 제공
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// ✅ locations.json 불러오기
+// ✅ locations.json 제공
 app.get("/locations", (req, res) => {
   fs.readFile(path.join(__dirname, "locations.json"), "utf8", (err, data) => {
     if (err) return res.status(500).json({ message: "읽기 오류" });
@@ -28,7 +29,7 @@ app.get("/locations", (req, res) => {
   });
 });
 
-// ✅ 위치 업데이트
+// ✅ 위치 저장
 app.post("/update-location", (req, res) => {
   const { title, lat, lng } = req.body;
   const filePath = path.join(__dirname, "locations.json");
@@ -38,7 +39,7 @@ app.post("/update-location", (req, res) => {
   }
 
   fs.readFile(filePath, "utf8", (err, data) => {
-    if (err) return res.status(500).json({ message: "읽기 실패" });
+    if (err) return res.status(500).json({ message: "파일 읽기 실패" });
 
     let locations;
     try {
@@ -47,19 +48,22 @@ app.post("/update-location", (req, res) => {
       return res.status(500).json({ message: "파싱 오류" });
     }
 
-    const idx = locations.findIndex(loc => loc.title === title);
-    if (idx === -1) return res.status(404).json({ message: "위치 없음" });
+    const index = locations.findIndex(loc => loc.title === title);
+    if (index === -1) return res.status(404).json({ message: "해당 위치 없음" });
 
-    locations[idx].lat = lat;
-    locations[idx].lng = lng;
+    locations[index].lat = lat;
+    locations[index].lng = lng;
 
     fs.writeFile(filePath, JSON.stringify(locations, null, 2), "utf8", err => {
-      if (err) return res.status(500).json({ message: "쓰기 실패" });
-      res.json({ message: "위치 저장 완료" });
+      if (err) return res.status(500).json({ message: "저장 실패" });
+      res.json({ message: "저장 성공" });
     });
   });
 });
 
+// ✅ 서버 실행
 app.listen(PORT, () => {
   console.log(`🚀 서버 실행 중: http://localhost:${PORT}`);
 });
+
+

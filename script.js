@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ✅ 관리자 여부 자동 판단 (localhost일 경우만 true)
+const isAdmin = location.hostname === "localhost";
+
 let map;
 let currentInfoWindow = null;
 let markers = [];
@@ -46,8 +49,32 @@ function initMapApp() {
           map,
           position,
           title: location.title,
-          image: markerImage
+          image: markerImage,
+          draggable: isAdmin // ✅ 관리자일 경우에만 드래그 가능
         });
+
+        // ✅ 드래그 후 서버로 위치 업데이트
+        if (isAdmin) {
+          kakao.maps.event.addListener(marker, "dragend", function () {
+            const newPos = marker.getPosition();
+            fetch("/update-location", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                title: location.title,
+                lat: newPos.getLat(),
+                lng: newPos.getLng()
+              })
+            })
+              .then(res => res.json())
+              .then(data => {
+                console.log("📍 저장됨:", data.message);
+              })
+              .catch(err => {
+                console.error("❌ 저장 오류:", err);
+              });
+          });
+        }
 
         const infoContent = `
           <div style="max-width:200px; position:relative;">
