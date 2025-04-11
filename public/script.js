@@ -1,6 +1,7 @@
 // ✅ 관리자 여부 자동 구분 (localhost일 때만 true)
 const isAdmin = location.hostname === "localhost" && location.port === "3000";
-const fetchPath = isAdmin ? "/locations" : "./locations.json";
+const fetchPath = isAdmin ? "/locations" : "locations.json"; // ← 앞에 ./ 빼기!
+
 
 console.log("✅ script.js 실행 확인");
 
