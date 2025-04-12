@@ -213,5 +213,317 @@
     "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
     "description": "갈매역 맞은편에 위치한 흡연구역입니다.",
     "type": "public"
+  },
+  {
+    "title": "강서구청 주차장 뒤편",
+    "lat": 37.5508806,
+    "lng": 126.8496649,
+    "type": "public",
+    "description": "강서구청 주차장 뒤편 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "강서구민회관 1층",
+    "lat": 37.5519333,
+    "lng": 126.8416092,
+    "type": "public",
+    "description": "강서구민회관 1층 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "마곡 실내배드민턴장 1층 주차장 뒤편",
+    "lat": 37.5656712,
+    "lng": 126.840318,
+    "type": "public",
+    "description": "마곡 실내배드민턴장 1층 주차장 뒤편 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "김포공항화물청사 1층 옥외의 일부",
+    "lat": 37.5558905,
+    "lng": 126.8081093,
+    "type": "public",
+    "description": "김포공항화물청사 1층 옥외의 일부 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "김포공항국제선 옥외의 일부",
+    "lat": 37.5650592,
+    "lng": 126.8029919,
+    "type": "public",
+    "description": "김포공항국제선 옥외의 일부 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "김포공항국내선 옥외의 일부",
+    "lat": 37.5558905,
+    "lng": 126.8081093,
+    "type": "public",
+    "description": "김포공항국내선 옥외의 일부 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "광진경찰서",
+    "lat": 37.5428231,
+    "lng": 127.0838395,
+    "type": "public",
+    "description": "광진경찰서 흡연구역입니다",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "광진소방서",
+    "lat": 37.5448313,
+    "lng": 127.0828431,
+    "type": "public",
+    "description": "광진소방서 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "광진소방서",
+    "lat": 37.5443273,
+    "lng": 127.0863479,
+    "type": "public",
+    "description": "광진소방서 흡연구역입니다",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "광진우편집중국",
+    "lat": 37.5354796,
+    "lng": 127.0858842,
+    "type": "public",
+    "description": "광진우편집중국 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "광진우체국",
+    "lat": 37.5372631,
+    "lng": 127.0901456,
+    "type": "public",
+    "description": "광진우체국 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "광진구청",
+    "lat": 37.5384193,
+    "lng": 127.0824491,
+    "type": "public",
+    "description": "광진구청 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "화양동 주민자치센터",
+    "lat": 37.5462698,
+    "lng": 127.0704801,
+    "type": "public",
+    "description": "화양동 주민자치센터 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "서울시 물연구원",
+    "lat": 37.5467622,
+    "lng": 127.0921741,
+    "type": "public",
+    "description": "서울시 물연구원 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "아차산배수지체육공원",
+    "lat": 37.5489614,
+    "lng": 127.0965031,
+    "type": "public",
+    "description": "아차산배수지체육공원 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "국립정신건강센터",
+    "lat": 37.5650124,
+    "lng": 127.0857923,
+    "type": "public",
+    "description": "국립정신건강센터 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "세종대학교 대양홀",
+    "lat": 37.5507345,
+    "lng": 127.0741314,
+    "type": "public",
+    "description": "세종대학교 대양홀 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "유니버설아트센터 ",
+    "lat": 37.5503951,
+    "lng": 127.087338,
+    "type": "public",
+    "description": "유니버설아트센터 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "건국대학교새천년관 대공연장",
+    "lat": 37.5425408,
+    "lng": 127.0737253,
+    "type": "public",
+    "description": "건국대학교새천년관 대공연장 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "세종대학교 학생회관 대공연장",
+    "lat": 37.5507345,
+    "lng": 127.0741314,
+    "type": "public",
+    "description": "세종대학교 학생회관 대공연장 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "이마트 자양점",
+    "lat": 37.5378028,
+    "lng": 127.0726322,
+    "type": "public",
+    "description": "이마트 자양점 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "롯데백화점 건대스타시티점",
+    "lat": 37.5387882,
+    "lng": 127.0711369,
+    "type": "public",
+    "description": "롯데백화점 건대스타시티점 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "커먼그라운드",
+    "lat": 37.5411513,
+    "lng": 127.0659498,
+    "type": "public",
+    "description": "커먼그라운드 3층 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "테크노마트21",
+    "lat": 37.5375292,
+    "lng": 127.0963368,
+    "type": "public",
+    "description": "테크노마트21 흡연구역입니다.",
+    "image": "https://via.placeholder.com/200x120?text=%EC%84%9C%EC%9A%B8%EC%97%AD+1%EB%B2%88%EC%B6%9C%EA%B5%AC"
+  },
+  {
+    "title": "워커힐",
+    "lat": 37.5551679,
+    "lng": 127.1114168,
+    "type": "public",
+    "description": "워커힐 흡연구역입니다.",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "탐앤탐스 블랙그레이트점",
+    "lat": 37.5378422,
+    "lng": 127.0898161,
+    "type": "cafe",
+    "description": "탐앤탐스 블랙그레이트점 ",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "투썸플레이스 군자역점",
+    "lat": 37.5557895,
+    "lng": 127.0783384,
+    "type": "cafe",
+    "description": "투썸플레이스 군자역점",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "카페오로시",
+    "lat": 37.5395189,
+    "lng": 127.0828446,
+    "type": "cafe",
+    "description": "카페오로시",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "더이퀄리브리엄커피",
+    "lat": 37.540358,
+    "lng": 127.0678603,
+    "type": "cafe",
+    "description": "더이퀄리브리엄커피",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "이디야",
+    "lat": 37.5404164,
+    "lng": 127.0676076,
+    "type": "cafe",
+    "description": "이디야",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "탐앤탐스 탐스커버리건대점",
+    "lat": 37.540039,
+    "lng": 127.0693832,
+    "type": "cafe",
+    "description": "탐앤탐스 탐스커버리건대점",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "카페온더플랜 건대점",
+    "lat": 37.5452955,
+    "lng": 127.0727509,
+    "type": "cafe",
+    "description": "카페온더플랜 건대점",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "허니룸 건대점",
+    "lat": 37.5413168,
+    "lng": 127.0680945,
+    "type": "cafe",
+    "description": "허니룸 건대점",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "꿈꾸다917",
+    "lat": 37.5417966,
+    "lng": 127.0694427,
+    "type": "cafe",
+    "description": "꿈꾸다917",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "커피마켓",
+    "lat": 37.5428753,
+    "lng": 127.0711474,
+    "type": "cafe",
+    "description": "커피마켓",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "카패베네 건대2호점",
+    "lat": 37.5415506,
+    "lng": 127.0667491,
+    "type": "cafe",
+    "description": "카패베네 건대2호점",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "탐앤탐스 건대점",
+    "lat": 37.540783,
+    "lng": 127.0704664,
+    "type": "cafe",
+    "description": "탐앤탐스 건대점",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "탐앤탐스 광진화양점",
+    "lat": 37.5432374,
+    "lng": 127.0707865,
+    "type": "cafe",
+    "description": "탐앤탐스 광진화양점",
+    "image": "images/IMG_6207.jpg"
+  },
+  {
+    "title": "동서울터미널 앞 전면보도",
+    "lat": 37.5339173,
+    "lng": 127.0935856,
+    "type": "cafe",
+    "description": "동서울터미널 앞 전면보도",
+    "image": "images/IMG_6207.jpg"
   }
 ]
