@@ -38,6 +38,10 @@ function initMapApp() {
   fetch("locations.json")
     .then(res => res.json())
     .then(locations => {
+      // ✅ 기존 마커 모두 제거
+    markers.forEach(m => m.setMap(null));
+    markers = [];
+    allMarkers = [];
       locations.forEach(location => {
         const position = new kakao.maps.LatLng(location.lat, location.lng);
         const markerImage = new kakao.maps.MarkerImage(
