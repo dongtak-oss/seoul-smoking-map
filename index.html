@@ -1,151 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>서울 흡연구역 지도</title>
+  <meta charset="UTF-8" /> <!-- ✅ 한글 깨짐 방지 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- ✅ 모바일 최적화 -->
+  <title>연지도 – 서울 흡연구역 지도</title> <!-- ✅ 브라우저 탭 제목 -->
+
+  <!-- ✅ 명시적으로 보이지는 않지만, 검색엔진에 노출되는 데 도움이 되는 코드 -->
+  <meta name="description" content="서울시 흡연구역 위치를 지도에서 한눈에 확인하고, 근처 흡연구역을 쉽게 찾을 수 있는 서비스입니다.">
 
   <!-- ✅ 웹폰트 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
 
-  <!-- ✅ Kakao Maps SDK (반드시 autoload=false 추가!) -->
+  <!-- ✅ Kakao Maps SDK -->
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bd5ad6d3034dbd38379e6f449abf0cdc&autoload=false&libraries=services"></script>
 
-  <style>
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-    }
-
-    h1 {
-      margin: 70px 0 10px;
-      font-size: 24px;
-      font-weight: 700;
-      color: #222;
-      text-align: center;
-    }
-
-    .filter-bar {
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      padding: 10px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 1000;
-      justify-content: center;
-    }
-
-    .filter-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 12px;
-      background: #f5f5f5;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      font-size: 13px;
-      white-space: nowrap;
-      cursor: pointer;
-    }
-
-    .filter-item:hover {
-      background-color: #eee;
-    }
-
-    .filter-item img {
-      width: 18px;
-      height: 18px;
-    }
-
-    #map {
-      width: 100%;
-      height: calc(100vh - 160px);
-      margin-top: 10px;
-    }
-
-    .bottom-buttons {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: white;
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    .bottom-buttons button {
-      padding: 10px 15px;
-      font-size: 14px;
-      border: none;
-      border-radius: 5px;
-      color: white;
-      background-color: #007bff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-    }
-
-    .bottom-buttons button:nth-child(2) {
-      background-color: #28a745;
-    }
-
-    .bottom-buttons button:nth-child(3) {
-      background-color: #6c757d;
-    }
-
-    .bottom-buttons button:nth-child(4) {
-      background-color: #dc3545;
-    }
-
-    .bottom-buttons button:hover {
-      opacity: 0.85;
-    }
-  </style>
+  <!-- ✅ CSS 연결 -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- ✅ 상단 필터 바 -->
-<div class="filter-bar">
-  <div class="filter-item" id="filter-public-top">
-    <img src="images/icon_public.png" alt="공공" />
-    <span>공공 흡연구역</span>
-  </div>
-  <div class="filter-item" id="filter-cafe-top">
-    <img src="images/icon_cafe.png" alt="카페" />
-    <span>흡연실이 있는 카페</span>
-  </div>
-  <div class="filter-item" id="filter-building-top">
-    <img src="images/icon_building.png" alt="건물" />
-    <span>건물 내 흡연구역</span>
-  </div>
-</div>
 
-  <h1>서울 흡연구역 지도</h1>
+  <!-- ✅ 페이지 상단 (필터 바 + 제목) -->
+  <header>
+    <div class="filter-bar">
+      <div class="filter-item" id="filter-public-top">
+        <img src="images/icon_public.png" alt="공공 흡연구역 마커 아이콘" />
+        <span>공공 흡연구역</span>
+      </div>
+      <div class="filter-item" id="filter-cafe-top">
+        <img src="images/icon_cafe.png" alt="흡연 가능한 카페 마커 아이콘" />
+        <span>흡연실이 있는 카페</span>
+      </div>
+      <div class="filter-item" id="filter-building-top">
+        <img src="images/icon_building.png" alt="건물 내 흡연구역 마커 아이콘" />
+        <span>건물 내 흡연구역</span>
+      </div>
+    </div>
 
-  <div id="map"></div>
+    <h1>서울 흡연구역 지도</h1> <!-- 나중에 로고로 교체 가능 -->
+  </header>
 
-  <!-- ✅ 하단 고정 버튼 바 -->
-  <div class="bottom-buttons">
-    <button id="findMe">내 위치 찾기</button>
-    <button id="findNearby">근처 흡연구역 보기</button>
-    <button onclick="location.href='source.html'">출처 보기</button>
-    <button onclick="window.open('https://docs.google.com/forms/d/1cCBZkqha49EoA29QeUFeHatisZHMwY8XONgYV7sEsWw/viewform', '_blank')">
-      제보하기
-    </button>
-  </div>
+  <!-- ✅ 페이지 핵심 콘텐츠: 지도 -->
+  <main>
+    <div id="map"></div> <!-- Kakao 지도 표시 영역 -->
+  </main>
 
-  <!-- ✅ 단일 경로 script.js -->
+  <!-- ✅ 페이지 하단 버튼 -->
+  <footer>
+    <div class="bottom-buttons">
+      <button id="findMe" type="button">내 위치 찾기</button>
+      <button id="findNearby" type="button">근처 흡연구역 보기</button>
+      <button onclick="location.href='source.html'" type="button">출처 보기</button>
+      <button type="button" onclick="window.open('https://docs.google.com/forms/d/1cCBZkqha49EoA29QeUFeHatisZHMwY8XONgYV7sEsWw/viewform', '_blank')">제보하기</button>
+    </div>
+  </footer>
+
+  <!-- ✅ 기능 실행 스크립트 -->
   <script src="script.js" defer></script>
 </body>
 </html>
+
+
 
 
   
