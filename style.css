@@ -10,11 +10,12 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
   background-color: transparent;
   overflow-x: hidden; /* ← 혹시나 생기는 가로 스크롤 방지 */
   overflow-y: hidden;     /* ✅ 추가: 상하 여백도 막아줌 */
   position: relative;     /* ✅ 추가: 렌더링 틀어짐 방지 */
+  background: transparent;
 }
 
 .filter-bar {
@@ -27,9 +28,11 @@ html, body {
   align-items: center;
   gap: 8px;
   padding: 10px 0;
-  background: transparent;
+  background: transparent !important;
   z-index: 1000;
+  height: 60px;
   line-height: 0;
+  background-color: transparent !important;
 }
 
 /* ✅ 기본 전체 페이지 설정 */
@@ -40,12 +43,11 @@ body {
   text-align: center; /* 전체 텍스트를 중앙 정렬 – h1, p 등에 적용됨 */
 }
 
-/* ✅ 카카오맵이 들어가는 영역 스타일 */
 #map {
-  width: 100%; /* 브라우저 너비 전체를 지도에 할당 */
-  height: calc(100vh - 120px); /* 전체 화면 높이에서 상단 필터 + 하단 버튼 높이를 뺀 크기로 설정 */
-  margin-top: 0; /* 지도 위에 10px 여백 추가 */
-  display: block;
+width: 100%;
+height: calc(100vh - 60px);
+margin-top: 0;
+display: block;
 }
 
 /* ✅ 필터 항목 */
@@ -146,6 +148,7 @@ body {
   align-items: center;
   justify-content: space-around; /* 버튼 간 간격을 균등하게 배치 */
   padding: 0; /* 위아래 여백 (세로로 넉넉한 클릭 영역 확보) */
+  margin: 0;
   border-top: 1px solid #ccc; /* 상단에 얇은 회색 테두리 – 구분선 역할 */
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* 위쪽 방향으로 부드러운 그림자 (살짝 떠 있는 느낌) */
   z-index: 1000; /* 다른 요소보다 위에 위치 */
@@ -214,6 +217,8 @@ body {
     white-space: nowrap; /* 버튼 안의 텍스트가 줄바꿈되지 않도록 설정 (ex. '내 위치 찾기') */
   }
 }
+
+
 
 
 
