@@ -1,9 +1,53 @@
+/* ✅ 모든 요소 기본값 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* ✅ 화면 전체 여백/스크롤 여유 제거 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: transparent;
+  overflow-x: hidden; /* ← 혹시나 생기는 가로 스크롤 방지 */
+  overflow-y: hidden;     /* ✅ 추가: 상하 여백도 막아줌 */
+  position: relative;     /* ✅ 추가: 렌더링 틀어짐 방지 */
+}
+
+.filter-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  background: transparent;
+  z-index: 1000;
+  line-height: 0;
+}
+
+#map {
+  margin-top: 60px;
+}
+
+body::before {
+  content: "";
+  display: block;
+  height: 0px;
+  background: transparent;
+}
+
 /* ✅ 기본 전체 페이지 설정 */
 body {
   margin: 0; /* 기본 브라우저 여백 제거 (바깥쪽 공백) */
   padding: 0; /* 기본 브라우저 패딩 제거 (안쪽 공백) */
   font-family: 'Noto Sans KR', sans-serif; /* 한글 가독성을 높이기 위한 웹폰트 지정 */
-  background-color: #fff; /* 전체 배경을 흰색으로 설정해 깔끔하고 밝은 느낌 연출 */
   text-align: center; /* 전체 텍스트를 중앙 정렬 – h1, p 등에 적용됨 */
 }
 
@@ -14,22 +58,6 @@ body {
   width: 100%; /* 브라우저 너비 전체를 지도에 할당 */
   height: calc(100vh - 160px); /* 전체 화면 높이에서 상단 필터 + 하단 버튼 높이를 뺀 크기로 설정 */
   margin-top: 10px; /* 지도 위에 10px 여백 추가 */
-}
-
-/* ✅ 상단 필터 바: 카카오맵 스타일 */
-.filter-bar {
-  position: fixed;
-  top: env(safe-area-inset-top, 10px);
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  z-index: 1000;
-  max-width: 90vw;               /* ← 모바일 대응 */
-  overflow-x: auto;              /* ← 좁은 화면에서 스크롤 가능 */
-  white-space: nowrap;
 }
 
 /* ✅ 필터 항목 */
@@ -62,9 +90,6 @@ body {
   border-radius: 50%;
 }
 
-#map {
-  margin-top: 70px; /* 필터 바 높이만큼 아래로 밀어줌 */
-}
 
 /* ✅ 범례 전체 박스 스타일 */
 #legend {
@@ -199,8 +224,6 @@ body {
     white-space: nowrap; /* 버튼 안의 텍스트가 줄바꿈되지 않도록 설정 (ex. '내 위치 찾기') */
   }
 }
-
-
 
 
 
