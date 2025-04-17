@@ -37,19 +37,19 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 6px 10px;
+  padding: 5px 10px;
   font-size: 13px;
-  background-color: #ffffffee;
+  background-color: rgba(255, 255, 255, 0.9); /* ← 더 자연스럽고 부드러운 반투명 */
   border: 1px solid #ddd;
   border-radius: 20px;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
   flex-shrink: 0; /* 좁은 화면에서도 줄어들지 않게 */
 }
 
 .filter-item:hover {
-  background-color: #f5f5f5;
+  background-color: rgba(245, 245, 245, 0.9); /* ← hover 시 더 밝은 느낌 */
 }
 
 /* ✅ 아이콘 */
@@ -63,7 +63,7 @@ body {
 }
 
 #map {
-  margin-top: 50px; /* 필터 바 높이만큼 아래로 밀어줌 */
+  margin-top: 70px; /* 필터 바 높이만큼 아래로 밀어줌 */
 }
 
 /* ✅ 범례 전체 박스 스타일 */
