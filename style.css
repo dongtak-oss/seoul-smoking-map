@@ -32,17 +32,6 @@ html, body {
   line-height: 0;
 }
 
-#map {
-  margin-top: 60px;
-}
-
-body::before {
-  content: "";
-  display: block;
-  height: 0px;
-  background: transparent;
-}
-
 /* ✅ 기본 전체 페이지 설정 */
 body {
   margin: 0; /* 기본 브라우저 여백 제거 (바깥쪽 공백) */
@@ -51,13 +40,12 @@ body {
   text-align: center; /* 전체 텍스트를 중앙 정렬 – h1, p 등에 적용됨 */
 }
 
-
-
 /* ✅ 카카오맵이 들어가는 영역 스타일 */
 #map {
   width: 100%; /* 브라우저 너비 전체를 지도에 할당 */
-  height: calc(100vh - 160px); /* 전체 화면 높이에서 상단 필터 + 하단 버튼 높이를 뺀 크기로 설정 */
-  margin-top: 10px; /* 지도 위에 10px 여백 추가 */
+  height: calc(100vh - 120px); /* 전체 화면 높이에서 상단 필터 + 하단 버튼 높이를 뺀 크기로 설정 */
+  margin-top: 0; /* 지도 위에 10px 여백 추가 */
+  display: block;
 }
 
 /* ✅ 필터 항목 */
@@ -152,10 +140,12 @@ body {
   position: fixed; /* 항상 화면 아래 고정됨 (스크롤해도 따라옴) */
   bottom: 0; /* 브라우저 창의 맨 아래에 붙임 */
   width: 100%; /* 화면 가로 전체를 사용 */
+  height: 60px;
   background: white; /* 배경 흰색 (지도와 구분) */
   display: flex; /* 내부 버튼들을 가로로 정렬 */
+  align-items: center;
   justify-content: space-around; /* 버튼 간 간격을 균등하게 배치 */
-  padding: 10px 0; /* 위아래 여백 (세로로 넉넉한 클릭 영역 확보) */
+  padding: 0; /* 위아래 여백 (세로로 넉넉한 클릭 영역 확보) */
   border-top: 1px solid #ccc; /* 상단에 얇은 회색 테두리 – 구분선 역할 */
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* 위쪽 방향으로 부드러운 그림자 (살짝 떠 있는 느낌) */
   z-index: 1000; /* 다른 요소보다 위에 위치 */
