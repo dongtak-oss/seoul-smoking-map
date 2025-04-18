@@ -156,7 +156,19 @@ function initMapApp() {
 
       nearbyMode = !nearbyMode;
       const btn = document.getElementById("findNearby");
-      btn.textContent = nearbyMode ? "전체 흡연구역 보기" : "내 근처 흡연구역 보기";
+const icon = btn.querySelector("img");
+const text = btn.querySelector("span");
+
+if (nearbyMode) {
+  icon.src = "images/icon_nearby.png"; // 전체 보기용 아이콘 경로
+  icon.alt = "전체 아이콘";
+  text.textContent = "전체";
+} else {
+  icon.src = "images/icon_nearby.png"; // 근처 보기용 아이콘 경로
+  icon.alt = "근처 아이콘";
+  text.textContent = "근처";
+}
+
       btn.classList.toggle("active", nearbyMode);
     });
   });
