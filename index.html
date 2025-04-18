@@ -42,10 +42,22 @@
   <!-- ✅ 페이지 하단 버튼 -->
   <footer>
     <div class="bottom-buttons">
-      <button id="findMe" type="button">내 위치 찾기</button>
-      <button id="findNearby" type="button">근처 흡연구역 보기</button>
-      <button onclick="location.href='source.html'" type="button">출처 보기</button>
-      <button type="button" onclick="window.open('https://docs.google.com/forms/d/1cCBZkqha49EoA29QeUFeHatisZHMwY8XONgYV7sEsWw/viewform', '_blank')">제보하기</button>
+      <button id="findMe" type="button">
+        <img src="images/icon_location.png" alt="내 위치" />
+        <span>내 위치</span>
+      </button>
+      <button id="findNearby" type="button">
+        <img src="images/icon_nearby.png" alt="근처 보기" />
+        <span>근처</span>
+      </button>
+      <button onclick="location.href='source.html'" type="button">
+        <img src="images/icon_source.png" alt="출처 보기" />
+        <span>출처</span>
+      </button>
+      <button type="button" onclick="window.open('https://docs.google.com/forms/d/1cCBZkqha49EoA29QeUFeHatisZHMwY8XONgYV7sEsWw/viewform', '_blank')">
+        <img src="images/icon_report.png" alt="제보하기" />
+        <span>제보</span>
+      </button>
     </div>
   </footer>
 
