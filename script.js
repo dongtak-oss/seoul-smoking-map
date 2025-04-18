@@ -21,9 +21,9 @@ let nearbyMode = false;
 let activeType = null;
 
 const iconUrls = {
-  public: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
-  building: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
-  cafe: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+  public: 'images/marker_public.png',
+  building: 'images/marker_building.png',
+  cafe: 'images/marker_cafe.png',
   current: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 };
 
