@@ -6,16 +6,15 @@
   vertical-align: baseline;
 }
 
-/* ✅ 화면 전체 여백/스크롤 여유 제거 */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background-color: transparent;
-  overflow-x: hidden; /* ← 혹시나 생기는 가로 스크롤 방지 */
-  overflow-y: hidden;     /* ✅ 추가: 상하 여백도 막아줌 */
-  position: relative;     /* ✅ 추가: 렌더링 틀어짐 방지 */
-  background: transparent;
+  height: 100%; /* ← 100vh 대신 100% 사용 (부모 기준) */
+  background-color: #fff; /* ← 명시적 흰색 배경으로 줄 제거 */
+  overflow-x: hidden; 
+  overflow-y: auto; /* ← 스크롤은 허용하되, 이상한 줄은 방지 */
+  position: relative;
+  -webkit-overflow-scrolling: touch; /* ← iOS 자연스러운 스크롤 */
 }
 
 .filter-bar {
@@ -45,9 +44,10 @@ body {
 
 #map {
 width: 100%;
-height: calc(100vh - 60px);
-margin-top: 0;
+height: calc(100vh - 56px);
+margin-top: 60;
 display: block;
+z-index: 0;
 }
 
 /* ✅ 필터 항목 */
@@ -151,9 +151,12 @@ display: block;
   justify-content: space-around; /* 버튼 간 간격을 균등하게 배치 */
   padding: 0; /* 위아래 여백 (세로로 넉넉한 클릭 영역 확보) */
   margin: 0;
-  border-top: 1px solid #ccc; /* 상단에 얇은 회색 테두리 – 구분선 역할 */
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* 위쪽 방향으로 부드러운 그림자 (살짝 떠 있는 느낌) */
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1000; /* 다른 요소보다 위에 위치 */
+  will-change: transform;
+  transform: translateY(0);
+  padding-bottom: 0 !important;
+  background-color: #ffffff;
 }
 
 
