@@ -67,13 +67,21 @@
   <!-- ✅ 기능 실행 스크립트 -->
   <script src="script.js" defer></script>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log("✅ Service Worker 등록 완료"))
-        .catch(err => console.error("❌ Service Worker 등록 실패", err));
+  <!-- ✅ 기능 실행 스크립트 -->
+<script src="script.js" defer></script>
+
+<!-- ✅ Service Worker 등록 (개발 중일 때는 제외) -->
+<script>
+  if (location.hostname !== "localhost") {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(reg => console.log("✅ Service Worker registered:", reg))
+        .catch(err => console.error("❌ Service Worker registration failed:", err));
     }
-  </script>
+  } else {
+    console.log("🛠 개발 중: Service Worker 등록 안 함");
+  }
+</script>
   </body>
 </html>
 
