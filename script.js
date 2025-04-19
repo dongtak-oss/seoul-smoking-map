@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ✅ 관리자 여부 자동 판단 (localhost일 경우만 true)
-const isAdmin = location.hostname === "localhost";
+const isAdmin = location.hostname === "localhost" && location.port === "3000";
 
 let map;
 let currentInfoWindow = null;
