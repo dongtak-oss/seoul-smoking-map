@@ -45,7 +45,7 @@ body {
 #map {
 width: 100%;
 height: calc(100vh - 56px);
-margin-top: 60;
+margin-top: 60px;
 display: block;
 z-index: 0;
 }
@@ -148,8 +148,8 @@ z-index: 0;
   background: #ffffff; /* 배경 흰색 (지도와 구분) */
   display: flex; /* 내부 버튼들을 가로로 정렬 */
   align-items: center;
-  justify-content: space-around; /* 버튼 간 간격을 균등하게 배치 */
-  padding: 0; /* 위아래 여백 (세로로 넉넉한 클릭 영역 확보) */
+  justify-content: space-between; /* 버튼 간 간격을 균등하게 배치 */
+  padding: 0 8px; /* 위아래 여백 (세로로 넉넉한 클릭 영역 확보) */
   margin: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1000; /* 다른 요소보다 위에 위치 */
