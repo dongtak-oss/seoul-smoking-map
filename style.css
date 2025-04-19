@@ -158,7 +158,7 @@ z-index: 0;
   padding-bottom: 0 !important;
   background-color: #ffffff;
   padding-bottom: env(safe-area-inset-bottom); /* ✅ 추가 */
-  gap: 6px;
+  gap: 2px;
 }
 
 
