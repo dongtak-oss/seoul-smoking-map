@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     intro.classList.remove("hidden");
     setTimeout(() => {
       intro.classList.add("hidden");
-    }, 800); // 총 0.8초 후 제거 (애니메이션 포함)
+    }, 2000); // 총 2초 후 제거 (애니메이션 포함)
   }
 
   // 기존 이벤트 리스너들 여기 아래에 쭉 이어지면 됨!
