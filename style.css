@@ -357,6 +357,19 @@ display: block;
 
 
 
+.drag-handle {
+  width: 40px;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 3px;
+  margin: 10px auto;
+  cursor: grab;
+}
+
+
+
+
+
 
 
 

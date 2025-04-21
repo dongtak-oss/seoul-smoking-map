@@ -224,6 +224,8 @@ function showPreviewCard(location) {
   document.getElementById("preview-title").textContent = location.title;
   document.getElementById("preview-description").textContent = location.description || '';
   document.getElementById("preview-image").src = location.image || '';
+  document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
+
   document.getElementById("info-preview-card").classList.remove("hidden");
   document.getElementById("info-full-card").classList.add("hidden");
 }
@@ -285,5 +287,28 @@ document.addEventListener("DOMContentLoaded", () => {
 }); // ← document.addEventListener 전체를 정확히 닫음!
 
 
+
+let startY = 0;
+
+const dragHandle = document.querySelector(".drag-handle");
+if (dragHandle) {
+  dragHandle.addEventListener("touchstart", (e) => {
+    startY = e.touches[0].clientY;
+  });
+
+  dragHandle.addEventListener("touchend", (e) => {
+    const endY = e.changedTouches[0].clientY;
+    const deltaY = startY - endY;
+
+    if (deltaY > 50) { // 50px 이상 위로 드래그했을 때
+      const previewCard = document.getElementById("info-preview-card");
+      const locationData = previewCard.dataset.locationData;
+      if (locationData) {
+        const location = JSON.parse(locationData);
+        showFullCard(location);
+      }
+    }
+  });
+}
 
 
