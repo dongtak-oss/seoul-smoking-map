@@ -248,6 +248,14 @@ function showFullCard(location) {
 // ✅ DOM이 완전히 로드된 후 이벤트 연결
 document.addEventListener("DOMContentLoaded", () => {
 
+  // ✅ 닫기 버튼 이벤트
+  const closeBtn = document.getElementById("close-preview");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      document.getElementById("info-preview-card").classList.add("hidden");
+    });
+  }
+
   // ✅ 드래그 핸들 → 전체 보기 전환
   const dragHandle = document.querySelector(".drag-handle");
   if (dragHandle) {
@@ -261,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ 전체 보기 → 미리보기 전환
+  // ✅ 전체 보기 → 미리보기 전환 ← 여기도 같이 포함!
   const backButton = document.getElementById("back-to-preview");
   if (backButton) {
     backButton.addEventListener("click", () => {
@@ -273,7 +281,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
+
+}); // ← document.addEventListener 전체를 정확히 닫음!
 
 
 
