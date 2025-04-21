@@ -215,40 +215,20 @@ window.closeInfoWindow = function () {
   if (currentInfoWindow) currentInfoWindow.close();
 };
 
-// ✅ 정보창 열기 함수
-function showInfoCard(location) {
-  document.getElementById("info-title").textContent = location.title;
-  document.getElementById("info-description").textContent = location.description || '';
-  document.getElementById("info-image").src = location.image || '';
-  document.getElementById("info-card").classList.add("active");
-}
-
-// ✅ 닫기 버튼 누르면 정보창 닫힘
-document.getElementById("close-info").addEventListener("click", () => {
-  const card = document.getElementById("info-card");
-  card.classList.remove("active", "expanded");
-});
-
-// ✅ 드래그 손잡이 누르면 전체 화면 토글
-document.querySelector(".drag-handle").addEventListener("click", () => {
-  const card = document.getElementById("info-card");
-  card.classList.toggle("expanded");
-});
 
 
+
+
+// ✅ 기능: 절반 카드 열기
 function showPreviewCard(location) {
-  // 텍스트/이미지 채우기
   document.getElementById("preview-title").textContent = location.title;
   document.getElementById("preview-description").textContent = location.description || '';
   document.getElementById("preview-image").src = location.image || '';
-
-  // 카드 보이기
   document.getElementById("info-preview-card").classList.remove("hidden");
-
-  // 전체 보기 카드가 떠 있었다면 숨기기
   document.getElementById("info-full-card").classList.add("hidden");
 }
 
+// ✅ 기능: 전체 카드 열기
 function showFullCard(location) {
   document.getElementById("full-title").textContent = location.title;
   document.getElementById("full-description").textContent = location.description || '';
@@ -256,7 +236,6 @@ function showFullCard(location) {
   document.getElementById("full-type").textContent = `흡연실 형태: ${location.type_detail || '정보 없음'}`;
   document.getElementById("suggest-edit").href = location.editLink || "#";
 
-  // 예시 리뷰도 넣어보기 (추후 데이터 연결 예정)
   document.getElementById("review-list").innerHTML = `
     <li>🔥 공간 넓고 깔끔했어요</li>
     <li>😷 환기가 약간 부족한 느낌</li>
@@ -266,28 +245,36 @@ function showFullCard(location) {
   document.getElementById("info-preview-card").classList.add("hidden");
 }
 
+// ✅ DOM이 완전히 로드된 후 이벤트 연결
+document.addEventListener("DOMContentLoaded", () => {
 
-// 미리보기 → 전체 보기로
-document.querySelector(".drag-handle").addEventListener("click", () => {
-  const previewCard = document.getElementById("info-preview-card");
-  if (!previewCard.classList.contains("hidden")) {
-    const location = previewCard.dataset.locationData
-      ? JSON.parse(previewCard.dataset.locationData)
-      : null;
-    if (location) showFullCard(location);
+  // ✅ 드래그 핸들 → 전체 보기 전환
+  const dragHandle = document.querySelector(".drag-handle");
+  if (dragHandle) {
+    dragHandle.addEventListener("click", () => {
+      const previewCard = document.getElementById("info-preview-card");
+      const locationData = previewCard.dataset.locationData;
+      if (locationData) {
+        const location = JSON.parse(locationData);
+        showFullCard(location);
+      }
+    });
+  }
+
+  // ✅ 전체 보기 → 미리보기 전환
+  const backButton = document.getElementById("back-to-preview");
+  if (backButton) {
+    backButton.addEventListener("click", () => {
+      const fullCard = document.getElementById("info-full-card");
+      const locationData = fullCard.dataset.locationData;
+      if (locationData) {
+        const location = JSON.parse(locationData);
+        showPreviewCard(location);
+      }
+    });
   }
 });
 
-// 전체 보기 → 미리보기로
-document.getElementById("back-to-preview").addEventListener("click", () => {
-  const fullCard = document.getElementById("info-full-card");
-  if (!fullCard.classList.contains("hidden")) {
-    const location = fullCard.dataset.locationData
-      ? JSON.parse(fullCard.dataset.locationData)
-      : null;
-    if (location) showPreviewCard(location);
-  }
-});
 
 
 
