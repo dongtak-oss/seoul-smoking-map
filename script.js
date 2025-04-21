@@ -1,3 +1,22 @@
+// ✅ 앱에서만 인트로 보여주기
+function isStandaloneApp() {
+  return window.matchMedia('(display-mode: standalone)').matches ||
+         window.navigator.standalone === true;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const intro = document.getElementById("intro-screen");
+
+  if (isStandaloneApp() && intro) {
+    intro.classList.remove("hidden");
+    setTimeout(() => {
+      intro.classList.add("hidden");
+    }, 800); // 총 0.8초 후 제거 (애니메이션 포함)
+  }
+
+  // 기존 이벤트 리스너들 여기 아래에 쭉 이어지면 됨!
+});
+
 // ✅ script.js 전체 코드 - '근처 흡연구역 보기' 클릭 시 내 위치도 자동 표시되도록 수정 완료
 
 console.log("✅ script.js 실행 확인");
