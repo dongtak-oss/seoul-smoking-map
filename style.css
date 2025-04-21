@@ -201,9 +201,6 @@ display: block;
 }
 
 
-.hidden {
-  display: none;
-}
 
 #info-preview-card {
   position: fixed;
@@ -392,13 +389,13 @@ display: block;
   width: 120px;
   height: auto;
   opacity: 0;
-  animation: fadeInOut 0.5s ease-in-out forwards;
+  animation: fadeInOut 2s ease-in-out forwards;
 }
 
 @keyframes fadeInOut {
   0% { opacity: 0; }
   20% { opacity: 1; }
-  80% { opacity: 1; }
+  90% { opacity: 1; }
   100% { opacity: 0; }
 }
 
