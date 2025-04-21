@@ -24,7 +24,7 @@
 <body>
   <!-- ✅ 인트로 화면 -->
 <div id="intro-screen" class="intro hidden">
-  <img src="images/logo.png" alt="연지도 로고" />
+  <img src="images/logo_v2.png" alt="연지도 로고" />
 </div>
   
 <div class="filter-bar">
@@ -128,7 +128,15 @@
     <img id="full-image" src="" alt="큰 이미지" />
     <p id="full-description">상세 설명</p>
     <p id="full-type">흡연실 형태: </p>
-    <a id="suggest-edit" href="#" target="_blank">정보 수정 제보하기</a>
+    
+    <!-- ✅ 외부 제보 링크: 새 창에서 열리게 설정 -->
+    <a id="suggest-edit" 
+       href="https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform" 
+       target="_blank" 
+       rel="noopener noreferrer">
+      정보 수정 제보하기
+    </a>
+
     <div id="full-reviews">
       <h4>리뷰</h4>
       <ul id="review-list">
@@ -137,8 +145,7 @@
     </div>
   </div>
 </div>
-</body>
-</html>
+
 
 
 
