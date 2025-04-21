@@ -247,10 +247,8 @@ function showFullCard(location) {
   document.getElementById("info-preview-card").classList.add("hidden");
 }
 
-// ✅ DOM이 완전히 로드된 후 이벤트 연결
 document.addEventListener("DOMContentLoaded", () => {
-
-  // ✅ 닫기 버튼 이벤트
+  // ✅ 닫기 버튼 (미리보기 닫기)
   const closeBtn = document.getElementById("close-preview");
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
@@ -258,9 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
- 
-
-  // ✅ 전체 보기 → 미리보기 전환 ← 여기도 같이 포함!
+  // ✅ 전체 보기 → 미리보기 전환
   const backButton = document.getElementById("back-to-preview");
   if (backButton) {
     backButton.addEventListener("click", () => {
@@ -273,52 +269,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-}); // ← document.addEventListener 전체를 정확히 닫음!
-
-
-
-let startY = 0;
-
-document.addEventListener("DOMContentLoaded", () => {
-  const dragHandle = document.querySelector(".drag-handle");
-  if (dragHandle) {
-    // 모바일 터치
-    dragHandle.addEventListener("touchstart", (e) => {
-      startY = e.touches[0].clientY;
-    });
-
-    dragHandle.addEventListener("touchend", (e) => {
-      const endY = e.changedTouches[0].clientY;
-      const deltaY = startY - endY;
-      if (deltaY > 50) {
-        const previewCard = document.getElementById("info-preview-card");
-        const locationData = previewCard.dataset.locationData;
-        if (locationData) {
-          const location = JSON.parse(locationData);
-          showFullCard(location);
-        }
-      }
-    });
-
-    // PC 마우스
-    dragHandle.addEventListener("mousedown", (e) => {
-      startY = e.clientY;
-    });
-
-    dragHandle.addEventListener("mouseup", (e) => {
-      const endY = e.clientY;
-      const deltaY = startY - endY;
-      if (deltaY > 50) {
-        const previewCard = document.getElementById("info-preview-card");
-        const locationData = previewCard.dataset.locationData;
-        if (locationData) {
-          const location = JSON.parse(locationData);
-          showFullCard(location);
-        }
+  // ✅ 전체 정보 보기 버튼 → 전체 카드 전환
+  const viewFullBtn = document.getElementById("view-full-button");
+  if (viewFullBtn) {
+    viewFullBtn.addEventListener("click", () => {
+      const previewCard = document.getElementById("info-preview-card");
+      const locationData = previewCard.dataset.locationData;
+      if (locationData) {
+        const location = JSON.parse(locationData);
+        showFullCard(location);
       }
     });
   }
 });
-
-
 

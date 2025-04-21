@@ -219,14 +219,6 @@ display: block;
   transition: transform 0.3s ease;
 }
 
-.drag-handle {
-  width: 40px;
-  height: 6px;
-  background: #ccc;
-  border-radius: 3px;
-  margin: 8px auto;
-}
-
 .info-preview-content {
   display: flex;
   flex-direction: column;
@@ -353,19 +345,34 @@ display: block;
   height: 100%;
   object-fit: cover;
   object-position: center bottom;
-
 }
 
 
+.view-full-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 12px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border: none;
+  border-top: 1px solid #ddd;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 0 0 8px 8px; /* 아래 모서리 둥글게 */
+}
 
+.view-full-btn:hover {
+  background-color: #ececec;
+}
 
-.drag-handle {
-  width: 40px;
-  height: 6px;
-  background-color: #ccc;
-  border-radius: 3px;
-  margin: 10px auto;
-  cursor: grab;
+.arrow-icon {
+  font-size: 14px;
+  line-height: 1;
 }
 
 
