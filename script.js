@@ -258,18 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ 드래그 핸들 → 전체 보기 전환
-  const dragHandle = document.querySelector(".drag-handle");
-  if (dragHandle) {
-    dragHandle.addEventListener("click", () => {
-      const previewCard = document.getElementById("info-preview-card");
-      const locationData = previewCard.dataset.locationData;
-      if (locationData) {
-        const location = JSON.parse(locationData);
-        showFullCard(location);
-      }
-    });
-  }
+ 
 
   // ✅ 전체 보기 → 미리보기 전환 ← 여기도 같이 포함!
   const backButton = document.getElementById("back-to-preview");
@@ -290,25 +279,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let startY = 0;
 
-const dragHandle = document.querySelector(".drag-handle");
-if (dragHandle) {
-  dragHandle.addEventListener("touchstart", (e) => {
-    startY = e.touches[0].clientY;
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const dragHandle = document.querySelector(".drag-handle");
+  if (dragHandle) {
+    // 모바일 터치
+    dragHandle.addEventListener("touchstart", (e) => {
+      startY = e.touches[0].clientY;
+    });
 
-  dragHandle.addEventListener("touchend", (e) => {
-    const endY = e.changedTouches[0].clientY;
-    const deltaY = startY - endY;
-
-    if (deltaY > 50) { // 50px 이상 위로 드래그했을 때
-      const previewCard = document.getElementById("info-preview-card");
-      const locationData = previewCard.dataset.locationData;
-      if (locationData) {
-        const location = JSON.parse(locationData);
-        showFullCard(location);
+    dragHandle.addEventListener("touchend", (e) => {
+      const endY = e.changedTouches[0].clientY;
+      const deltaY = startY - endY;
+      if (deltaY > 50) {
+        const previewCard = document.getElementById("info-preview-card");
+        const locationData = previewCard.dataset.locationData;
+        if (locationData) {
+          const location = JSON.parse(locationData);
+          showFullCard(location);
+        }
       }
-    }
-  });
-}
+    });
+
+    // PC 마우스
+    dragHandle.addEventListener("mousedown", (e) => {
+      startY = e.clientY;
+    });
+
+    dragHandle.addEventListener("mouseup", (e) => {
+      const endY = e.clientY;
+      const deltaY = startY - endY;
+      if (deltaY > 50) {
+        const previewCard = document.getElementById("info-preview-card");
+        const locationData = previewCard.dataset.locationData;
+        if (locationData) {
+          const location = JSON.parse(locationData);
+          showFullCard(location);
+        }
+      }
+    });
+  }
+});
+
 
 
