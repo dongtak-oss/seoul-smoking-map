@@ -1,3 +1,5 @@
+// ✅ script.js 전체 코드 - '근처 흡연구역 보기' 클릭 시 내 위치도 자동 표시되도록 수정 완료
+
 console.log("✅ script.js 실행 확인");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ✅ 관리자 여부 자동 판단 (localhost일 경우만 true)
 const isAdmin = location.hostname === "localhost" && location.port === "3000";
 
 let map;
@@ -24,7 +25,7 @@ const iconUrls = {
   public: 'images/marker_public.png',
   building: 'images/marker_building.png',
   cafe: 'images/marker_cafe.png',
-  current: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+  current: 'images/marker_current_v2.png'
 };
 
 function initMapApp() {
@@ -38,10 +39,10 @@ function initMapApp() {
   fetch("locations.json")
     .then(res => res.json())
     .then(locations => {
-      // ✅ 기존 마커 모두 제거
-    markers.forEach(m => m.setMap(null));
-    markers = [];
-    allMarkers = [];
+      markers.forEach(m => m.setMap(null));
+      markers = [];
+      allMarkers = [];
+
       locations.forEach(location => {
         const position = new kakao.maps.LatLng(location.lat, location.lng);
         const markerImage = new kakao.maps.MarkerImage(
@@ -54,10 +55,9 @@ function initMapApp() {
           position,
           title: location.title,
           image: markerImage,
-          draggable: isAdmin // ✅ 관리자일 경우에만 드래그 가능
+          draggable: isAdmin
         });
 
-        // ✅ 드래그 후 서버로 위치 업데이트
         if (isAdmin) {
           kakao.maps.event.addListener(marker, "dragend", function () {
             const newPos = marker.getPosition();
@@ -95,8 +95,7 @@ function initMapApp() {
 
         kakao.maps.event.addListener(marker, 'click', () => {
           if (currentInfoWindow) currentInfoWindow.close();
-          infoWindow.open(map, marker);
-          currentInfoWindow = infoWindow;
+          showInfoCard(location); // ✅ 새 카드형 정보창 열기
         });
 
         markers.push(marker);
@@ -105,41 +104,11 @@ function initMapApp() {
     });
 
   document.getElementById("findMe").addEventListener("click", () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(pos => {
-        const userLoc = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-        map.setCenter(userLoc);
-        map.setLevel(4);
-
-        const markerImage = new kakao.maps.MarkerImage(
-          iconUrls.current,
-          new kakao.maps.Size(32, 32)
-        );
-
-        if (userMarker) userMarker.setMap(null);
-
-        userMarker = new kakao.maps.Marker({
-          position: userLoc,
-          map,
-          title: "내 위치",
-          image: markerImage
-        });
-      });
-    } else {
-      alert("이 브라우저는 위치 정보를 지원하지 않습니다.");
-    }
+    getUserLocation();
   });
 
   document.getElementById("findNearby").addEventListener("click", () => {
-    if (!navigator.geolocation) {
-      alert("이 브라우저는 위치 정보를 지원하지 않습니다.");
-      return;
-    }
-
-    navigator.geolocation.getCurrentPosition(pos => {
-      const lat = pos.coords.latitude;
-      const lng = pos.coords.longitude;
-
+    getUserLocation().then(({ lat, lng }) => {
       let nearbyCount = 0;
 
       allMarkers.forEach(({ marker, data }) => {
@@ -156,20 +125,22 @@ function initMapApp() {
 
       nearbyMode = !nearbyMode;
       const btn = document.getElementById("findNearby");
-const icon = btn.querySelector("img");
-const text = btn.querySelector("span");
+      const icon = btn.querySelector("img");
+      const text = btn.querySelector("span");
 
-if (nearbyMode) {
-  icon.src = "images/icon_nearby.png"; // 전체 보기용 아이콘 경로
-  icon.alt = "전체 아이콘";
-  text.textContent = "전체";
-} else {
-  icon.src = "images/icon_nearby.png"; // 근처 보기용 아이콘 경로
-  icon.alt = "근처 아이콘";
-  text.textContent = "근처";
-}
+      if (nearbyMode) {
+        icon.src = "images/icon_nearby.png";
+        icon.alt = "전체 아이콘";
+        text.textContent = "전체";
+      } else {
+        icon.src = "images/icon_nearby.png";
+        icon.alt = "근처 아이콘";
+        text.textContent = "근처";
+      }
 
       btn.classList.toggle("active", nearbyMode);
+    }).catch(() => {
+      console.error("❌ 위치 정보를 가져오는 데 실패했습니다.");
     });
   });
 
@@ -193,6 +164,37 @@ if (nearbyMode) {
   });
 }
 
+function getUserLocation() {
+  return new Promise((resolve, reject) => {
+    if (!navigator.geolocation) {
+      alert("이 브라우저는 위치 정보를 지원하지 않습니다.");
+      return reject();
+    }
+
+    navigator.geolocation.getCurrentPosition(pos => {
+      const userLoc = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+      map.setCenter(userLoc);
+      map.setLevel(4);
+
+      const markerImage = new kakao.maps.MarkerImage(
+        iconUrls.current,
+        new kakao.maps.Size(32, 32)
+      );
+
+      if (userMarker) userMarker.setMap(null);
+
+      userMarker = new kakao.maps.Marker({
+        position: userLoc,
+        map,
+        title: "내 위치",
+        image: markerImage
+      });
+
+      resolve({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+    }, reject);
+  });
+}
+
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const dLat = deg2rad(lat2 - lat1);
@@ -211,3 +213,24 @@ function deg2rad(deg) {
 window.closeInfoWindow = function () {
   if (currentInfoWindow) currentInfoWindow.close();
 };
+
+// ✅ 정보창 열기 함수
+function showInfoCard(location) {
+  document.getElementById("info-title").textContent = location.title;
+  document.getElementById("info-description").textContent = location.description || '';
+  document.getElementById("info-image").src = location.image || '';
+  document.getElementById("info-card").classList.add("active");
+}
+
+// ✅ 닫기 버튼 누르면 정보창 닫힘
+document.getElementById("close-info").addEventListener("click", () => {
+  const card = document.getElementById("info-card");
+  card.classList.remove("active", "expanded");
+});
+
+// ✅ 드래그 손잡이 누르면 전체 화면 토글
+document.querySelector(".drag-handle").addEventListener("click", () => {
+  const card = document.getElementById("info-card");
+  card.classList.toggle("expanded");
+});
+

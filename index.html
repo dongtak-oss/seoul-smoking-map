@@ -82,8 +82,19 @@
     console.log("🛠 개발 중: Service Worker 등록 안 함");
   }
 </script>
+
+<!-- ✅ 하단 카드형 정보창 (초기에는 숨겨져 있음) -->
+<div id="info-card" class="collapsed">
+  <div class="drag-handle"></div>
+  <div class="info-content">
+    <h3 id="info-title">흡연구역 이름</h3>
+    <p id="info-description">흡연구역 설명</p>
+    <img id="info-image" src="" alt="흡연구역 사진" />
+    <button id="close-info">닫기</button>
+  </div>
+</div>
   </body>
-</html>
+  </html>
 
 
 
