@@ -224,6 +224,7 @@ function showPreviewCard(location) {
   document.getElementById("preview-title").textContent = location.title;
   document.getElementById("preview-description").textContent = location.description || '';
   document.getElementById("preview-image").src = location.image || '';
+  document.getElementById("preview-image").style.objectPosition = "center bottom";
   document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
 
   document.getElementById("info-preview-card").classList.remove("hidden");
