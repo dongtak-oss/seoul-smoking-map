@@ -94,8 +94,9 @@ function initMapApp() {
         const infoWindow = new kakao.maps.InfoWindow({ content: infoContent });
 
         kakao.maps.event.addListener(marker, 'click', () => {
-          if (currentInfoWindow) currentInfoWindow.close();
-          showInfoCard(location); // ✅ 새 카드형 정보창 열기
+          showPreviewCard(location);
+          document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
+  document.getElementById("info-full-card").dataset.locationData = JSON.stringify(location);
         });
 
         markers.push(marker);
@@ -233,4 +234,60 @@ document.querySelector(".drag-handle").addEventListener("click", () => {
   const card = document.getElementById("info-card");
   card.classList.toggle("expanded");
 });
+
+
+function showPreviewCard(location) {
+  // 텍스트/이미지 채우기
+  document.getElementById("preview-title").textContent = location.title;
+  document.getElementById("preview-description").textContent = location.description || '';
+  document.getElementById("preview-image").src = location.image || '';
+
+  // 카드 보이기
+  document.getElementById("info-preview-card").classList.remove("hidden");
+
+  // 전체 보기 카드가 떠 있었다면 숨기기
+  document.getElementById("info-full-card").classList.add("hidden");
+}
+
+function showFullCard(location) {
+  document.getElementById("full-title").textContent = location.title;
+  document.getElementById("full-description").textContent = location.description || '';
+  document.getElementById("full-image").src = location.image || '';
+  document.getElementById("full-type").textContent = `흡연실 형태: ${location.type_detail || '정보 없음'}`;
+  document.getElementById("suggest-edit").href = location.editLink || "#";
+
+  // 예시 리뷰도 넣어보기 (추후 데이터 연결 예정)
+  document.getElementById("review-list").innerHTML = `
+    <li>🔥 공간 넓고 깔끔했어요</li>
+    <li>😷 환기가 약간 부족한 느낌</li>
+  `;
+
+  document.getElementById("info-full-card").classList.remove("hidden");
+  document.getElementById("info-preview-card").classList.add("hidden");
+}
+
+
+// 미리보기 → 전체 보기로
+document.querySelector(".drag-handle").addEventListener("click", () => {
+  const previewCard = document.getElementById("info-preview-card");
+  if (!previewCard.classList.contains("hidden")) {
+    const location = previewCard.dataset.locationData
+      ? JSON.parse(previewCard.dataset.locationData)
+      : null;
+    if (location) showFullCard(location);
+  }
+});
+
+// 전체 보기 → 미리보기로
+document.getElementById("back-to-preview").addEventListener("click", () => {
+  const fullCard = document.getElementById("info-full-card");
+  if (!fullCard.classList.contains("hidden")) {
+    const location = fullCard.dataset.locationData
+      ? JSON.parse(fullCard.dataset.locationData)
+      : null;
+    if (location) showPreviewCard(location);
+  }
+});
+
+
 

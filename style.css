@@ -200,82 +200,127 @@ display: block;
   }
 }
 
-/* ✅ 카드 전체 박스 */
-#info-card {
+
+.hidden {
+  display: none;
+}
+
+#info-preview-card {
   position: fixed;
   bottom: 0;
-  left: 0;
-  right: 0;
   width: 100%;
   height: 50%;
-  background: white;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
+  background: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  padding: 16px;
+  transition: transform 0.3s ease;
 }
 
-/* ✅ 보일 때 */
-#info-card.active {
-  transform: translateY(0);
-}
-
-/* ✅ 전체화면 확장 시 */
-#info-card.expanded {
-  height: 100%;
-}
-
-/* ✅ 드래그 손잡이 */
 .drag-handle {
   width: 40px;
   height: 6px;
   background: #ccc;
   border-radius: 3px;
-  margin: 12px auto 4px;
+  margin: 8px auto;
 }
 
-/* ✅ 내부 콘텐츠 */
-.info-content {
-  padding: 16px;
-  overflow-y: auto;
-  flex: 1;
+.info-preview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-#info-title {
+#preview-title {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 8px;
 }
 
-#info-description {
+#preview-description {
   font-size: 14px;
-  color: #555;
-  margin-bottom: 12px;
+  color: #666;
 }
 
-#info-image {
+#preview-image {
   width: 100%;
-  max-height: 200px;
+  height: auto;
+  border-radius: 8px;
   object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 12px;
 }
 
-#close-info {
-  margin-top: auto;
-  align-self: flex-end;
-  padding: 8px 16px;
-  font-size: 14px;
-  background-color: #eee;
+#info-full-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1001;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-preview {
+  background: #eee;
   border: none;
   border-radius: 8px;
+  padding: 8px 12px;
   cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
+
+.info-full-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#full-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#full-description,
+#full-type {
+  font-size: 14px;
+  color: #555;
+}
+
+#full-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#suggest-edit {
+  color: #007aff;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+#full-reviews h4 {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#review-list {
+  list-style: none;
+  padding: 0;
+}
+
+#review-list li {
+  font-size: 13px;
+  color: #444;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
 
 
 

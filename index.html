@@ -83,18 +83,39 @@
   }
 </script>
 
-<!-- ✅ 하단 카드형 정보창 (초기에는 숨겨져 있음) -->
-<div id="info-card" class="collapsed">
+
+
+<!-- ✅ 절반 카드형 정보창 (미리보기용) -->
+<div id="info-preview-card" class="hidden">
   <div class="drag-handle"></div>
-  <div class="info-content">
-    <h3 id="info-title">흡연구역 이름</h3>
-    <p id="info-description">흡연구역 설명</p>
-    <img id="info-image" src="" alt="흡연구역 사진" />
-    <button id="close-info">닫기</button>
+  <div class="info-preview-content">
+    <h3 id="preview-title">흡연구역 이름</h3>
+    <img id="preview-image" src="" alt="썸네일 이미지" />
+    <p id="preview-description">간단한 설명</p>
   </div>
 </div>
-  </body>
-  </html>
+
+<!-- ✅ 전체화면 상세 정보창 -->
+<div id="info-full-card" class="hidden">
+  <button id="back-to-preview">⬇ 돌아가기</button>
+  <div class="info-full-content">
+    <h2 id="full-title">흡연구역 이름</h2>
+    <img id="full-image" src="" alt="큰 이미지" />
+    <p id="full-description">상세 설명</p>
+    <p id="full-type">흡연실 형태: </p>
+    <a id="suggest-edit" href="#" target="_blank">정보 수정 제보하기</a>
+    <div id="full-reviews">
+      <h4>리뷰</h4>
+      <ul id="review-list">
+        <!-- 리뷰 항목이 들어감 -->
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
 
 
 
