@@ -67,3 +67,27 @@ app.listen(PORT, () => {
 });
 
 
+// ✅ 리뷰 저장 API (pending-reviews.json에 저장)
+app.post("/pending-reviews", (req, res) => {
+  const newReview = req.body;
+
+  // 유효성 검사 (간단한 형식 확인)
+  if (!newReview || !newReview.locationTitle || !newReview.comment) {
+    return res.status(400).json({ message: "리뷰 형식이 올바르지 않습니다." });
+  }
+
+  const filePath = path.join(__dirname, "pending-reviews.json");
+
+  fs.readFile(filePath, "utf8", (err, data) => {
+    const reviews = err ? [] : JSON.parse(data);
+    reviews.push(newReview);
+
+    fs.writeFile(filePath, JSON.stringify(reviews, null, 2), "utf8", err => {
+      if (err) {
+        console.error("리뷰 저장 실패:", err);
+        return res.status(500).json({ message: "저장 실패" });
+      }
+      res.json({ message: "리뷰 저장 성공" });
+    });
+  });
+});

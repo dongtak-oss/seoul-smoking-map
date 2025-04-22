@@ -299,6 +299,12 @@ display: block;
   font-weight: bold;
 }
 
+#info-preview-card {
+  max-height: 70vh; /* 화면 높이의 70% */
+  overflow-y: auto;
+}
+
+
 #review-list {
   list-style: none;
   padding: 0;
