@@ -109,51 +109,45 @@
       전체 정보 보기 <span class="arrow-icon">⬆</span>
     </button>
   </div>
-
 </div>
 
-<!-- ✅ CLUB JT 스타일 전체 정보창 -->
-<div id="info-full-card" class="hidden info-card">
-  <button id="back-to-preview" class="back-btn">⬇ 돌아가기</button>
+  <!-- ✅ 이미지 비율 유지용 래퍼 -->
+  <div class="preview-image-wrapper">
+    <img id="preview-image" src="" alt="썸네일 이미지" />
+  </div>
 
+  <p id="preview-description">간단한 설명</p>
+</div>
+
+
+<!-- ✅ 전체화면 상세 정보창 -->
+<div id="info-full-card" class="hidden">
+  <button id="back-to-preview">⬇ 돌아가기</button>
   <div class="info-full-content">
-    <h2 id="full-title" class="spot-name">흡연구역 이름</h2>
-
-    <div class="spot-section">
-      <img id="full-image" src="" alt="큰 이미지" />
+    <h2 id="full-title">흡연구역 이름</h2>
+    <img id="full-image" src="" alt="큰 이미지" />
+    <div class="info-row">
+      <span class="label">설명:</span>
+      <span class="content" id="full-description"></span>
     </div>
     
+    <p id="full-type">흡연실 형태: </p>
+    
 
-    <div class="spot-section">
-      <span class="label">설명</span>
-      <p id="full-description" class="value">용산 아이파크몰 옥상에 위치한 흡연구역입니다.</p>
-    </div>
+    <!-- ✅ 정보 수정 버튼 (단독 버튼으로 교체!) -->
+<button
+class="info-button"
+onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform', '_blank')"
+>
+정보수정하기
+</button>
+      
 
-    <div class="spot-section">
-      <span class="label">흡연실 형태</span>
-      <p id="full-type" class="value">반개방형</p>
-    </div>
-
-    <div class="spot-section">
-      <span class="label">정보 수정</span>
-      <p class="value">
-        <a id="suggest-edit"
-           href="https://docs.google.com/forms/..."
-           target="_blank"
-           rel="noopener noreferrer"
-           class="info-link">
-          위치 정보 수정 제보
-        </a>
-      </p>
-    </div>
-
-    <div class="spot-section">
-      <span class="label">리뷰</span>
-      <p class="value">
-        <a href="#" class="info-link">리뷰 보기</a> | 
-        <a href="#" class="info-link">리뷰 작성</a>
-      </p>
-      <ul id="review-list"></ul>
+    <div id="full-reviews">
+      <h4>리뷰</h4>
+      <ul id="review-list">
+        <!-- 리뷰 항목이 들어감 -->
+      </ul>
     </div>
   </div>
 </div>
