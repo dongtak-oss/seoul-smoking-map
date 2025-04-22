@@ -110,41 +110,51 @@
     </button>
   </div>
 </div>
-
-  <!-- ✅ 이미지 비율 유지용 래퍼 -->
-  <div class="preview-image-wrapper">
-    <img id="preview-image" src="" alt="썸네일 이미지" />
-  </div>
-
-  <p id="preview-description">간단한 설명</p>
 </div>
 
+<!-- ✅ CLUB JT 스타일 전체 정보창 -->
+<div id="info-full-card" class="hidden info-card">
+  <button id="back-to-preview" class="back-btn">⬇ 돌아가기</button>
 
-<!-- ✅ 전체화면 상세 정보창 -->
-<div id="info-full-card" class="hidden">
-  <button id="back-to-preview">⬇ 돌아가기</button>
   <div class="info-full-content">
-    <h2 id="full-title">흡연구역 이름</h2>
-    <img id="full-image" src="" alt="큰 이미지" />
-    <p id="full-description">상세 설명</p>
-    <p id="full-type">흡연실 형태: </p>
-    
-    <!-- ✅ 외부 제보 링크: 새 창에서 열리게 설정 -->
-    <a id="suggest-edit" 
-       href="https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform" 
-       target="_blank" 
-       rel="noopener noreferrer">
-      정보 수정 제보하기
-    </a>
+    <h2 id="full-title" class="spot-name">흡연구역 이름</h2>
 
-    <div id="full-reviews">
-      <h4>리뷰</h4>
-      <ul id="review-list">
-        <!-- 리뷰 항목이 들어감 -->
-      </ul>
+    <div class="spot-section">
+      <span class="label">설명</span>
+      <p id="full-description" class="value">용산 아이파크몰 옥상에 위치한 흡연구역입니다.</p>
+    </div>
+
+    <div class="spot-section">
+      <span class="label">흡연실 형태</span>
+      <p id="full-type" class="value">반개방형</p>
+    </div>
+
+    <div class="spot-section">
+      <span class="label">정보 수정</span>
+      <p class="value">
+        <a id="suggest-edit"
+           href="https://docs.google.com/forms/..."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="info-link">
+          위치 정보 수정 제보
+        </a>
+      </p>
+    </div>
+
+    <div class="spot-section">
+      <span class="label">리뷰</span>
+      <p class="value">
+        <a href="#" class="info-link">리뷰 보기</a> | 
+        <a href="#" class="info-link">리뷰 작성</a>
+      </p>
+      <ul id="review-list"></ul>
     </div>
   </div>
 </div>
+</body>
+</html>
+
 
 
 
