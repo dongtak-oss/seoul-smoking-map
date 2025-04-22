@@ -267,56 +267,60 @@ function showFullCard(location) {
   document.getElementById("info-preview-card").classList.add("hidden");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // ✅ 닫기 버튼 (미리보기 닫기)
-  const closeBtn = document.getElementById("close-preview");
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      document.getElementById("info-preview-card").classList.add("hidden");
-    });
-  }
-
-  // ✅ 전체 보기 → 미리보기 전환
-  const backButton = document.getElementById("back-to-preview");
-  if (backButton) {
-    backButton.addEventListener("click", () => {
-      const fullCard = document.getElementById("info-full-card");
-      const locationData = fullCard.dataset.locationData;
-      if (locationData) {
-        const location = JSON.parse(locationData);
-        showPreviewCard(location);
-      }
-    });
-  }
-
-  // ✅ 전체 정보 보기 버튼 → 전체 카드 전환
-  const viewFullBtn = document.getElementById("view-full-button");
-  if (viewFullBtn) {
-    viewFullBtn.addEventListener("click", () => {
-      const previewCard = document.getElementById("info-preview-card");
-      const locationData = previewCard.dataset.locationData;
-      if (locationData) {
-        const location = JSON.parse(locationData);
-        showFullCard(location);
-      }
-    });
-  }
-});
-
-
-locations.forEach(location => {
-  const marker = new kakao.maps.Marker({
-    map: map,
-    position: new kakao.maps.LatLng(location.lat, location.lng),
-    title: location.title
-  });
-
-  kakao.maps.event.addListener(marker, "click", () => {
-    showPreviewCard(location); // ✅ 이미 정리된 함수 재사용!
-  });
-});
-
+  document.addEventListener("DOMContentLoaded", () => {
+    // ✅ 닫기 버튼 (미리보기 닫기)
+    const closeBtn = document.getElementById("close-preview");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        document.getElementById("info-preview-card").classList.add("hidden");
+      });
+    }
   
-
-
-
+    // ✅ 전체 보기 → 미리보기 전환
+    const backButton = document.getElementById("back-to-preview");
+    if (backButton) {
+      backButton.addEventListener("click", () => {
+        const fullCard = document.getElementById("info-full-card");
+        const locationData = fullCard.dataset.locationData;
+        if (locationData) {
+          const location = JSON.parse(locationData);
+          showPreviewCard(location);
+        }
+      });
+    }
+  
+    // ✅ 전체 정보 보기 버튼 → 전체 카드 전환
+    const viewFullBtn = document.getElementById("view-full-button");
+    console.log("✅ viewFullBtn:", viewFullBtn);
+  
+    if (viewFullBtn) {
+      console.log("✅ 이벤트 연결 시작");
+      viewFullBtn.addEventListener("click", () => {
+        console.log("✅ 버튼 클릭됨!");
+        const previewCard = document.getElementById("info-preview-card");
+        const locationData = previewCard.dataset.locationData;
+        if (locationData) {
+          const location = JSON.parse(locationData);
+          console.log("✅ location 확인:", location);
+          showFullCard(location);
+        } else {
+          console.warn("❌ locationData가 비어있음!");
+        }
+      });
+    } else {
+      console.warn("❌ viewFullBtn 찾지 못함!");
+    }
+  
+    // ✅ 마커 생성 및 이벤트 연결 (중요: 반드시 DOMContentLoaded 안에 있어야 함!)
+    locations.forEach(location => {
+      const marker = new kakao.maps.Marker({
+        map: map,
+        position: new kakao.maps.LatLng(location.lat, location.lng),
+        title: location.title
+      });
+  
+      kakao.maps.event.addListener(marker, "click", () => {
+        showPreviewCard(location);
+      });
+    });
+  });
