@@ -262,7 +262,7 @@ function showFullCard(location) {
     <li>🔥 공간 넓고 깔끔했어요</li>
     <li>😷 환기가 약간 부족한 느낌</li>
   `;
-
+  document.getElementById("info-full-card").dataset.locationData = JSON.stringify(location);
   document.getElementById("info-full-card").classList.remove("hidden");
   document.getElementById("info-preview-card").classList.add("hidden");
 }
@@ -302,4 +302,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+locations.forEach(location => {
+  const marker = new kakao.maps.Marker({
+    map: map,
+    position: new kakao.maps.LatLng(location.lat, location.lng),
+    title: location.title
+  });
+
+  kakao.maps.event.addListener(marker, "click", () => {
+    showPreviewCard(location); // ✅ 이미 정리된 함수 재사용!
+  });
+});
+
+  
+
+
 
