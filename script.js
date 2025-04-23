@@ -7,11 +7,16 @@ function isStandaloneApp() {
 document.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro-screen");
 
-  // 앱(PWA)으로 실행 중일 때만 인트로 화면 표시
-  if (isStandaloneApp() && intro) {
+  // ✅ 세션 스토리지에 인트로 표시 여부 확인
+  const hasSeenIntro = sessionStorage.getItem("hasSeenIntro");
+
+  // ✅ PWA로 실행 중이고, 인트로가 아직 안 보인 경우에만 표시
+  if (isStandaloneApp() && intro && !hasSeenIntro) {
     intro.classList.remove("hidden"); // 인트로 표시
+    
     setTimeout(() => {
       intro.classList.add("hidden"); // 2초 후 인트로 숨김
+      sessionStorage.setItem("hasSeenIntro", "true"); // ✅ 이 줄이 중요! 다시 안 뜨게
     }, 2000);
   }
 });
@@ -156,7 +161,7 @@ function initMapApp() {
       map.setCenter(new kakao.maps.LatLng(37.5665, 126.9780)); // 예시: 서울 시청
       map.setLevel(7);
     }
-    
+
       const btn = document.getElementById("findNearby");
       const icon = btn.querySelector("img");
       const text = btn.querySelector("span");
