@@ -273,7 +273,7 @@ function showFullCard(location) {
   document.getElementById("full-title").textContent = location.title;
   document.getElementById("full-description").textContent = location.description || '';
   document.getElementById("full-image").src = location.image || '';
-  document.getElementById("full-type").textContent = `흡연실 형태: ${location.type_detail || '정보 없음'}`;
+  document.getElementById("full-type").textContent = location.form || '정보 없음';
 
   document.getElementById("review-list").innerHTML = `
     <li>🔥 공간 넓고 깔끔했어요</li>
