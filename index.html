@@ -116,14 +116,19 @@
         <span class="content" id="full-type">정보 없음</span>
       </div>
       
-      <button class="info-button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform', '_blank')">
-        정보수정하기
-      </button>
-      <div id="full-reviews">
-        <h4>리뷰</h4>
-        <ul id="review-list">
-          <!-- 리뷰 항목이 여기에 동적으로 삽입됨 -->
-        </ul>
+      <!-- ✅ 리뷰 토글 버튼 (기본 상태: 닫혀 있음) -->
+<button id="toggle-reviews" class="info-button">리뷰 보기 ⬇</button>
+
+<!-- ✅ 리뷰 실제 내용 (기본 상태: 숨겨진 상태) -->
+<div id="review-section" class="hidden">
+  <h4>리뷰</h4>
+  <ul id="review-list">
+    <!-- 리뷰 항목이 여기에 동적으로 삽입됨 -->
+  </ul>
+</div>
+<button class="info-button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform', '_blank')">
+  정보수정하기
+</button>
       </div>
     </div>
   </div>

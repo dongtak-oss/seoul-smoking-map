@@ -284,9 +284,10 @@ function showFullCard(location) {
   document.getElementById("info-preview-card").classList.add("hidden");
 }
 
+
 // ✅ 카드 전환 관련 이벤트 연결 (DOM 로드 후)
 document.addEventListener("DOMContentLoaded", () => {
-  // 닫기 버튼 (미리보기 닫기)
+  // 닫기 버튼
   const closeBtn = document.getElementById("close-preview");
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
@@ -294,7 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 전체 보기 → 미리보기로 돌아가기
+  // 전체 보기 → 미리보기
   const backButton = document.getElementById("back-to-preview");
   if (backButton) {
     backButton.addEventListener("click", () => {
@@ -307,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 미리보기 → 전체 보기로 이동
+  // 미리보기 → 전체 보기
   const viewFullBtn = document.getElementById("view-full-button");
   if (viewFullBtn) {
     viewFullBtn.addEventListener("click", () => {
@@ -316,6 +317,26 @@ document.addEventListener("DOMContentLoaded", () => {
       if (locationData) {
         const location = JSON.parse(locationData);
         showFullCard(location);
+      }
+
+      // ✅ 리뷰 접고/펼치기 버튼 토글은 여기에 들어가도 되지만...
+      // 더 좋은 위치는 아래와 같아 👇
+    });
+  }
+
+  // ✅ 💡 리뷰 접기/펼치기 기능은 viewFullBtn이 아닌 전역으로 둬야 재사용도 쉬움!
+  const toggleBtn = document.getElementById("toggle-reviews");
+  const reviewSection = document.getElementById("review-section");
+
+  if (toggleBtn && reviewSection) {
+    toggleBtn.addEventListener("click", () => {
+      const isHidden = reviewSection.classList.contains("hidden");
+      if (isHidden) {
+        reviewSection.classList.remove("hidden");
+        toggleBtn.textContent = "리뷰 접기 ⬆";
+      } else {
+        reviewSection.classList.add("hidden");
+        toggleBtn.textContent = "리뷰 보기 ⬇";
       }
     });
   }
