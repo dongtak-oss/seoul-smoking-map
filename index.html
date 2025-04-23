@@ -5,49 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- ✅ 모바일 최적화 -->
   <title>연지도 – 서울 흡연구역 지도</title> <!-- ✅ 브라우저 탭 제목 -->
 
+  <!-- ✅ PWA 설정용 manifest -->
   <link rel="manifest" href="manifest.json">
 
-
-  <!-- ✅ 명시적으로 보이지는 않지만, 검색엔진에 노출되는 데 도움이 되는 코드 -->
+  <!-- ✅ SEO 및 서비스 설명 -->
   <meta name="description" content="서울시 흡연구역 위치를 지도에서 한눈에 확인하고, 근처 흡연구역을 쉽게 찾을 수 있는 서비스입니다.">
 
-  <!-- ✅ 웹폰트 -->
+  <!-- ✅ 웹폰트 - Noto Sans KR (한글 가독성 우수) -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
 
-  <!-- ✅ Kakao Maps SDK -->
+  <!-- ✅ Kakao Maps SDK (autoload 비활성화 + services 라이브러리 포함) -->
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bd5ad6d3034dbd38379e6f449abf0cdc&autoload=false&libraries=services"></script>
 
-  <!-- ✅ CSS 연결 -->
+  <!-- ✅ 메인 CSS 연결 -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- ✅ 인트로 화면 -->
-<div id="intro-screen" class="intro hidden">
-  <img src="https://dongtak-oss.github.io/seoul-smoking-map/images/logo_v2.png" alt="인트로 로고" />
-</div>
-  
-<div class="filter-bar">
-      <div class="filter-item" id="filter-public-top">
-        <img src="https://dongtak-oss.github.io/seoul-smoking-map/images/icon_public_v2.png" alt="공공 흡연구역" />
-        <span>공공 흡연구역</span>
-      </div>
-      <div class="filter-item" id="filter-cafe-top">
-        <img src="images/icon_cafe.png" alt="흡연 가능한 카페" />
-        <span>흡연실이 있는 카페</span>
-      </div>
-      <div class="filter-item" id="filter-building-top">
-        <img src="https://dongtak-oss.github.io/seoul-smoking-map/images/icon_building_v2.png" alt="건물 내 흡연구역" />
-        <span>건물 내 흡연구역</span>
-      </div>
-    </div>
+  <!-- ✅ PWA 앱에서만 보여지는 인트로 화면 -->
+  <div id="intro-screen" class="intro hidden">
+    <img src="https://dongtak-oss.github.io/seoul-smoking-map/images/logo_v2.png" alt="인트로 로고" />
+  </div>
 
-  <!-- ✅ 페이지 핵심 콘텐츠: 지도 -->
+  <!-- ✅ 상단 필터 바: 유형별 마커 필터링 -->
+  <div class="filter-bar">
+    <div class="filter-item" id="filter-public-top">
+      <img src="https://dongtak-oss.github.io/seoul-smoking-map/images/icon_public_v2.png" alt="공공 흡연구역" />
+      <span>공공 흡연구역</span>
+    </div>
+    <div class="filter-item" id="filter-cafe-top">
+      <img src="images/icon_cafe.png" alt="흡연 가능한 카페" />
+      <span>흡연실이 있는 카페</span>
+    </div>
+    <div class="filter-item" id="filter-building-top">
+      <img src="https://dongtak-oss.github.io/seoul-smoking-map/images/icon_building_v2.png" alt="건물 내 흡연구역" />
+      <span>건물 내 흡연구역</span>
+    </div>
+  </div>
+
+  <!-- ✅ 본문 메인: 카카오맵 표시 영역 -->
   <main>
-    <div id="map"></div> <!-- Kakao 지도 표시 영역 -->
+    <div id="map"></div>
   </main>
 
-  <!-- ✅ 페이지 하단 버튼 -->
+  <!-- ✅ 하단 고정 버튼바: 내 위치, 근처, 출처, 제보 -->
   <footer>
     <div class="bottom-buttons">
       <button id="findMe" type="button">
@@ -69,90 +70,62 @@
     </div>
   </footer>
 
-  <!-- ✅ 기능 실행 스크립트 -->
+  <!-- ✅ 메인 기능 자바스크립트 파일 연결 (defer로 지연 실행) -->
   <script src="script.js" defer></script>
 
-
-<!-- ✅ Service Worker 등록 (개발 중일 때는 제외) -->
-<script>
-  if (location.hostname !== "localhost") {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js")
-        .then(reg => console.log("✅ Service Worker registered:", reg))
-        .catch(err => console.error("❌ Service Worker registration failed:", err));
+  <!-- ✅ PWA Service Worker 등록 스크립트 -->
+  <script>
+    if (location.hostname !== "localhost") {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js")
+          .then(reg => console.log("✅ Service Worker registered:", reg))
+          .catch(err => console.error("❌ Service Worker registration failed:", err));
+      }
+    } else {
+      console.log("🛠 개발 중: Service Worker 등록 안 함");
     }
-  } else {
-    console.log("🛠 개발 중: Service Worker 등록 안 함");
-  }
-</script>
+  </script>
 
-
-
-<!-- ✅ 절반 카드형 정보창 (미리보기용) -->
-<div id="info-preview-card" class="hidden">
-
-  <!-- ✅ 닫기 버튼 -->
-  <button id="close-preview" class="close-btn">✖</button>
-
-  <div class="info-preview-content">
-    <h3 id="preview-title">흡연구역 이름</h3>
-
-    <!-- ✅ 이미지 비율 유지용 래퍼 -->
-    <div class="preview-image-wrapper">
-      <img id="preview-image" src="" alt="썸네일 이미지" />
-    </div>
-
-    <p id="preview-description">간단한 설명</p>
-
-    <!-- ✅ 전체 정보 보기 버튼 -->
-    <button id="view-full-button" class="view-full-btn">
-      전체 정보 보기 <span class="arrow-icon">⬆</span>
-    </button>
-  </div>
-</div>
-
-  <!-- ✅ 이미지 비율 유지용 래퍼 -->
-  <div class="preview-image-wrapper">
-    <img id="preview-image" src="" alt="썸네일 이미지" />
-  </div>
-
-  <p id="preview-description">간단한 설명</p>
-</div>
-
-
-<!-- ✅ 전체화면 상세 정보창 -->
-<div id="info-full-card" class="hidden">
-  <button id="back-to-preview">⬇ 돌아가기</button>
-  <div class="info-full-content">
-    <h2 id="full-title">흡연구역 이름</h2>
-    <img id="full-image" src="" alt="큰 이미지" />
-    <div class="info-row">
-      <span class="label">설명:</span>
-      <span class="content" id="full-description"></span>
-    </div>
-    
-    <p id="full-type">흡연실 형태: </p>
-    
-
-    <!-- ✅ 정보 수정 버튼 (단독 버튼으로 교체!) -->
-<button
-class="info-button"
-onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform', '_blank')"
->
-정보수정하기
-</button>
-      
-
-    <div id="full-reviews">
-      <h4>리뷰</h4>
-      <ul id="review-list">
-        <!-- 리뷰 항목이 들어감 -->
-      </ul>
+  <!-- ✅ 절반 카드형 정보창 (미리보기 용) -->
+  <div id="info-preview-card" class="hidden">
+    <button id="close-preview" class="close-btn">✖</button>
+    <div class="info-preview-content">
+      <h3 id="preview-title">흡연구역 이름</h3>
+      <div class="preview-image-wrapper">
+        <img id="preview-image" src="" alt="썸네일 이미지" />
+      </div>
+      <p id="preview-description">간단한 설명</p>
+      <button id="view-full-button" class="view-full-btn">
+        전체 정보 보기 <span class="arrow-icon">⬆</span>
+      </button>
     </div>
   </div>
-</div>
+
+  <!-- ✅ 전체화면 정보창 (상세 정보, 리뷰 포함) -->
+  <div id="info-full-card" class="hidden">
+    <button id="back-to-preview">⬇ 돌아가기</button>
+    <div class="info-full-content">
+      <h2 id="full-title">흡연구역 이름</h2>
+      <img id="full-image" src="" alt="큰 이미지" />
+      <div class="info-row">
+        <span class="label">설명:</span>
+        <span class="content" id="full-description"></span>
+      </div>
+      <p id="full-type">흡연실 형태: </p>
+      <button class="info-button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform', '_blank')">
+        정보수정하기
+      </button>
+      <div id="full-reviews">
+        <h4>리뷰</h4>
+        <ul id="review-list">
+          <!-- 리뷰 항목이 여기에 동적으로 삽입됨 -->
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+
 
 
 

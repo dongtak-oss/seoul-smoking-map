@@ -1,24 +1,22 @@
 // ✅ 앱에서만 인트로 보여주기
 function isStandaloneApp() {
   return window.matchMedia('(display-mode: standalone)').matches ||
-         window.navigator.standalone === true;
+         window.navigator.standalone === true; // iOS 지원
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro-screen");
 
+  // 앱(PWA)으로 실행 중일 때만 인트로 화면 표시
   if (isStandaloneApp() && intro) {
-    intro.classList.remove("hidden");
+    intro.classList.remove("hidden"); // 인트로 표시
     setTimeout(() => {
-      intro.classList.add("hidden");
-    }, 2000); // 총 2초 후 제거 (애니메이션 포함)
+      intro.classList.add("hidden"); // 2초 후 인트로 숨김
+    }, 2000);
   }
-
-  // 기존 이벤트 리스너들 여기 아래에 쭉 이어지면 됨!
 });
 
-// ✅ script.js 전체 코드 - '근처 흡연구역 보기' 클릭 시 내 위치도 자동 표시되도록 수정 완료
-
+// ✅ script.js 시작점 - kakao map 초기화
 console.log("✅ script.js 실행 확인");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,20 +24,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   kakao.maps.load(() => {
     console.log("✅ kakao.maps.load 안의 initMapApp 실행됨");
-    initMapApp();
+    initMapApp(); // 지도 및 마커 초기화
   });
 });
 
+// ✅ 관리자 여부 확인 - localhost:3000 환경에서만 true
 const isAdmin = location.hostname === "localhost" && location.port === "3000";
 
 let map;
-let currentInfoWindow = null;
-let markers = [];
-let allMarkers = [];
-let userMarker = null;
-let nearbyMode = false;
-let activeType = null;
+let currentInfoWindow = null; // 현재 열려있는 카카오맵 정보창
+let markers = []; // 현재 표시 중인 마커
+let allMarkers = []; // 모든 마커 정보 (marker 객체 + location 데이터)
+let userMarker = null; // 내 위치 마커
+let nearbyMode = false; // 근처 보기 모드 여부
+let activeType = null; // 현재 활성화된 필터 타입
 
+// ✅ 마커 타입별 이미지 경로
 const iconUrls = {
   public: 'images/marker_public.png',
   building: 'images/marker_building.png',
@@ -50,15 +50,16 @@ const iconUrls = {
 function initMapApp() {
   const container = document.getElementById('map');
   const options = {
-    center: new kakao.maps.LatLng(37.5665, 126.9780),
+    center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울 중심
     level: 7
   };
   map = new kakao.maps.Map(container, options);
 
+  // ✅ 위치 데이터 가져오기 및 마커 생성
   fetch("locations.json")
     .then(res => res.json())
     .then(locations => {
-      markers.forEach(m => m.setMap(null));
+      markers.forEach(m => m.setMap(null)); // 기존 마커 제거
       markers = [];
       allMarkers = [];
 
@@ -77,6 +78,7 @@ function initMapApp() {
           draggable: isAdmin
         });
 
+        // ✅ 관리자 모드일 경우 드래그 후 저장
         if (isAdmin) {
           kakao.maps.event.addListener(marker, "dragend", function () {
             const newPos = marker.getPosition();
@@ -99,6 +101,7 @@ function initMapApp() {
           });
         }
 
+        // ✅ 정보창 내용 구성 (기본 InfoWindow용)
         const infoContent = `
           <div style="max-width:200px; position:relative;">
             <div style="text-align:right;">
@@ -112,10 +115,11 @@ function initMapApp() {
 
         const infoWindow = new kakao.maps.InfoWindow({ content: infoContent });
 
+        // ✅ 마커 클릭 시 카드 정보창 표시
         kakao.maps.event.addListener(marker, 'click', () => {
-          showPreviewCard(location);
+          showPreviewCard(location); // 절반 카드
           document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
-  document.getElementById("info-full-card").dataset.locationData = JSON.stringify(location);
+          document.getElementById("info-full-card").dataset.locationData = JSON.stringify(location);
         });
 
         markers.push(marker);
@@ -123,10 +127,12 @@ function initMapApp() {
       });
     });
 
+  // ✅ 내 위치 버튼 이벤트
   document.getElementById("findMe").addEventListener("click", () => {
     getUserLocation();
   });
 
+  // ✅ 근처 보기 버튼 이벤트
   document.getElementById("findNearby").addEventListener("click", () => {
     getUserLocation().then(({ lat, lng }) => {
       let nearbyCount = 0;
@@ -144,6 +150,13 @@ function initMapApp() {
       }
 
       nearbyMode = !nearbyMode;
+
+      // ✅ 전체 보기로 전환 시 지도 중심을 초기 위치로
+    if (!nearbyMode) {
+      map.setCenter(new kakao.maps.LatLng(37.5665, 126.9780)); // 예시: 서울 시청
+      map.setLevel(7);
+    }
+    
       const btn = document.getElementById("findNearby");
       const icon = btn.querySelector("img");
       const text = btn.querySelector("span");
@@ -164,6 +177,7 @@ function initMapApp() {
     });
   });
 
+  // ✅ 필터바 (카페, 공공, 빌딩) 클릭 이벤트
   ["filter-cafe-top", "filter-public-top", "filter-building-top"].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
@@ -184,6 +198,7 @@ function initMapApp() {
   });
 }
 
+// ✅ 현재 위치 요청 및 마커 표시
 function getUserLocation() {
   return new Promise((resolve, reject) => {
     if (!navigator.geolocation) {
@@ -215,6 +230,7 @@ function getUserLocation() {
   });
 }
 
+// ✅ 거리 계산 함수 (하버사인 공식)
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const dLat = deg2rad(lat2 - lat1);
@@ -230,12 +246,12 @@ function deg2rad(deg) {
   return deg * Math.PI / 180;
 }
 
+// ✅ 기존 카카오맵 정보창 닫기용 글로벌 함수
 window.closeInfoWindow = function () {
   if (currentInfoWindow) currentInfoWindow.close();
 };
 
-
-// ✅ 기능: 절반 카드 열기
+// ✅ 카드형 정보 미리보기 표시
 function showPreviewCard(location) {
   document.getElementById("preview-title").textContent = location.title;
   document.getElementById("preview-description").textContent = location.description || '';
@@ -247,7 +263,7 @@ function showPreviewCard(location) {
   document.getElementById("info-full-card").classList.add("hidden");
 }
 
-// ✅ 기능: 전체 카드 열기
+// ✅ 카드형 전체 정보창 표시
 function showFullCard(location) {
   document.getElementById("full-title").textContent = location.title;
   document.getElementById("full-description").textContent = location.description || '';
@@ -263,8 +279,9 @@ function showFullCard(location) {
   document.getElementById("info-preview-card").classList.add("hidden");
 }
 
+// ✅ 카드 전환 관련 이벤트 연결 (DOM 로드 후)
 document.addEventListener("DOMContentLoaded", () => {
-  // ✅ 닫기 버튼 (미리보기 닫기)
+  // 닫기 버튼 (미리보기 닫기)
   const closeBtn = document.getElementById("close-preview");
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
@@ -272,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ 전체 보기 → 미리보기 전환
+  // 전체 보기 → 미리보기로 돌아가기
   const backButton = document.getElementById("back-to-preview");
   if (backButton) {
     backButton.addEventListener("click", () => {
@@ -285,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ 전체 정보 보기 버튼 → 전체 카드 전환
+  // 미리보기 → 전체 보기로 이동
   const viewFullBtn = document.getElementById("view-full-button");
   if (viewFullBtn) {
     viewFullBtn.addEventListener("click", () => {
