@@ -210,7 +210,7 @@
     "lat": 37.633465,
     "lng": 127.1156738,
     "title": "갈매동 흡연구역",
-    "image": "images/갈매동 흡연구역.jpg",
+    "images": ["images/갈매동 흡연구역.jpg", "images/갈매동_흡연구역_2.jpg"],
     "description": "갈매역 맞은편에 위치한 흡연구역입니다.",
     "type": "public"
   },

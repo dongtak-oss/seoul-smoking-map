@@ -260,7 +260,9 @@ window.closeInfoWindow = function () {
 function showPreviewCard(location) {
   document.getElementById("preview-title").textContent = location.title;
   document.getElementById("preview-description").textContent = location.description || '';
-  document.getElementById("preview-image").src = location.image || '';
+  document.getElementById("preview-image").src =
+  Array.isArray(location.images) ? location.images[0] : location.image || '';
+
   document.getElementById("preview-image").style.objectPosition = "center bottom";
   document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
 
@@ -272,8 +274,9 @@ function showPreviewCard(location) {
 function showFullCard(location) {
   document.getElementById("full-title").textContent = location.title;
   document.getElementById("full-description").textContent = location.description || '';
-  document.getElementById("full-image").src = location.image || '';
-  document.getElementById("full-type").textContent = location.form || '정보 없음';
+  // ✅ 이미지 슬라이더 적용
+initCarousel(location.images || [location.image]);
+document.getElementById("full-type").textContent = location.form || '정보 없음';
 
   document.getElementById("review-list").innerHTML = `
     <li>🔥 공간 넓고 깔끔했어요</li>
@@ -341,3 +344,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+
+
+// ✅ 현재 슬라이드 위치를 기억하는 변수
+let currentSlide = 0;
+
+// ✅ 슬라이더 초기화 함수 - 이미지 배열을 받아서 DOM에 이미지 생성
+function initCarousel(images) {
+  const container = document.getElementById("carousel-images");
+  container.innerHTML = ""; // 이전 이미지 제거
+
+  images.forEach((src) => {
+    const img = document.createElement("img");
+    img.src = src;
+    container.appendChild(img);
+  });
+
+  currentSlide = 0;
+  updateCarousel();
+}
+
+// ✅ 슬라이더 위치 이동 함수 - currentSlide 값을 기반으로 transform 적용
+function updateCarousel() {
+  const container = document.getElementById("carousel-images");
+  container.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+document.getElementById("carousel-prev").addEventListener("click", () => {
+  const total = document.getElementById("carousel-images").children.length;
+  currentSlide = (currentSlide - 1 + total) % total;
+  updateCarousel();
+});
+
+document.getElementById("carousel-next").addEventListener("click", () => {
+  const total = document.getElementById("carousel-images").children.length;
+  currentSlide = (currentSlide + 1) % total;
+  updateCarousel();
+});
+
