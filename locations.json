@@ -21,7 +21,8 @@
     "title": "중계근린공원 주차장 흡연구역",
     "images": ["images/중계근린공원 흡연구역.jpg"],
     "description": "중계근린공원 주차장에 위치한 흡연구역입니다.",
-    "type": "public"
+    "type": "public",
+    "form": "반개방형"
   },
   {
     "lat": 37.63949836366099,
@@ -29,7 +30,8 @@
     "title": "등나무문화공원 주차장 흡연구역",
     "images": ["images/등나무문화공원 흡연구역.jpg"],
     "description": "등나무문화공원 주차장에 위치한 흡연구역입니다.",
-    "type": "public"
+    "type": "public",
+    "form": "폐쇄형"
   },
   {
     "lat": 37.49821257,
@@ -45,7 +47,8 @@
     "title": "탐앤탐스 사가정역점",
     "images": "https://via.placeholder.com/200x120?text=서울역+1번출구",
     "description": "사가정역 2번 출구 앞에 위치한 탐앤탐스입니다.",
-    "type": "cafe"
+    "type": "cafe",
+    "form": "폐쇄형"
   },
   {
     "lat": 37.529492,
@@ -123,7 +126,8 @@
     "lng": 127.05671961148272,
     "type": "public",
     "description": "성수역 3번 출구 흡연구역입니다.",
-    "image": "images/성수역 3번 출구 흡연구역.jpg"
+    "images": ["images/성수역 3번 출구 흡연구역.jpg"],
+    "form": "폐쇄형"
   },
   {
     "address": "서울특별시 성동구 성수동2가 325-2 (한라시그마밸리 뒤)",
@@ -150,7 +154,8 @@
     "lng": 127.05538952854079,
     "type": "public",
     "description": "성수역 SKV1타워 앞 흡연구역입니다.",
-    "images": ["images/성수역 SKV1타워 앞 흡연구역.jpg"]
+    "images": ["images/성수역 SKV1타워 앞 흡연구역.jpg"],
+    "form": "폐쇄형"
   },
   {
     "address": "서울특별시 성동구 성수동1가 13-164 (서울숲IT밸리 앞)",
@@ -195,7 +200,8 @@
     "lng": 127.096092,
     "type": "cafe",
     "description": "흡연실이 있는 탐앤탐스 중랑구청점입니다. ",
-    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구"
+    "image": "https://via.placeholder.com/200x120?text=서울역+1번출구",
+    "form": "폐쇄형"
   },
   {
     "address": "서울특별시 송파구 신천동 30",
@@ -204,7 +210,8 @@
     "lng": 127.105134,
     "type": "public",
     "description": "롯데월드몰 잔디광장에 위치한 흡연구역입니다.",
-    "images": ["images/롯데월드몰 잔디광장 흡연구역.jpg"]
+    "images": ["images/롯데월드몰 잔디광장 흡연구역.jpg"],
+    "form": "반개방형"
   },
   {
     "lat": 37.633465,
@@ -212,7 +219,8 @@
     "title": "갈매동 흡연구역",
     "images": ["images/갈매동 흡연구역.jpg", "images/갈매동_흡연구역_2.jpg"],
     "description": "갈매역 맞은편에 위치한 흡연구역입니다.",
-    "type": "public"
+    "type": "public",
+    "form": "완전개방형"
   },
   {
     "title": "강서구청 주차장 뒤편",
