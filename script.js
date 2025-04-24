@@ -260,8 +260,9 @@ window.closeInfoWindow = function () {
 function showPreviewCard(location) {
   document.getElementById("preview-title").textContent = location.title;
   document.getElementById("preview-description").textContent = location.description || '';
+  // ✅ images 배열의 첫 번째 이미지를 사용
   document.getElementById("preview-image").src =
-  Array.isArray(location.images) ? location.images[0] : location.image || '';
+    location.images && location.images.length > 0 ? location.images[0] : '';
 
   document.getElementById("preview-image").style.objectPosition = "center bottom";
   document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
@@ -275,7 +276,7 @@ function showFullCard(location) {
   document.getElementById("full-title").textContent = location.title;
   document.getElementById("full-description").textContent = location.description || '';
   // ✅ 이미지 슬라이더 적용
-initCarousel(location.images || [location.image]);
+initCarousel(location.images);
 document.getElementById("full-type").textContent = location.form || '정보 없음';
 
   document.getElementById("review-list").innerHTML = `
