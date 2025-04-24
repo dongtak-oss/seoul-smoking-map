@@ -370,7 +370,11 @@ function initCarousel(images) {
 // ✅ 슬라이더 위치 이동 함수 - currentSlide 값을 기반으로 transform 적용
 function updateCarousel() {
   const container = document.getElementById("carousel-images");
+  const total = container.children.length; // ✅ 총 슬라이드 수 계산
   container.style.transform = `translateX(-${currentSlide * 100}%)`;
+   // ✅ 버튼 표시 제어
+   document.getElementById("carousel-prev").style.display = currentSlide === 0 ? "none" : "block";
+   document.getElementById("carousel-next").style.display = currentSlide === total - 1 ? "none" : "block";
 }
 
 document.getElementById("carousel-prev").addEventListener("click", () => {
