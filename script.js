@@ -260,7 +260,10 @@ window.closeInfoWindow = function () {
 function showPreviewCard(location) {
   document.getElementById("preview-title").textContent = location.title;
   document.getElementById("preview-description").textContent = location.description || '';
-  document.getElementById("preview-image").src = location.image || '';
+  // ✅ images 배열의 첫 번째 이미지를 사용
+  document.getElementById("preview-image").src =
+    location.images && location.images.length > 0 ? location.images[0] : '';
+
   document.getElementById("preview-image").style.objectPosition = "center bottom";
   document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
 
@@ -272,8 +275,9 @@ function showPreviewCard(location) {
 function showFullCard(location) {
   document.getElementById("full-title").textContent = location.title;
   document.getElementById("full-description").textContent = location.description || '';
-  document.getElementById("full-image").src = location.image || '';
-  document.getElementById("full-type").textContent = location.form || '정보 없음';
+  // ✅ 이미지 슬라이더 적용
+initCarousel(location.images);
+document.getElementById("full-type").textContent = location.form || '정보 없음';
 
   document.getElementById("review-list").innerHTML = `
     <li>🔥 공간 넓고 깔끔했어요</li>
@@ -341,6 +345,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+
 
 // ✅ 현재 슬라이드 위치를 기억하는 변수
 let currentSlide = 0;
