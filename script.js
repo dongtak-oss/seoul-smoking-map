@@ -260,10 +260,7 @@ window.closeInfoWindow = function () {
 function showPreviewCard(location) {
   document.getElementById("preview-title").textContent = location.title;
   document.getElementById("preview-description").textContent = location.description || '';
-  // ✅ images 배열의 첫 번째 이미지를 사용
-  document.getElementById("preview-image").src =
-    location.images && location.images.length > 0 ? location.images[0] : '';
-
+  document.getElementById("preview-image").src = location.image || '';
   document.getElementById("preview-image").style.objectPosition = "center bottom";
   document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
 
@@ -275,9 +272,8 @@ function showPreviewCard(location) {
 function showFullCard(location) {
   document.getElementById("full-title").textContent = location.title;
   document.getElementById("full-description").textContent = location.description || '';
-  // ✅ 이미지 슬라이더 적용
-initCarousel(location.images);
-document.getElementById("full-type").textContent = location.form || '정보 없음';
+  document.getElementById("full-image").src = location.image || '';
+  document.getElementById("full-type").textContent = location.form || '정보 없음';
 
   document.getElementById("review-list").innerHTML = `
     <li>🔥 공간 넓고 깔끔했어요</li>
@@ -291,7 +287,7 @@ document.getElementById("full-type").textContent = location.form || '정보 없�
 
 // ✅ 카드 전환 관련 이벤트 연결 (DOM 로드 후)
 document.addEventListener("DOMContentLoaded", () => {
-  // ✅ 닫기 버튼
+  // 닫기 버튼
   const closeBtn = document.getElementById("close-preview");
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
@@ -299,7 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ 전체 보기 → 미리보기
+  // 전체 보기 → 미리보기
   const backButton = document.getElementById("back-to-preview");
   if (backButton) {
     backButton.addEventListener("click", () => {
@@ -312,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ✅ 미리보기 → 전체 보기
+  // 미리보기 → 전체 보기
   const viewFullBtn = document.getElementById("view-full-button");
   if (viewFullBtn) {
     viewFullBtn.addEventListener("click", () => {
@@ -322,10 +318,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const location = JSON.parse(locationData);
         showFullCard(location);
       }
+
+      // ✅ 리뷰 접고/펼치기 버튼 토글은 여기에 들어가도 되지만...
+      // 더 좋은 위치는 아래와 같아 👇
     });
   }
 
-  // ✅ 리뷰 접기/펼치기
+  // ✅ 💡 리뷰 접기/펼치기 기능은 viewFullBtn이 아닌 전역으로 둬야 재사용도 쉬움!
   const toggleBtn = document.getElementById("toggle-reviews");
   const reviewSection = document.getElementById("review-section");
 
@@ -341,118 +340,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  // ✅ 드래그로 전체 정보창 전환 기능 추가
-  const previewCard = document.getElementById("info-preview-card");
-  const fullCard = document.getElementById("info-full-card");
-  const dragHandle = document.getElementById("info-preview-card"); 
-
-  let startY = 0;
-  let startTime = 0; // ✅ 추가: 드래그 시작 시간 저장
-  let isDragging = false;
-
-  dragHandle.addEventListener("touchstart", (e) => {
-    startY = e.touches[0].clientY;
-    startTime = e.timeStamp; // ✅ 추가
-    isDragging = true;
-  });
-
-  dragHandle.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    const currentY = e.touches[0].clientY;
-    const deltaY = startY - currentY;
-    if (deltaY > 0) {
-      previewCard.style.transform = `translateY(${-deltaY}px)`;
-    }
-  });
-
-  dragHandle.addEventListener("touchend", (e) => {
-    isDragging = false;
-    const endY = e.changedTouches[0].clientY;
-    const deltaY = startY - endY;
-    const duration = e.timeStamp - startTime; // ✅ 추가
-    const fastSwipe = deltaY > 20 && duration < 150; // ✅ 빠른 스와이프 조건
-
-    if (deltaY > 40 || fastSwipe) {
-      previewCard.classList.add("hidden");
-      fullCard.classList.remove("hidden");
-      previewCard.style.transform = "translateY(0)";
-    } else {
-      previewCard.style.transition = "transform 0.3s ease";
-      previewCard.style.transform = "translateY(0)";
-      setTimeout(() => {
-        previewCard.style.transition = "";
-      }, 300);
-    }
-  });
-    
-  // ✅ 전체 카드 → 절반 카드로 드래그 전환
-const dragDownHandle = document.querySelector(".drag-handle-down");
-
-if (dragDownHandle) {
-  let startY = 0;
-  let startTime = 0; // ✅ 드래그 시작 시간 저장
-  let isDragging = false;
-
-  // ✅ 드래그 시작 (터치 시작 시)
-  dragDownHandle.addEventListener("touchstart", (e) => {
-    startY = e.touches[0].clientY; // 시작 위치
-    startTime = e.timeStamp;       // 드래그 시작 시간
-    isDragging = true;             // 드래그 상태 활성화
-  });
-
-  // ✅ 드래그 중 (터치 움직일 때)
-  dragDownHandle.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;      // 드래그 중일 때만 처리
-
-    const currentY = e.touches[0].clientY;  // 현재 Y 좌표
-    const deltaY = currentY - startY;      // 이동 거리
-
-    if (deltaY > 0) {
-      // 아래로 이동할 때
-      document.getElementById("info-full-card").style.transform = `translateY(${deltaY}px)`;
-    }
-  });
-
-  // ✅ 드래그 종료 (터치 끝났을 때)
-  dragDownHandle.addEventListener("touchend", (e) => {
-    isDragging = false;  // 드래그 종료
-    const endY = e.changedTouches[0].clientY;  // 종료 위치
-    const deltaY = endY - startY;  // 시작 위치와 종료 위치 차이
-    const duration = e.timeStamp - startTime;  // 드래그 시간
-    const fastSwipe = deltaY > 20 && duration < 150; // 빠른 스와이프 조건
-
-    // ✅ 기준치 넘으면 → 절반 카드로 돌아가기
-    if (deltaY > 40 || fastSwipe) {
-      const fullCard = document.getElementById("info-full-card");
-      const locationData = fullCard.dataset.locationData;
-      if (locationData) {
-        const location = JSON.parse(locationData);
-        showPreviewCard(location);  // 미리보기 카드로 전환
-      }
-      fullCard.style.transition = "transform 0.3s ease";  // 애니메이션 효과
-      fullCard.style.transform = "translateY(0)";  // 원위치로 복귀
-    } else {
-      // ✅ 기준치 미달 → 원위치로 복귀
-      const fullCard = document.getElementById("info-full-card");
-      fullCard.style.transition = "transform 0.3s ease";  // 애니메이션 효과
-      fullCard.style.transform = "translateY(0)";  // 원위치 복귀
-      setTimeout(() => {
-        fullCard.style.transition = "";  // 전환 초기화
-        fullCard.style.transform = "";   // 위치 초기화
-      }, 300);
-    }
-  });
-}
 });
-
-
-
-
-
-
-
-
 
 // ✅ 현재 슬라이드 위치를 기억하는 변수
 let currentSlide = 0;
