@@ -515,6 +515,28 @@ display: block;
 }
 
 
+/* ✅ 드래그 핸들: 위로 끌어올릴 수 있게 시각적 힌트 */
+.drag-handle {
+  width: 50px;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 3px;
+  margin: 12px auto 8px;
+  cursor: grab;
+}
+
+
+/* ✅ 아래로 드래그용 핸들 (전체카드 상단) */
+.drag-handle-down {
+  width: 50px;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 3px;
+  margin: 12px auto 8px;
+  cursor: grab;
+}
+
+
 
 
 
