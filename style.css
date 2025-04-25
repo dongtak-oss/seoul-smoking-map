@@ -517,58 +517,40 @@ display: block;
 }
 
 
-/* ✅ 드래그 핸들: 위로 끌어올릴 수 있게 시각적 힌트 */
-.drag-handle {
-  width: 50px;
+/* ✅ 공통 드래그 핸들 (위/아래 동일 스타일) */
+.drag-handle,
+.drag-handle-down .handle-bar {
+  width: 40px;
   height: 5px;
   background-color: #ccc;
   border-radius: 3px;
-  margin: 12px auto 8px;
+  margin: 12px auto;
   cursor: grab;
 }
 
-
-/* ✅ 아래로 드래그용 핸들 (전체카드 상단) */
-.drag-handle-down {
-  width: 50px;
-  height: 5px;
-  background-color: #ccc;
-  border-radius: 3px;
-  margin: 12px auto 8px;
-  cursor: grab;
-}
-
-
-/* 드래그 시 부드러운 인터랙션 */
-#info-preview-card,
-#info-full-card {
-  will-change: transform;
-  touch-action: pan-y;
-}
-
-/* ✅ 드래그 감지 상단 영역 (제목 포함) */
+/* ✅ 드래그 감지 영역 전체 (터치 우선, 제목 줄 포함 영역) */
 .drag-handle-down {
   padding: 16px 20px 0;
   background: #fff;
-  touch-action: pan-y; /* 터치 드래그 충돌 방지 */
-  overscroll-behavior: contain;
+  touch-action: none;              /* ✅ 드래그만, 스크롤 방지 */
+  overscroll-behavior: contain;    /* ✅ 뒷배경 스크롤 차단 */
+  -webkit-user-select: none;       /* ✅ 텍스트 선택 방지 */
+  -webkit-touch-callout: none;     /* ✅ iOS 꾹 누르기 방지 */
 }
 
-/* ✅ 회색 핸들 바 (시각적 요소) */
-.handle-bar {
-  width: 40px;
-  height: 5px;
-  background: #ccc;
-  border-radius: 3px;
-  margin: 0 auto 12px;
+/* ✅ 전환 애니메이션 준비 */
+#info-preview-card,
+#info-full-card {
+  will-change: transform;
+  transition: transform 0.3s ease; /* 부드럽게 */
+  touch-action: pan-y;
 }
 
-.drag-handle-down {
-  /* ✅ 드래그 전용으로 만들기 위한 추가 속성들 */
-  touch-action: none; /* 📌 스크롤 충돌 방지 */
-  -webkit-user-select: none; /* iOS에서 텍스트 선택 막기 */
-  -webkit-touch-callout: none; /* iOS에서 꾹 누르면 나오는 메뉴 방지 */
-}
+
+
+
+
+
 
 
 
