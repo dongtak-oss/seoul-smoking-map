@@ -537,6 +537,14 @@ display: block;
 }
 
 
+/* 드래그 시 부드러운 인터랙션 */
+#info-preview-card,
+#info-full-card {
+  will-change: transform;
+  touch-action: pan-y;
+}
+
+
 
 
 
