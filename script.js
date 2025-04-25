@@ -291,7 +291,7 @@ document.getElementById("full-type").textContent = location.form || '정보 없�
 
 // ✅ 카드 전환 관련 이벤트 연결 (DOM 로드 후)
 document.addEventListener("DOMContentLoaded", () => {
-  // 닫기 버튼
+  // ✅ 닫기 버튼
   const closeBtn = document.getElementById("close-preview");
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 전체 보기 → 미리보기
+  // ✅ 전체 보기 → 미리보기
   const backButton = document.getElementById("back-to-preview");
   if (backButton) {
     backButton.addEventListener("click", () => {
@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 미리보기 → 전체 보기
+  // ✅ 미리보기 → 전체 보기
   const viewFullBtn = document.getElementById("view-full-button");
   if (viewFullBtn) {
     viewFullBtn.addEventListener("click", () => {
@@ -322,13 +322,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const location = JSON.parse(locationData);
         showFullCard(location);
       }
-
-      // ✅ 리뷰 접고/펼치기 버튼 토글은 여기에 들어가도 되지만...
-      // 더 좋은 위치는 아래와 같아 👇
     });
   }
 
-  // ✅ 💡 리뷰 접기/펼치기 기능은 viewFullBtn이 아닌 전역으로 둬야 재사용도 쉬움!
+  // ✅ 리뷰 접기/펼치기
   const toggleBtn = document.getElementById("toggle-reviews");
   const reviewSection = document.getElementById("review-section");
 
@@ -344,7 +341,101 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // ✅ 드래그로 전체 정보창 전환 기능 추가
+  const previewCard = document.getElementById("info-preview-card");
+  const fullCard = document.getElementById("info-full-card");
+  const dragHandle = previewCard.querySelector(".drag-handle");
+
+  let startY = 0;
+  let isDragging = false;
+
+  dragHandle.addEventListener("touchstart", (e) => {
+    startY = e.touches[0].clientY;
+    isDragging = true;
+  });
+
+  dragHandle.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    const currentY = e.touches[0].clientY;
+    const deltaY = startY - currentY;
+    if (deltaY > 0) {
+      previewCard.style.transform = `translateY(${-deltaY}px)`;
+    }
+  });
+
+  dragHandle.addEventListener("touchend", (e) => {
+    isDragging = false;
+    const endY = e.changedTouches[0].clientY;
+    const deltaY = startY - endY;
+
+    if (deltaY > 80) {
+      previewCard.classList.add("hidden");
+      fullCard.classList.remove("hidden");
+      previewCard.style.transform = "translateY(0)";
+    } else {
+      previewCard.style.transition = "transform 0.3s ease";
+      previewCard.style.transform = "translateY(0)";
+      setTimeout(() => {
+        previewCard.style.transition = "";
+      }, 300);
+    }
+  });
+    // ✅ 전체 카드 → 절반 카드로 드래그 전환
+    const dragDownHandle = document.querySelector("#info-full-card .drag-handle-down");
+
+    if (dragDownHandle) {
+      let startY = 0;
+      let isDragging = false;
+  
+      dragDownHandle.addEventListener("touchstart", (e) => {
+        startY = e.touches[0].clientY;
+        isDragging = true;
+      });
+  
+      dragDownHandle.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+        const currentY = e.touches[0].clientY;
+        const deltaY = currentY - startY; // ✅ 아래로 움직인 거리 계산
+  
+        if (deltaY > 0) {
+          // ✅ 아래로 끌리는 시각 효과
+          document.getElementById("info-full-card").style.transform = `translateY(${deltaY}px)`;
+        }
+      });
+  
+      dragDownHandle.addEventListener("touchend", (e) => {
+        isDragging = false;
+        const endY = e.changedTouches[0].clientY;
+        const deltaY = endY - startY;
+  
+        if (deltaY > 80) {
+          // ✅ 기준치 넘으면 → 절반 카드로 돌아가기
+          const fullCard = document.getElementById("info-full-card");
+          const locationData = fullCard.dataset.locationData;
+          if (locationData) {
+            const location = JSON.parse(locationData);
+            showPreviewCard(location);
+          }
+          fullCard.style.transform = "translateY(0)";
+        } else {
+          // ✅ 기준치 미달 → 원위치로 복귀
+          const fullCard = document.getElementById("info-full-card");
+          fullCard.style.transition = "transform 0.3s ease";
+          fullCard.style.transform = "translateY(0)";
+          setTimeout(() => {
+            fullCard.style.transition = "";
+          }, 300);
+        }
+      });
+    }
+  
 });
+
+
+
+
+
 
 
 
