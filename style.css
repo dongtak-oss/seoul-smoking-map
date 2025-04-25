@@ -563,6 +563,15 @@ display: block;
   margin: 0 auto 12px;
 }
 
+.drag-handle-down {
+  padding: 20px; /* ← 이미 있다면 유지 */
+  background: #fff; /* ← 배경도 필요하면 유지 */
+  
+  /* ✅ 드래그 전용으로 만들기 위한 추가 속성들 */
+  touch-action: none; /* 📌 스크롤 충돌 방지 */
+  -webkit-user-select: none; /* iOS에서 텍스트 선택 막기 */
+  -webkit-touch-callout: none; /* iOS에서 꾹 누르면 나오는 메뉴 방지 */
+}
 
 
 
