@@ -107,16 +107,12 @@
   <!-- ✅ 전체화면 정보창 (상세 정보, 리뷰 포함) -->
 <div id="info-full-card" class="hidden">
 
-  <!-- ✅ 드래그 감지 전용 영역 (투명한 터치 영역) -->
-  <div class="drag-handle-down">
-    <div class="handle-bar"></div> <!-- ← 눈에 보이는 회색 바 -->
-  </div>
-
-  <!-- ✅ 시각 콘텐츠 -->
-  <div class="info-full-header">
-    <button id="back-to-preview">⬇ 돌아가기</button>
-    <h2 id="full-title">흡연구역 이름</h2>
-  </div>
+ <!-- ✅ 드래그 감지 + 시각 콘텐츠 통합 -->
+ <div class="drag-handle-down">
+  <div class="handle-bar"></div> <!-- ⬆ 회색 바 (시각적 힌트) -->
+  <button id="back-to-preview">⬇ 돌아가기</button>
+  <h2 id="full-title">흡연구역 이름</h2>
+</div>
 
   <!-- ✅ 내용 영역 -->
   <div class="info-full-content">
