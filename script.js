@@ -167,7 +167,7 @@ function initMapApp() {
       const text = btn.querySelector("span");
 
       if (nearbyMode) {
-        icon.src = "images/icon_nearby.png";
+        icon.src = "images/icon_all.png";
         icon.alt = "전체 아이콘";
         text.textContent = "전체";
       } else {
