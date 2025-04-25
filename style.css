@@ -520,31 +520,55 @@ display: block;
 /* ✅ 공통 드래그 핸들 (위/아래 동일 스타일) */
 .drag-handle,
 .drag-handle-down .handle-bar {
-  width: 40px;
-  height: 5px;
+  width: 100%;                    /* 전체 너비로 확장 */
+  height: 5px;                    /* 높이 유지 */
   background-color: #ccc;
   border-radius: 3px;
   margin: 12px auto;
-  cursor: grab;
+  cursor: grab;                   /* 드래그 가능 표시 */
 }
 
-/* ✅ 드래그 감지 영역 전체 (터치 우선, 제목 줄 포함 영역) */
+/* ✅ 드래그 감지 영역 (상단부터 제목 줄까지 포함) */
 .drag-handle-down {
-  padding: 16px 20px 0;
+  padding: 0 16px 12px;           /* 여백 조정 */
   background: #fff;
-  touch-action: none;              /* ✅ 드래그만, 스크롤 방지 */
-  overscroll-behavior: contain;    /* ✅ 뒷배경 스크롤 차단 */
-  -webkit-user-select: none;       /* ✅ 텍스트 선택 방지 */
-  -webkit-touch-callout: none;     /* ✅ iOS 꾹 누르기 방지 */
+  touch-action: none;              /* 드래그만, 스크롤 방지 */
+  overscroll-behavior: contain;    /* 뒷배경 스크롤 차단 */
+  -webkit-user-select: none;       /* 텍스트 선택 방지 */
+  -webkit-touch-callout: none;     /* iOS 꾹 누르기 방지 */
+  display: flex;
+  flex-direction: column;          /* 세로 방향으로 설정 */
+  align-items: flex-start;         /* 왼쪽 정렬 */
+  width: 100%;                     /* 전체 너비 차지 */
+  position: relative;              /* 위치 조정 */
 }
 
-/* ✅ 전환 애니메이션 준비 */
-#info-preview-card,
+/* ✅ 회색 핸들 바 (시각적 힌트) */
+.handle-bar {
+  width: 40px;
+  height: 5px;
+  background: #ccc;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+
+/* ✅ 드래그 감지 영역 */
 #info-full-card {
   will-change: transform;
-  transition: transform 0.3s ease; /* 부드럽게 */
-  touch-action: pan-y;
+  transition: transform 0.3s ease;
+  touch-action: pan-y; /* 터치에서 스크롤 차단 */
 }
+
+/* ✅ 전체 정보창 콘텐츠 */
+#info-full-card {
+  position: relative;
+  background: #fff;
+  padding: 0 16px;
+  overflow: hidden;
+  z-index: 1;  /* 콘텐츠는 드래그 감지 영역 아래에 */
+}
+
+
 
 
 
