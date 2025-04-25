@@ -385,61 +385,65 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300);
     }
   });
-    // ✅ 전체 카드 → 절반 카드로 드래그 전환
-    const dragDownHandle = document.querySelector(".drag-handle-down");
+    
+  // ✅ 전체 카드 → 절반 카드로 드래그 전환
+const dragDownHandle = document.querySelector(".drag-handle-down");
 
+if (dragDownHandle) {
+  let startY = 0;
+  let startTime = 0; // ✅ 드래그 시작 시간 저장
+  let isDragging = false;
 
-    if (dragDownHandle) {
-      let startY = 0;
-      let startTime = 0; // ✅ 추가
-      let isDragging = false;
-  
-      dragDownHandle.addEventListener("touchstart", (e) => {
-        startY = e.touches[0].clientY;
-        startTime = e.timeStamp; // ✅ 추가
-        isDragging = true;
-      });
-  
-      dragDownHandle.addEventListener("touchmove", (e) => {
-        if (!isDragging) return;
-        const currentY = e.touches[0].clientY;
-        const deltaY = currentY - startY; // ✅ 아래로 움직인 거리 계산
-  
-        if (deltaY > 0) {
-          // ✅ 아래로 끌리는 시각 효과
-          document.getElementById("info-full-card").style.transform = `translateY(${deltaY}px)`;
-        }
-      });
-  
-      dragDownHandle.addEventListener("touchend", (e) => {
-        isDragging = false;
-        const endY = e.changedTouches[0].clientY;
-        const deltaY = endY - startY;
-        const duration = e.timeStamp - startTime; // ✅ 추가
-        const fastSwipe = deltaY > 20 && duration < 150; // ✅ 빠른 스와이프 조건
-  
-        if (deltaY > 40 || fastSwipe) {
-          // ✅ 기준치 넘으면 → 절반 카드로 돌아가기
-          const fullCard = document.getElementById("info-full-card");
-          const locationData = fullCard.dataset.locationData;
-          if (locationData) {
-            const location = JSON.parse(locationData);
-            showPreviewCard(location);
-          }
-          fullCard.style.transform = "translateY(0)";
-        } else {
-          // ✅ 기준치 미달 → 원위치로 복귀
-          const fullCard = document.getElementById("info-full-card");
-          fullCard.style.transition = "transform 0.3s ease";
-          fullCard.style.transform = "translateY(0)";
-          setTimeout(() => {
-            fullCard.style.transition = "";
-            fullCard.style.transform = "";  // ← 추가! 완전 초기화 (선택)
-          }, 300);
-        }
-      });
+  // ✅ 드래그 시작 (터치 시작 시)
+  dragDownHandle.addEventListener("touchstart", (e) => {
+    startY = e.touches[0].clientY; // 시작 위치
+    startTime = e.timeStamp;       // 드래그 시작 시간
+    isDragging = true;             // 드래그 상태 활성화
+  });
+
+  // ✅ 드래그 중 (터치 움직일 때)
+  dragDownHandle.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;      // 드래그 중일 때만 처리
+
+    const currentY = e.touches[0].clientY;  // 현재 Y 좌표
+    const deltaY = currentY - startY;      // 이동 거리
+
+    if (deltaY > 0) {
+      // 아래로 이동할 때
+      document.getElementById("info-full-card").style.transform = `translateY(${deltaY}px)`;
     }
-  
+  });
+
+  // ✅ 드래그 종료 (터치 끝났을 때)
+  dragDownHandle.addEventListener("touchend", (e) => {
+    isDragging = false;  // 드래그 종료
+    const endY = e.changedTouches[0].clientY;  // 종료 위치
+    const deltaY = endY - startY;  // 시작 위치와 종료 위치 차이
+    const duration = e.timeStamp - startTime;  // 드래그 시간
+    const fastSwipe = deltaY > 20 && duration < 150; // 빠른 스와이프 조건
+
+    // ✅ 기준치 넘으면 → 절반 카드로 돌아가기
+    if (deltaY > 40 || fastSwipe) {
+      const fullCard = document.getElementById("info-full-card");
+      const locationData = fullCard.dataset.locationData;
+      if (locationData) {
+        const location = JSON.parse(locationData);
+        showPreviewCard(location);  // 미리보기 카드로 전환
+      }
+      fullCard.style.transition = "transform 0.3s ease";  // 애니메이션 효과
+      fullCard.style.transform = "translateY(0)";  // 원위치로 복귀
+    } else {
+      // ✅ 기준치 미달 → 원위치로 복귀
+      const fullCard = document.getElementById("info-full-card");
+      fullCard.style.transition = "transform 0.3s ease";  // 애니메이션 효과
+      fullCard.style.transform = "translateY(0)";  // 원위치 복귀
+      setTimeout(() => {
+        fullCard.style.transition = "";  // 전환 초기화
+        fullCard.style.transform = "";   // 위치 초기화
+      }, 300);
+    }
+  });
+}
 });
 
 
