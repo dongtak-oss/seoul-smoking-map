@@ -28,7 +28,7 @@
     "lat": 37.63949836366099,
     "lng": 127.06812772733437,
     "title": "등나무문화공원 주차장 흡연구역",
-    "images": ["images/등나무문화공원 흡연구역.jpg"],
+    "images": ["images/등나무문화공원 흡연구역.jpg","images/등나무문화공원_2.jpg","images/등나무문화공원_3.jpg"],
     "description": "등나무문화공원 주차장에 위치한 흡연구역입니다.",
     "type": "public",
     "form": "폐쇄형"
@@ -126,7 +126,7 @@
     "lng": 127.05671961148272,
     "type": "public",
     "description": "성수역 3번 출구 흡연구역입니다.",
-    "images": ["images/성수역 3번 출구 흡연구역.jpg"],
+    "images": ["images/성수역 3번 출구 흡연구역.jpg","images/성수역_3번출구_2.jpg","images/성수역_3번출구_3.jpg"],
     "form": "폐쇄형"
   },
   {
@@ -154,7 +154,7 @@
     "lng": 127.05538952854079,
     "type": "public",
     "description": "성수역 SKV1타워 앞 흡연구역입니다.",
-    "images": ["images/성수역 SKV1타워 앞 흡연구역.jpg"],
+    "images": ["images/성수역 SKV1타워 앞 흡연구역.jpg","images/성수_SK타워_2.jpg","images/성수_SK타워_3.jpg"],
     "form": "폐쇄형"
   },
   {
