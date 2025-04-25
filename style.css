@@ -301,9 +301,7 @@ display: block;
 
 #info-preview-card {
   max-height: 70vh; /* 화면 높이의 70% */
-  overflow-y: hidden;
-  touch-action: pan-y; /* ✅ 모바일에서 드래그 충돌 방지 */
-  overscroll-behavior: none; /* ✅ 외부로 넘치는 스크롤 차단 */
+  overflow-y: auto;
 }
 
 
