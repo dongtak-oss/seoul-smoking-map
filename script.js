@@ -386,7 +386,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
     // ✅ 전체 카드 → 절반 카드로 드래그 전환
-    const dragDownHandle = document.querySelector("#info-full-card .drag-handle-down");
+    const dragDownHandle = document.querySelector(".drag-handle-down");
+
 
     if (dragDownHandle) {
       let startY = 0;
