@@ -434,6 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
           fullCard.style.transform = "translateY(0)";
           setTimeout(() => {
             fullCard.style.transition = "";
+            fullCard.style.transform = "";  // ← 추가! 완전 초기화 (선택)
           }, 300);
         }
       });
