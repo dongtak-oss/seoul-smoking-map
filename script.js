@@ -348,10 +348,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const dragHandle = previewCard.querySelector(".drag-handle");
 
   let startY = 0;
+  let startTime = 0; // ✅ 추가: 드래그 시작 시간 저장
   let isDragging = false;
 
   dragHandle.addEventListener("touchstart", (e) => {
     startY = e.touches[0].clientY;
+    startTime = e.timeStamp; // ✅ 추가
     isDragging = true;
   });
 
@@ -368,8 +370,10 @@ document.addEventListener("DOMContentLoaded", () => {
     isDragging = false;
     const endY = e.changedTouches[0].clientY;
     const deltaY = startY - endY;
+    const duration = e.timeStamp - startTime; // ✅ 추가
+    const fastSwipe = deltaY > 20 && duration < 150; // ✅ 빠른 스와이프 조건
 
-    if (deltaY > 80) {
+    if (deltaY > 40 || fastSwipe) {
       previewCard.classList.add("hidden");
       fullCard.classList.remove("hidden");
       previewCard.style.transform = "translateY(0)";
@@ -386,10 +390,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (dragDownHandle) {
       let startY = 0;
+      let startTime = 0; // ✅ 추가
       let isDragging = false;
   
       dragDownHandle.addEventListener("touchstart", (e) => {
         startY = e.touches[0].clientY;
+        startTime = e.timeStamp; // ✅ 추가
         isDragging = true;
       });
   
@@ -408,8 +414,10 @@ document.addEventListener("DOMContentLoaded", () => {
         isDragging = false;
         const endY = e.changedTouches[0].clientY;
         const deltaY = endY - startY;
+        const duration = e.timeStamp - startTime; // ✅ 추가
+        const fastSwipe = deltaY > 20 && duration < 150; // ✅ 빠른 스와이프 조건
   
-        if (deltaY > 80) {
+        if (deltaY > 40 || fastSwipe) {
           // ✅ 기준치 넘으면 → 절반 카드로 돌아가기
           const fullCard = document.getElementById("info-full-card");
           const locationData = fullCard.dataset.locationData;
