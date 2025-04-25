@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ 드래그로 전체 정보창 전환 기능 추가
   const previewCard = document.getElementById("info-preview-card");
   const fullCard = document.getElementById("info-full-card");
-  const dragHandle = previewCard.querySelector(".drag-handle");
+  const dragHandle = document.getElementById("info-preview-card"); 
 
   let startY = 0;
   let startTime = 0; // ✅ 추가: 드래그 시작 시간 저장
