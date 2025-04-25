@@ -301,7 +301,9 @@ display: block;
 
 #info-preview-card {
   max-height: 70vh; /* 화면 높이의 70% */
-  overflow-y: auto;
+  overflow-y: hidden;
+  touch-action: pan-y; /* ✅ 모바일에서 드래그 충돌 방지 */
+  overscroll-behavior: none; /* ✅ 외부로 넘치는 스크롤 차단 */
 }
 
 
@@ -543,6 +545,25 @@ display: block;
   will-change: transform;
   touch-action: pan-y;
 }
+
+/* ✅ 드래그 감지 상단 영역 (제목 포함) */
+.drag-handle-down {
+  padding: 16px 20px 0;
+  background: #fff;
+  touch-action: pan-y; /* 터치 드래그 충돌 방지 */
+  overscroll-behavior: contain;
+}
+
+/* ✅ 회색 핸들 바 (시각적 요소) */
+.handle-bar {
+  width: 40px;
+  height: 5px;
+  background: #ccc;
+  border-radius: 3px;
+  margin: 0 auto 12px;
+}
+
+
 
 
 
