@@ -104,52 +104,48 @@
   </div>
 
   
-  <!-- ✅ 전체화면 정보창 (상세 정보, 리뷰 포함) -->
+ <!-- ✅ 전체화면 정보창 -->
 <div id="info-full-card" class="hidden">
 
- <!-- ✅ 드래그 감지 + 시각 콘텐츠 통합 -->
- <div class="drag-handle-down">
-  <div class="handle-bar"></div> <!-- ⬆ 회색 바 (시각적 힌트) -->
-  <button id="back-to-preview">⬇ 돌아가기</button>
-  <h2 id="full-title">흡연구역 이름</h2>
-</div>
+  <!-- ✅ 드래그 감지 + 시각 영역 (여기까지가 드래그 범위) -->
+  <div class="drag-handle-down">
+    <div class="handle-bar"></div>  <!-- 시각적 힌트 -->
+    <button id="back-to-preview">⬇ 돌아가기</button>
+    <h2 id="full-title">흡연구역 이름</h2>
+  </div>
 
-  <!-- ✅ 내용 영역 -->
+  <!-- ✅ 실제 내용 -->
   <div class="info-full-content">
-    <!-- 이미지 슬라이더 등 나머지 동일 -->
+    <!-- 슬라이더 -->
+    <div class="carousel-container">
+      <div class="carousel-images" id="carousel-images"></div>
+      <button class="carousel-btn left" id="carousel-prev">←</button>
+      <button class="carousel-btn right" id="carousel-next">→</button>
+    </div>
 
-<!-- ✅ 이미지 슬라이더 -->
-      <div class="carousel-container">
-        <div class="carousel-images" id="carousel-images"></div>
-        <button class="carousel-btn left" id="carousel-prev">←</button>
-        <button class="carousel-btn right" id="carousel-next">→</button>
-      </div>
-  
-      <!-- ✅ 설명 -->
-      <div class="info-row">
-        <span class="label">설명:</span>
-        <span class="content" id="full-description"></span>
-      </div>
-  
-      <!-- ✅ 흡연실 형태 -->
-      <div class="info-row">
-        <span class="label">흡연실 형태:</span>
-        <span class="content" id="full-type"></span>
-      </div>
-  
-      <!-- ✅ 리뷰 토글 버튼 -->
-      <button id="toggle-reviews" class="info-button">리뷰 보기 ⬇</button>
-  
-      <div id="review-section" class="hidden">
-        <h4>리뷰</h4>
-        <ul id="review-list"></ul>
-      </div>
-  
-      <!-- ✅ 수정 요청 버튼 -->
-      <button class="info-button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform', '_blank')">
-        이 흡연구역 정보 수정 요청하기
-      </button>
+    <!-- 설명 -->
+    <div class="info-row">
+      <span class="label">설명:</span>
+      <span class="content" id="full-description"></span>
+    </div>
 
+    <!-- 흡연실 형태 -->
+    <div class="info-row">
+      <span class="label">흡연실 형태:</span>
+      <span class="content" id="full-type"></span>
+    </div>
+
+    <!-- 리뷰 -->
+    <button id="toggle-reviews" class="info-button">리뷰 보기 ⬇</button>
+    <div id="review-section" class="hidden">
+      <h4>리뷰</h4>
+      <ul id="review-list"></ul>
+    </div>
+
+    <!-- 수정 요청 -->
+    <button class="info-button" onclick="window.open('https://docs.google.com/forms/...', '_blank')">
+      이 흡연구역 정보 수정 요청하기
+    </button>
   </div>
 </div>
 </body>
