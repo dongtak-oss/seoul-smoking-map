@@ -1,16 +1,3 @@
-// ✅ 길찾기 기능용 전역 변수 (기존 기능과 완전히 분리)
-let isRouteMode = false;         // 길찾기 모드 여부
-let settingStartPoint = false;   // 출발지 선택 모드 여부
-let settingEndPoint = false;     // 목적지 선택 모드 여부
-let startPoint = null;           // 출발지 좌표
-let endPoint = null;             // 목적지 좌표
-let startMarker = null;          // 출발지 마커 객체
-let currentPolyline = null;      // 그려진 선(경로)
-
-
-
-
-
 // ✅ 앱에서만 인트로 보여주기
 function isStandaloneApp() {
   return window.matchMedia('(display-mode: standalone)').matches ||
@@ -73,110 +60,77 @@ function initMapApp() {
   };
   map = new kakao.maps.Map(container, options);
 
+  // ✅ 위치 데이터 가져오기 및 마커 생성
+  fetch("locations.json")
+    .then(res => res.json())
+    .then(locations => {
+      markers.forEach(m => m.setMap(null)); // 기존 마커 제거
+      markers = [];
+      allMarkers = [];
 
-// ✅ 지도 클릭해서 출발지 설정
-kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
-  if (isRouteMode && settingStartPoint) {
-    const latlng = mouseEvent.latLng;
-    startPoint = latlng;
+      locations.forEach(location => {
+        const position = new kakao.maps.LatLng(location.lat, location.lng);
+        const markerImage = new kakao.maps.MarkerImage(
+          iconUrls[location.type] || iconUrls.public,
+          new kakao.maps.Size(32, 32)
+        );
 
-    // ✅ 기존 출발지 마커가 있으면 제거
-    if (startMarker) {
-      startMarker.setMap(null);
-    }
+        const marker = new kakao.maps.Marker({
+          map,
+          position,
+          title: location.title,
+          image: markerImage,
+          draggable: isAdmin
+        });
 
-    // ✅ 새 출발지 마커 생성
-    startMarker = new kakao.maps.Marker({
-      position: latlng,
-      map: map
-    });
+        // ✅ 관리자 모드일 경우 드래그 후 저장
+        if (isAdmin) {
+          kakao.maps.event.addListener(marker, "dragend", function () {
+            const newPos = marker.getPosition();
+            fetch("/update-location", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                title: location.title,
+                lat: newPos.getLat(),
+                lng: newPos.getLng()
+              })
+            })
+              .then(res => res.json())
+              .then(data => {
+                console.log("📍 저장됨:", data.message);
+              })
+              .catch(err => {
+                console.error("❌ 저장 오류:", err);
+              });
+          });
+        }
 
-    // 출발지 텍스트 갱신
-    document.getElementById('start-point-text').textContent = '출발지: 지도에서 선택 완료';
+        // ✅ 정보창 내용 구성 (기본 InfoWindow용)
+        const infoContent = `
+          <div style="max-width:200px; position:relative;">
+            <div style="text-align:right;">
+              <button onclick="closeInfoWindow()" style="border:none; background:none; font-size:16px; cursor:pointer;">✖</button>
+            </div>
+            <h3>${location.title}</h3>
+            ${location.image ? `<img src="${location.image}" style="width:100%; border-radius:8px;" />` : ''}
+            ${location.description ? `<p>${location.description}</p>` : ''}
+          </div>
+        `;
 
-    settingStartPoint = false; // 출발지 설정 완료
-    alert('출발지가 설정되었습니다! 이제 목적지를 설정하세요.');
-  }
-});
+        const infoWindow = new kakao.maps.InfoWindow({ content: infoContent });
 
-
-
-
-
-// ✅ 위치 데이터 가져오기 및 마커 생성
-fetch("locations.json")
-  .then(res => res.json())
-  .then(locations => {
-    markers.forEach(m => m.setMap(null)); // 기존 마커 제거
-    markers = [];
-    allMarkers = [];
-
-    locations.forEach(location => {
-      const position = new kakao.maps.LatLng(location.lat, location.lng);
-      const markerImage = new kakao.maps.MarkerImage(
-        iconUrls[location.type] || iconUrls.public,
-        new kakao.maps.Size(32, 32)
-      );
-
-      const marker = new kakao.maps.Marker({
-        map,
-        position,
-        title: location.title,
-        image: markerImage,
-        draggable: isAdmin
-      });
-
-      // ✅ 마커 클릭 이벤트 (길찾기 모드 + 평소 모드 분기)
-      kakao.maps.event.addListener(marker, 'click', () => {
-        if (isRouteMode && settingEndPoint) {
-          // 길찾기 모드 + 목적지 설정
-          endPoint = marker.getPosition();
-          document.getElementById('end-point-text').textContent = '목적지: ' + (location.title || '선택 완료');
-          settingEndPoint = false;
-          drawRoute(); // (이건 아직 아래에서 추가할 예정)
-        } else {
-          // 평소 모드: 정보창 카드 열기
-          showPreviewCard(location);
+        // ✅ 마커 클릭 시 카드 정보창 표시
+        kakao.maps.event.addListener(marker, 'click', () => {
+          showPreviewCard(location); // 절반 카드
           document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
           document.getElementById("info-full-card").dataset.locationData = JSON.stringify(location);
-        }
-      });
-
-      markers.push(marker);
-      allMarkers.push({ marker, location }); // marker와 location 저장
-    });
-
-    // ✅ 관리자 모드일 경우 드래그 저장 기능 추가
-    if (isAdmin) {
-      allMarkers.forEach(({ marker, location }) => {
-        kakao.maps.event.addListener(marker, "dragend", function () {
-          const newPos = marker.getPosition();
-          fetch("/update-location", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              title: location.title,
-              lat: newPos.getLat(),
-              lng: newPos.getLng()
-            })
-          })
-            .then(res => res.json())
-            .then(data => {
-              console.log("📍 저장됨:", data.message);
-            })
-            .catch(err => {
-              console.error("❌ 저장 오류:", err);
-            });
         });
+
+        markers.push(marker);
+        allMarkers.push({ marker, data: location });
       });
-    }
-  })
-  .catch(err => {
-    console.error("❌ locations.json 불러오기 실패:", err);
-  });
-
-
-  
+    });
 
   // ✅ 내 위치 버튼 이벤트
   document.getElementById("findMe").addEventListener("click", () => {
@@ -390,51 +344,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  document.getElementById('route-button').addEventListener('click', startRouteMode);
-document.getElementById('close-route-card').addEventListener('click', closeRouteMode);
-
-const selectStartButton = document.getElementById('select-start');
-if (selectStartButton) {
-  selectStartButton.addEventListener('click', () => {
-    if (!isRouteMode) return; // 길찾기 모드가 아닐 때는 무시
-    settingStartPoint = true; // 출발지 선택 모드 ON
-    settingEndPoint = false;  // 목적지 선택 모드는 OFF
-
-    // ✅ 출발지 선택 방법 안내
-    const useCurrentLocation = confirm('현재 내 위치를 출발지로 설정할까요?\n취소하면 지도에서 직접 선택할 수 있습니다.');
-    
-    if (useCurrentLocation) {
-      // 1️⃣ 현재 내 위치로 설정
-      navigator.geolocation.getCurrentPosition(function(position) {
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
-        startPoint = new kakao.maps.LatLng(lat, lng);
-
-        // 출발지 텍스트 업데이트
-        document.getElementById('start-point-text').textContent = '출발지: 내 위치';
-        settingStartPoint = false; // 출발지 설정 완료
-      }, function(error) {
-        alert('현재 위치를 가져올 수 없습니다.');
-      });
-    } else {
-      // 2️⃣ 지도 클릭으로 출발지 설정
-      alert('지도를 클릭해서 출발지를 설정하세요.');
-    }
-  });
-}
-
-const selectEndButton = document.getElementById('select-end');
-if (selectEndButton) {
-  selectEndButton.addEventListener('click', () => {
-    if (!isRouteMode) return; // 길찾기 모드가 아닐 때는 무시
-    settingEndPoint = true;   // 목적지 선택 모드 ON
-    settingStartPoint = false; // 출발지 모드는 끔
-
-    alert('목적지로 설정할 흡연구역 마커를 클릭하세요!');
-  });
-}
-
 });
 
 
@@ -479,132 +388,3 @@ document.getElementById("carousel-next").addEventListener("click", () => {
   currentSlide = (currentSlide + 1) % total;
   updateCarousel();
 });
-
-
-
-
-// ✅ 길찾기 모드 시작
-function startRouteMode() {
-  isRouteMode = true;               // 길찾기 모드 켬
-  settingStartPoint = false;         // 출발지 선택 모드 끔
-  settingEndPoint = false;           // 목적지 선택 모드 끔
-  startPoint = null;
-  endPoint = null;
-
-  // 기존 선이 있다면 제거
-  if (currentPolyline) {
-    currentPolyline.setMap(null);
-    currentPolyline = null;
-  }
-
-  // 카드 안 텍스트 초기화
-  document.getElementById('start-point-text').textContent = '출발지: 미설정';
-  document.getElementById('end-point-text').textContent = '목적지: 미설정';
-  document.getElementById('distance-text').textContent = '거리: -';
-
-  // 길찾기 카드 보이기
-  document.getElementById('route-card').classList.remove('hidden');
-}
-
-// ✅ 길찾기 모드 종료
-function closeRouteMode() {
-  isRouteMode = false;               // 길찾기 모드 끔
-  settingStartPoint = false;
-  settingEndPoint = false;
-  startPoint = null;
-  endPoint = null;
-
-  // 경로 선이 그려져 있다면 제거
-  if (currentPolyline) {
-    currentPolyline.setMap(null);
-    currentPolyline = null;
-  }
-
-  // 길찾기 카드 숨기기
-  document.getElementById('route-card').classList.add('hidden');
-}
-
-
-
-
-
-
-
-// ✅ 출발지-목적지 연결하는 선 그리기 함수
-function drawRoute() {
-  if (!startPoint || !endPoint) {
-    console.error("출발지나 목적지가 설정되지 않았습니다.");
-    return;
-  }
-
-  // ✅ 기존 선이 있으면 먼저 삭제
-  if (currentPolyline) {
-    currentPolyline.setMap(null);
-  }
-
-  // ✅ 새로운 선(polyline) 생성
-  currentPolyline = new kakao.maps.Polyline({
-    map: map,
-    path: [startPoint, endPoint],
-    strokeWeight: 5,         // 선 두께
-    strokeColor: '#007bff',  // 선 색깔 (파란색)
-    strokeOpacity: 0.8,      // 선 투명도
-    strokeStyle: 'solid'     // 선 스타일
-  });
-
-  // ✅ 거리 계산
-  const distance = getDistance(startPoint, endPoint); // 단위: km (소수점 2자리)
-
-  // ✅ 거리 텍스트 표시
-  document.getElementById('distance-text').textContent = `거리: ${distance} km`;
-}
-
-// ✅ 두 좌표 간 거리(km)를 구하는 함수 (하버사인 공식)
-function getDistance(start, end) {
-  const R = 6371; // 지구 반지름 (km)
-  const dLat = deg2rad(end.getLat() - start.getLat());
-  const dLng = deg2rad(end.getLng() - start.getLng());
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(deg2rad(start.getLat())) * Math.cos(deg2rad(end.getLat())) *
-    Math.sin(dLng / 2) ** 2;
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return (R * c).toFixed(2); // 소수점 2자리로 표시
-}
-
-// ✅ 도(degree)를 라디안(radian)으로 변환하는 함수
-function deg2rad(deg) {
-  return deg * (Math.PI / 180);
-}
-
-function drawRoute() {
-  if (!startPoint || !endPoint) {
-    console.error("출발지나 목적지가 설정되지 않았습니다.");
-    return;
-  }
-
-  // ✅ 기존 선이 있으면 제거
-  if (currentPolyline) {
-    currentPolyline.setMap(null);
-  }
-
-  // ✅ 새 선 그리기
-  currentPolyline = new kakao.maps.Polyline({
-    map: map,
-    path: [startPoint, endPoint],
-    strokeWeight: 5,
-    strokeColor: '#007bff',
-    strokeOpacity: 0.8,
-    strokeStyle: 'solid'
-  });
-
-  // ✅ 거리 계산
-  const distance = getDistance(startPoint, endPoint);
-  document.getElementById('distance-text').textContent = `거리: ${distance} km`;
-
-  // ✅ 출발지-목적지를 포함하는 bounds 만들기
-  const bounds = new kakao.maps.LatLngBounds();
-  bounds.extend(startPoint);
-  bounds.extend(endPoint);
-  map.setBounds(bounds); // ✅ 지도 화면 자동 조정
-}
