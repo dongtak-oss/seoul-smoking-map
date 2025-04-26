@@ -48,6 +48,33 @@
     <div id="map"></div>
   </main>
 
+  <!-- ✅ 여기!! -->
+<!-- 길찾기 버튼 -->
+<button id="route-button" class="route-btn">길찾기</button>
+
+<!-- 길찾기 카드 -->
+<div id="route-card" class="hidden">
+  <div class="route-card-content">
+    <h3>길찾기 설정</h3>
+
+    <div class="select-group">
+      <button id="select-start">출발지 설정</button>
+      <p id="start-point-text">출발지: 미설정</p>
+    </div>
+
+    <div class="select-group">
+      <button id="select-end">목적지 설정</button>
+      <p id="end-point-text">목적지: 미설정</p>
+    </div>
+
+    <div class="distance-info">
+      <p id="distance-text">거리: -</p>
+    </div>
+
+    <button id="close-route-card" class="close-btn">✖</button>
+  </div>
+</div>
+
   <!-- ✅ 하단 고정 버튼바: 내 위치, 근처, 출처, 제보 -->
   <footer>
     <div class="bottom-buttons">

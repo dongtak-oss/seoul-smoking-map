@@ -515,6 +515,75 @@ display: block;
 }
 
 
+/* ✅ 길찾기 버튼 */
+.route-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  padding: 10px 16px;
+  background-color: #007bff; /* 파란색 */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ✅ 길찾기 카드 */
+#route-card {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* 카드 안의 내용 정렬 */
+.route-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 출발지/목적지 버튼 */
+.select-group button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 거리 표시 스타일 */
+.distance-info {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 닫기 버튼 (X) */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: gray;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+}
+
+/* 숨김 처리용 */
+.hidden {
+  display: none;
+}
+
 
 
 
