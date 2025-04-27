@@ -3,7 +3,9 @@
     "lat": 37.55501738661711,
     "lng": 126.97151725883685,
     "title": "서울역 1번 출구 흡연구역",
-    "images": ["images/흡연구역_이미지_예시.jpg"],
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
     "description": "1번 출구 옆 공터에 위치한 흡연구역입니다.",
     "type": "public"
   },
@@ -11,7 +13,9 @@
     "lat": 37.638988592390746,
     "lng": 127.06541089577844,
     "title": "중계근린공원 주차장 흡연구역",
-    "images": ["images/중계근린공원 흡연구역.jpg"],
+    "images": [
+      "images/중계근린공원 흡연구역.jpg"
+    ],
     "description": "중계근린공원 주차장에 위치한 흡연구역입니다.",
     "type": "public",
     "form": "반개방형"
@@ -20,7 +24,11 @@
     "lat": 37.63949836366099,
     "lng": 127.06812772733437,
     "title": "등나무문화공원 주차장 흡연구역",
-    "images": ["images/등나무문화공원 흡연구역.jpg","images/등나무문화공원_2.jpg","images/등나무문화공원_3.jpg"],
+    "images": [
+      "images/등나무문화공원 흡연구역.jpg",
+      "images/등나무문화공원_2.jpg",
+      "images/등나무문화공원_3.jpg"
+    ],
     "description": "등나무문화공원 주차장에 위치한 흡연구역입니다.",
     "type": "public",
     "form": "폐쇄형"
@@ -29,7 +37,9 @@
     "lat": 37.49821257,
     "lng": 126.8670887,
     "title": "고척 돔구장 흡연구역",
-    "images": ["images/흡연구역_이미지_예시.jpg"],
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
     "description": "고척 돔구장에 위치한 흡연구역입니다.",
     "type": "building"
   },
@@ -37,7 +47,9 @@
     "lat": 37.581239,
     "lng": 127.0882184,
     "title": "탐앤탐스 사가정역점",
-    "images": ["images/흡연구역_이미지_예시.jpg"],
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
     "description": "사가정역 2번 출구 앞에 위치한 탐앤탐스입니다.",
     "type": "cafe",
     "form": "폐쇄형"
@@ -46,7 +58,9 @@
     "lat": 37.529492,
     "lng": 126.964318,
     "title": "아이파크몰 8층 옥상 흡연구역",
-    "images": ["images/흡연구역_이미지_예시.jpg"],
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
     "description": "아이파크몰 8층 옥상에 위치한 흡연구역입니다.",
     "type": "building"
   },
@@ -54,7 +68,9 @@
     "lat": 37.50904,
     "lng": 126.8912,
     "title": "신도림역 2번 출구 흡연구역",
-    "images": ["images/흡연구역_이미지_예시.jpg"],
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
     "description": "신도림역 2번 출구에 위한 흡연구역입니다.",
     "type": "public"
   },
@@ -62,7 +78,9 @@
     "lat": 37.5225,
     "lng": 126.9238,
     "title": "여의도역 3번 출구 흡연구역",
-    "images": ["images/흡연구역_이미지_예시.jpg"],
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
     "description": "여의도역 3번 출구에 위치한 흡연구역입니다.",
     "type": "public"
   },
@@ -73,7 +91,9 @@
     "lng": 127.0428194,
     "type": "public",
     "description": "디타워 앞 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 성동구 성수동1가 656-3 (서울숲 포휴 앞)",
@@ -82,7 +102,9 @@
     "lng": 127.0451987,
     "type": "public",
     "description": "서울숲 포휴 앞 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 성동구 성수동2가 280 (SKV1 화양사거리)",
@@ -91,7 +113,9 @@
     "lng": 127.0514978,
     "type": "public",
     "description": " SKV1 화양사거리 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 성동구 행당동 1-182 (왕십리역 6번 출구 뒤)",
@@ -100,7 +124,9 @@
     "lng": 127.039169,
     "type": "public",
     "description": "왕십리역 6번 출구 뒤 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 성동구 도선동 58-1 (세신빌딩 뒤)",
@@ -109,7 +135,9 @@
     "lng": 127.0338928,
     "type": "public",
     "description": "세신빌딩 뒤 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 성동구 성수동2가 276-5 (성수역 3번 출구)",
@@ -118,7 +146,11 @@
     "lng": 127.05671961148272,
     "type": "public",
     "description": "성수역 3번 출구 흡연구역입니다.",
-    "images": ["images/성수역 3번 출구 흡연구역.jpg","images/성수역_3번출구_2.jpg","images/성수역_3번출구_3.jpg"],
+    "images": [
+      "images/성수역 3번 출구 흡연구역.jpg",
+      "images/성수역_3번출구_2.jpg",
+      "images/성수역_3번출구_3.jpg"
+    ],
     "form": "폐쇄형"
   },
   {
@@ -128,7 +160,9 @@
     "lng": 127.055188,
     "type": "public",
     "description": "한라시그마벨리 뒤 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 성동구 성수동2가 277-43 (아크밸리 앞)",
@@ -137,7 +171,9 @@
     "lng": 127.0613025,
     "type": "public",
     "description": "아크밸리 앞 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 성동구 성수동2가 315-61 (성수역 SKV1타워 앞)",
@@ -146,7 +182,11 @@
     "lng": 127.05538952854079,
     "type": "public",
     "description": "성수역 SKV1타워 앞 흡연구역입니다.",
-    "images": ["images/성수역 SKV1타워 앞 흡연구역.jpg","images/성수_SK타워_2.jpg","images/성수_SK타워_3.jpg"],
+    "images": [
+      "images/성수역 SKV1타워 앞 흡연구역.jpg",
+      "images/성수_SK타워_2.jpg",
+      "images/성수_SK타워_3.jpg"
+    ],
     "form": "폐쇄형"
   },
   {
@@ -156,7 +196,9 @@
     "lng": 127.0498957,
     "type": "public",
     "description": "서울숲IT밸리 앞 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 강북구 오현로 145",
@@ -165,7 +207,9 @@
     "lng": 127.0362995,
     "type": "public",
     "description": "강북문화정보도서관 흡연구역입니다. ",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 광진구 강변역로50",
@@ -174,7 +218,9 @@
     "lng": 127.0935966,
     "type": "public",
     "description": "동서울종합터미널 앞 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울특별시 동작구 노량진동 148-87",
@@ -183,16 +229,20 @@
     "lng": 127.73981376962955,
     "type": "public",
     "description": "노량진 컵밥거리 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "address": "서울 중랑구 신내동 565-1",
     "title": "탐앤탐스 중랑구청점",
-    "lat": 37.605552,
-    "lng": 127.096092,
+    "lat": 37.60545760284289,
+    "lng": 127.09612581007123,
     "type": "cafe",
     "description": "흡연실이 있는 탐앤탐스 중랑구청점입니다. ",
-    "images": ["images/흡연구역_이미지_예시.jpg"],
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
     "form": "폐쇄형"
   },
   {
@@ -202,14 +252,19 @@
     "lng": 127.105134,
     "type": "public",
     "description": "롯데월드몰 잔디광장에 위치한 흡연구역입니다.",
-    "images": ["images/롯데월드몰 잔디광장 흡연구역.jpg"],
+    "images": [
+      "images/롯데월드몰 잔디광장 흡연구역.jpg"
+    ],
     "form": "반개방형"
   },
   {
     "lat": 37.633465,
     "lng": 127.1156738,
     "title": "갈매동 흡연구역",
-    "images": ["images/갈매동 흡연구역.jpg", "images/갈매동_흡연구역_2.jpg"],
+    "images": [
+      "images/갈매동 흡연구역.jpg",
+      "images/갈매동_흡연구역_2.jpg"
+    ],
     "description": "갈매역 맞은편에 위치한 흡연구역입니다.",
     "type": "public",
     "form": "완전개방형"
@@ -220,7 +275,9 @@
     "lng": 126.8496649,
     "type": "public",
     "description": "강서구청 주차장 뒤편 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "강서구민회관 1층",
@@ -228,7 +285,9 @@
     "lng": 126.8416092,
     "type": "public",
     "description": "강서구민회관 1층 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "마곡 실내배드민턴장 1층 주차장 뒤편",
@@ -236,7 +295,9 @@
     "lng": 126.840318,
     "type": "public",
     "description": "마곡 실내배드민턴장 1층 주차장 뒤편 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "김포공항화물청사 1층 옥외의 일부",
@@ -244,7 +305,9 @@
     "lng": 126.8081093,
     "type": "public",
     "description": "김포공항화물청사 1층 옥외의 일부 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "김포공항국제선 옥외의 일부",
@@ -252,7 +315,9 @@
     "lng": 126.80086605682935,
     "type": "public",
     "description": "김포공항국제선 옥외의 일부 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "김포공항국내선 옥외의 일부",
@@ -260,7 +325,9 @@
     "lng": 126.80280954804337,
     "type": "public",
     "description": "김포공항국내선 옥외의 일부 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "광진경찰서",
@@ -268,7 +335,9 @@
     "lng": 127.08394924596045,
     "type": "public",
     "description": "광진경찰서 흡연구역입니다",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "광진소방서",
@@ -276,7 +345,9 @@
     "lng": 127.0828431,
     "type": "public",
     "description": "광진소방서 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "광진소방서",
@@ -284,7 +355,9 @@
     "lng": 127.0863479,
     "type": "public",
     "description": "광진소방서 흡연구역입니다",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "광진우편집중국",
@@ -292,7 +365,9 @@
     "lng": 127.08565514075539,
     "type": "public",
     "description": "광진우편집중국 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "광진우체국",
@@ -300,7 +375,9 @@
     "lng": 127.090477794377,
     "type": "public",
     "description": "광진우체국 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "광진구청",
@@ -308,7 +385,9 @@
     "lng": 127.08238858587187,
     "type": "public",
     "description": "광진구청 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "화양동 주민자치센터",
@@ -316,7 +395,9 @@
     "lng": 127.07136139052241,
     "type": "public",
     "description": "화양동 주민자치센터 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "서울시 물연구원",
@@ -324,7 +405,9 @@
     "lng": 127.0921741,
     "type": "public",
     "description": "서울시 물연구원 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "아차산배수지체육공원",
@@ -332,7 +415,9 @@
     "lng": 127.0965031,
     "type": "public",
     "description": "아차산배수지체육공원 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "국립정신건강센터",
@@ -340,7 +425,9 @@
     "lng": 127.0857923,
     "type": "building",
     "description": "국립정신건강센터 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "세종대학교 대양홀",
@@ -348,7 +435,9 @@
     "lng": 127.0741314,
     "type": "building",
     "description": "세종대학교 대양홀 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "유니버설아트센터 ",
@@ -356,7 +445,9 @@
     "lng": 127.08799827951832,
     "type": "building",
     "description": "유니버설아트센터 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "건국대학교새천년관 대공연장",
@@ -364,7 +455,9 @@
     "lng": 127.0737253,
     "type": "building",
     "description": "건국대학교새천년관 대공연장 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "세종대학교 학생회관 대공연장",
@@ -372,7 +465,9 @@
     "lng": 127.07518650638943,
     "type": "building",
     "description": "세종대학교 학생회관 대공연장 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "이마트 자양점",
@@ -380,7 +475,9 @@
     "lng": 127.07339602204489,
     "type": "building",
     "description": "이마트 자양점 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "롯데백화점 건대스타시티점",
@@ -388,7 +485,9 @@
     "lng": 127.07140517122609,
     "type": "building",
     "description": "롯데백화점 건대스타시티점 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "커먼그라운드",
@@ -396,7 +495,9 @@
     "lng": 127.06567318372998,
     "type": "building",
     "description": "커먼그라운드 3층 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "테크노마트21",
@@ -404,7 +505,9 @@
     "lng": 127.09565717252312,
     "type": "building",
     "description": "테크노마트21 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "워커힐",
@@ -412,7 +515,9 @@
     "lng": 127.11086988447865,
     "type": "building",
     "description": "워커힐 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "탐앤탐스 블랙그레이트점",
@@ -420,31 +525,39 @@
     "lng": 127.08972814405828,
     "type": "cafe",
     "description": "탐앤탐스 블랙그레이트점 ",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "투썸플레이스 군자역점",
-    "lat": 37.5557895,
-    "lng": 127.0783384,
+    "lat": 37.55580568090252,
+    "lng": 127.07841536019909,
     "type": "cafe",
     "description": "투썸플레이스 군자역점",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "카페오로시",
-    "lat": 37.5395189,
-    "lng": 127.0828446,
+    "lat": 37.539487748423014,
+    "lng": 127.08295252381272,
     "type": "cafe",
     "description": "카페오로시",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "더이퀄리브리엄커피",
-    "lat": 37.540358,
-    "lng": 127.0678603,
+    "lat": 37.54034885058542,
+    "lng": 127.06782525479022,
     "type": "cafe",
     "description": "더이퀄리브리엄커피",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "이디야",
@@ -452,7 +565,9 @@
     "lng": 127.0676076,
     "type": "cafe",
     "description": "이디야",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "탐앤탐스 탐스커버리건대점",
@@ -460,7 +575,9 @@
     "lng": 127.0693832,
     "type": "cafe",
     "description": "탐앤탐스 탐스커버리건대점",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "카페온더플랜 건대점",
@@ -468,7 +585,9 @@
     "lng": 127.07281138647267,
     "type": "cafe",
     "description": "카페온더플랜 건대점",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "허니룸 건대점",
@@ -476,7 +595,9 @@
     "lng": 127.0680945,
     "type": "cafe",
     "description": "허니룸 건대점",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "꿈꾸다917",
@@ -484,15 +605,19 @@
     "lng": 127.06947857863331,
     "type": "cafe",
     "description": "꿈꾸다917",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "커피마켓",
-    "lat": 37.5428753,
-    "lng": 127.0711474,
+    "lat": 37.54285843136404,
+    "lng": 127.07114860703734,
     "type": "cafe",
     "description": "커피마켓",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "카패베네 건대2호점",
@@ -500,7 +625,9 @@
     "lng": 127.0667491,
     "type": "cafe",
     "description": "카패베네 건대2호점",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "탐앤탐스 건대점",
@@ -508,7 +635,9 @@
     "lng": 127.0704664,
     "type": "cafe",
     "description": "탐앤탐스 건대점",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "탐앤탐스 광진화양점",
@@ -516,7 +645,9 @@
     "lng": 127.07078684356904,
     "type": "cafe",
     "description": "탐앤탐스 광진화양점",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "동서울터미널 앞 전면보도",
@@ -524,7 +655,9 @@
     "lng": 127.0935856,
     "type": "public",
     "description": "동서울터미널 앞 전면보도",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "문정 현대지식산업센터",
@@ -532,7 +665,9 @@
     "lng": 127.1206971,
     "type": "building",
     "description": "문정 현대지식산업센터",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "가든파이브",
@@ -540,7 +675,9 @@
     "lng": 127.1249964,
     "type": "building",
     "description": "가든파이브",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "문정 SK V1 GL 메트로시티",
@@ -548,7 +685,9 @@
     "lng": 127.12203721551815,
     "type": "building",
     "description": "문정 SK V1 GL 메트로시티",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "서대문구청",
@@ -556,7 +695,9 @@
     "lng": 126.9365919,
     "type": "public",
     "description": "서대문구청 1층 정자, 옥상 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "현대백화점 유플렉스 신촌점",
@@ -564,7 +705,9 @@
     "lng": 126.9365776,
     "type": "building",
     "description": "현대백화점 유플렉스 신촌점 옥상 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "현대백화점 신촌점",
@@ -572,7 +715,9 @@
     "lng": 126.9358839,
     "type": "building",
     "description": "현대백화점 신촌점 옥상 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "을지로입구역 8번출구",
@@ -580,7 +725,9 @@
     "lng": 126.98203124167959,
     "type": "public",
     "description": "을지로입구역 8번출구",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "서울역 8번 출구",
@@ -588,7 +735,9 @@
     "lng": 126.97353416304695,
     "type": "public",
     "description": "서울역 8번 출구",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "롯데백화점 관악점 ",
@@ -596,7 +745,9 @@
     "lng": 126.9250502,
     "type": "building",
     "description": "롯데백화점 관악점 건물 뒷편",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "관악구청",
@@ -604,7 +755,9 @@
     "lng": 126.9515208,
     "type": "public",
     "description": "관악구청 2층 테라스, 9층 옥상, 관악구의회 6층 옥상, 관악구 보건소 6층 옥상",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "싱글벙글교육센터",
@@ -612,7 +765,9 @@
     "lng": 126.95629065207913,
     "type": "building",
     "description": "싱글벙글교육센터 뒷편",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "관악문화도서관",
@@ -620,7 +775,9 @@
     "lng": 126.9448053,
     "type": "public",
     "description": "관악문화도서관",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "타임스트림",
@@ -628,7 +785,9 @@
     "lng": 126.9301737,
     "type": "building",
     "description": "타임스트림 옥상",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "르네상스쇼핑몰",
@@ -636,7 +795,9 @@
     "lng": 126.930087,
     "type": "building",
     "description": "르네상스쇼핑몰",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "구로성심병원",
@@ -644,7 +805,9 @@
     "lng": 126.8663767,
     "type": "building",
     "description": "구로성심병원",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "고대구로병원",
@@ -652,7 +815,9 @@
     "lng": 126.8847444,
     "type": "building",
     "description": "고대구로병원",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "지하이시티",
@@ -660,7 +825,9 @@
     "lng": 126.8922728,
     "type": "building",
     "description": "지하이시티",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "신도림테크노마트",
@@ -668,7 +835,9 @@
     "lng": 126.8903193,
     "type": "building",
     "description": "신도림테크노마트 북서쪽 철로변측 인도공간",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "신도림역 2번 출구",
@@ -676,7 +845,9 @@
     "lng": 126.891109,
     "type": "public",
     "description": "신도림역 2번 출구",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "여의도역 3번 출구 흡연구역",
@@ -684,7 +855,9 @@
     "lng": 126.9238,
     "type": "public",
     "description": "여의도역 3번 출구 뒤쪽 흡연구역",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "강북구의회",
@@ -692,7 +865,9 @@
     "lng": 127.0141244,
     "type": "public",
     "description": "강북구의회 본관과 신관 사이에 위치한 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "롯데백화점 미아점",
@@ -700,15 +875,19 @@
     "lng": 127.030526,
     "type": "building",
     "description": "롯데백화점 미아점 건물 옥상에 위치한 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "미즐 카페 엠",
-    "lat": 37.6387503,
-    "lng": 127.0289654,
+    "lat": 37.643540868777244,
+    "lng": 127.0037759515682,
     "type": "cafe",
     "description": "흡연실이 있는 '미즐 카페 엠'입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "은평구립도서관",
@@ -716,7 +895,9 @@
     "lng": 126.928039,
     "type": "public",
     "description": "은평구립도서관에 위치한 흡연구역입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpgC"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpgC"
+    ]
   },
   {
     "title": "이디야 연신내역점",
@@ -724,7 +905,9 @@
     "lng": 126.9199065,
     "type": "cafe",
     "description": "흡연실이 있는 '이디야 연신내역점'입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpgC"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpgC"
+    ]
   },
   {
     "title": "더홀릭보드게임카페 연신내점",
@@ -732,7 +915,9 @@
     "lng": 126.9186229,
     "type": "cafe",
     "description": "흡연실이 있는 '더홀릭보드게임카페 연신내점'입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "아로이 커피 연신내점",
@@ -740,7 +925,9 @@
     "lng": 126.9223909,
     "type": "cafe",
     "description": "흡연실이 있는 '아로이 커피 연신내점'입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "읍천리382 응암점",
@@ -748,7 +935,9 @@
     "lng": 126.921089,
     "type": "cafe",
     "description": "흡연실이 있는 '읍천리382 응암점'입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "코피티암",
@@ -756,7 +945,9 @@
     "lng": 126.9183922,
     "type": "cafe",
     "description": "흡연실이 있는 '코피티암'입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "coffee 13 oz",
@@ -764,7 +955,9 @@
     "lng": 126.9113039,
     "type": "cafe",
     "description": "흡연실이 있는 'coffee 13 oz'입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   },
   {
     "title": "아로이 커피 녹번점",
@@ -772,6 +965,8 @@
     "lng": 126.933078,
     "type": "cafe",
     "description": "흡연실이 있는 '아로이 커피 녹번점'입니다.",
-    "images": ["images/흡연구역_이미지_예시.jpg"]
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ]
   }
 ]
