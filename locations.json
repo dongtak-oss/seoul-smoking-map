@@ -6,7 +6,7 @@
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ],
-    "description": "1번 출구 옆 공터에 위치한 흡연구역입니다.",
+    "description": "1번 출구 앞 공터에 위치한 흡연구역입니다.",
     "type": "public"
   },
   {
@@ -350,16 +350,6 @@
     ]
   },
   {
-    "title": "광진소방서",
-    "lat": 37.5443273,
-    "lng": 127.0863479,
-    "type": "public",
-    "description": "광진소방서 흡연구역입니다",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ]
-  },
-  {
     "title": "광진우편집중국",
     "lat": 37.53557322599497,
     "lng": 127.08565514075539,
@@ -524,7 +514,7 @@
     "lat": 37.53780468211785,
     "lng": 127.08972814405828,
     "type": "cafe",
-    "description": "탐앤탐스 블랙그레이트점 ",
+    "description": "흡연실이 있는 '탐앤탐스 블랙그레이트점'입니다. ",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -534,7 +524,7 @@
     "lat": 37.55580568090252,
     "lng": 127.07841536019909,
     "type": "cafe",
-    "description": "투썸플레이스 군자역점",
+    "description": "흡연실이 있는 '투썸플레이스 군자역점'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -544,7 +534,7 @@
     "lat": 37.539487748423014,
     "lng": 127.08295252381272,
     "type": "cafe",
-    "description": "카페오로시",
+    "description": "흡연실이 있는 '카페오로시'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -554,7 +544,7 @@
     "lat": 37.54034885058542,
     "lng": 127.06782525479022,
     "type": "cafe",
-    "description": "더이퀄리브리엄커피",
+    "description": "흡연실이 있는 '더이퀄리브리엄커피'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -564,7 +554,7 @@
     "lat": 37.5404164,
     "lng": 127.0676076,
     "type": "cafe",
-    "description": "이디야",
+    "description": "흡연실이 있는 '이디야'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -574,7 +564,7 @@
     "lat": 37.540039,
     "lng": 127.0693832,
     "type": "cafe",
-    "description": "탐앤탐스 탐스커버리건대점",
+    "description": "흡연실이 있는 '탐앤탐스 탐스커버리건대점'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -584,17 +574,7 @@
     "lat": 37.54516172327742,
     "lng": 127.07281138647267,
     "type": "cafe",
-    "description": "카페온더플랜 건대점",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ]
-  },
-  {
-    "title": "허니룸 건대점",
-    "lat": 37.5413168,
-    "lng": 127.0680945,
-    "type": "cafe",
-    "description": "허니룸 건대점",
+    "description": "흡연실이 있는 '카페온더플랜 건대점'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -604,7 +584,7 @@
     "lat": 37.54177822639368,
     "lng": 127.06947857863331,
     "type": "cafe",
-    "description": "꿈꾸다917",
+    "description": "흡연실이 있는 '꿈꾸다917'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -614,7 +594,7 @@
     "lat": 37.54285843136404,
     "lng": 127.07114860703734,
     "type": "cafe",
-    "description": "커피마켓",
+    "description": "흡연실이 있는 '커피마켓'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -624,7 +604,7 @@
     "lat": 37.5415506,
     "lng": 127.0667491,
     "type": "cafe",
-    "description": "카패베네 건대2호점",
+    "description": "흡연실이 있는 '카패베네 건대2호점'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -634,7 +614,7 @@
     "lat": 37.540783,
     "lng": 127.0704664,
     "type": "cafe",
-    "description": "탐앤탐스 건대점",
+    "description": "흡연실이 있는 '탐앤탐스 건대점'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -644,7 +624,7 @@
     "lat": 37.54320778603184,
     "lng": 127.07078684356904,
     "type": "cafe",
-    "description": "탐앤탐스 광진화양점",
+    "description": "흡연실이 있는 '탐앤탐스 광진화양점'입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -654,7 +634,7 @@
     "lat": 37.5339173,
     "lng": 127.0935856,
     "type": "public",
-    "description": "동서울터미널 앞 전면보도",
+    "description": "동서울터미널 앞 전면보도에 위치한 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -664,7 +644,7 @@
     "lat": 37.4816698,
     "lng": 127.1206971,
     "type": "building",
-    "description": "문정 현대지식산업센터",
+    "description": "문정 현대지식산업센터 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -674,7 +654,7 @@
     "lat": 37.4776483,
     "lng": 127.1249964,
     "type": "building",
-    "description": "가든파이브",
+    "description": "가든파이브 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -684,7 +664,7 @@
     "lat": 37.48399478887767,
     "lng": 127.12203721551815,
     "type": "building",
-    "description": "문정 SK V1 GL 메트로시티",
+    "description": "문정 SK V1 GL 메트로시티 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -724,7 +704,7 @@
     "lat": 37.56580663986376,
     "lng": 126.98203124167959,
     "type": "public",
-    "description": "을지로입구역 8번출구",
+    "description": "을지로입구역 8번출구에 위한 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -734,7 +714,7 @@
     "lat": 37.556146355422314,
     "lng": 126.97353416304695,
     "type": "public",
-    "description": "서울역 8번 출구",
+    "description": "서울역 8번 출구에 위한 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -744,7 +724,7 @@
     "lat": 37.49053869999999,
     "lng": 126.9250502,
     "type": "building",
-    "description": "롯데백화점 관악점 건물 뒷편",
+    "description": "롯데백화점 관악점 건물 뒷편에 위치한 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -754,7 +734,7 @@
     "lat": 37.4782605,
     "lng": 126.9515208,
     "type": "public",
-    "description": "관악구청 2층 테라스, 9층 옥상, 관악구의회 6층 옥상, 관악구 보건소 6층 옥상",
+    "description": "관악구청 2층 테라스, 9층 옥상, 관악구의회 6층 옥상, 관악구 보건소 6층 옥상에 위한 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -764,7 +744,7 @@
     "lat": 37.476102829580505,
     "lng": 126.95629065207913,
     "type": "building",
-    "description": "싱글벙글교육센터 뒷편",
+    "description": "싱글벙글교육센터 뒤편에 위치한 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -774,7 +754,7 @@
     "lat": 37.4675139,
     "lng": 126.9448053,
     "type": "public",
-    "description": "관악문화도서관",
+    "description": "관악문화도서관 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -784,7 +764,7 @@
     "lat": 37.4838352,
     "lng": 126.9301737,
     "type": "building",
-    "description": "타임스트림 옥상",
+    "description": "타임스트림 옥상에 위한 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -794,7 +774,7 @@
     "lat": 37.4847684,
     "lng": 126.930087,
     "type": "building",
-    "description": "르네상스쇼핑몰",
+    "description": "르네상스쇼핑몰 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -804,7 +784,7 @@
     "lat": 37.4996281,
     "lng": 126.8663767,
     "type": "building",
-    "description": "구로성심병원",
+    "description": "구로성심병원 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -814,7 +794,7 @@
     "lat": 37.4921086,
     "lng": 126.8847444,
     "type": "building",
-    "description": "고대구로병원",
+    "description": "고대구로병원 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -824,7 +804,7 @@
     "lat": 37.4819677,
     "lng": 126.8922728,
     "type": "building",
-    "description": "지하이시티",
+    "description": "지하이시티 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -834,7 +814,7 @@
     "lat": 37.5069735,
     "lng": 126.8903193,
     "type": "building",
-    "description": "신도림테크노마트 북서쪽 철로변측 인도공간",
+    "description": "신도림테크노마트 북서쪽 철로변측 인도공간에 위한 흡연구역입니다",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -844,7 +824,7 @@
     "lat": 37.5087378,
     "lng": 126.891109,
     "type": "public",
-    "description": "신도림역 2번 출구",
+    "description": "신도림역 2번 출구에 위한 흡연구역입니다",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -854,7 +834,7 @@
     "lat": 37.5225,
     "lng": 126.9238,
     "type": "public",
-    "description": "여의도역 3번 출구 뒤쪽 흡연구역",
+    "description": "여의도역 3번 출구 뒤쪽에 위한 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ]
@@ -894,7 +874,7 @@
     "lat": 37.6189263,
     "lng": 126.928039,
     "type": "public",
-    "description": "은평구립도서관에 위치한 흡연구역입니다.",
+    "description": "은평구립도서관 흡연구역입니다.",
     "images": [
       "images/흡연구역_이미지_예시.jpgC"
     ]
