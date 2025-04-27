@@ -52,6 +52,15 @@ const iconUrls = {
   current: 'images/marker_current_v2.png'
 };
 
+// ✅ ✨ 여기! (hidePreviewCard 함수 추가)
+function hidePreviewCard() {
+  const previewCard = document.getElementById("info-preview-card");
+  const fullCard = document.getElementById("info-full-card");
+
+  if (previewCard) previewCard.classList.add("hidden");
+  if (fullCard) fullCard.classList.add("hidden");
+}
+
 function initMapApp() {
   const container = document.getElementById('map');
   const options = {
@@ -158,7 +167,6 @@ function initMapApp() {
 
       // ✅ 전체 보기로 전환 시 지도 중심을 초기 위치로
     if (!nearbyMode) {
-      map.setCenter(new kakao.maps.LatLng(37.5665, 126.9780)); // 예시: 서울 시청
       map.setLevel(7);
     }
 
@@ -187,8 +195,10 @@ function initMapApp() {
     const el = document.getElementById(id);
     if (el) {
       el.addEventListener("click", () => {
+        hidePreviewCard(); // ✅ 요기! 카드형 정보창 닫기 추가
         const type = id.split("-")[1];
         if (currentInfoWindow) currentInfoWindow.close();
+        
         if (activeType === type) {
           activeType = null;
           allMarkers.forEach(({ marker }) => marker.setMap(map));
