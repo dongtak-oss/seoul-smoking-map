@@ -1,0 +1,16 @@
+[
+    {
+      "locationId": "loc001",
+      "reviews": [
+        {
+          "id": "r1",
+          "text": "깔끔하고 넓은 흡연구역입니다.",
+          "date": "2025-04-28"
+        }
+      ]
+    },
+    {
+      "locationId": "loc002",
+      "reviews": []
+    }
+  ]
