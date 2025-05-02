@@ -515,6 +515,26 @@ display: block;
 }
 
 
+.hidden {
+  display: none;
+}
+
+.review-box {
+  margin-top: 10px;
+}
+
+.write-review-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
 
 
 
