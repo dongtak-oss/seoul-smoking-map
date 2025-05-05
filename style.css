@@ -534,6 +534,23 @@ display: block;
   font-size: 14px;
 }
 
+.review {
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.review.positive {
+  background-color: #e0f7e9;
+  color: #1b5e20;
+}
+
+.review.negative {
+  background-color: #ffecec;
+  color: #b71c1c;
+}
+
 
 
 

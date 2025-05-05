@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 // ✅ 관리자 여부 확인 - localhost:3000 환경에서만 true
 const isAdmin = location.hostname === "localhost" && location.port === "3000";
 
@@ -134,12 +135,21 @@ function initMapApp() {
           showPreviewCard(location); // 절반 카드
           document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
           document.getElementById("info-full-card").dataset.locationData = JSON.stringify(location);
+
+          const encodedTitle = encodeURIComponent(location.title);
+  const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?entry.1743852912=${encodedTitle}`;
+  document.getElementById("review-button").href = formURL;
         });
 
         markers.push(marker);
         allMarkers.push({ marker, data: location });
       });
-    });
+    }); 
+
+
+
+
+    
 
   // ✅ 내 위치 버튼 이벤트
   document.getElementById("findMe").addEventListener("click", () => {
@@ -290,9 +300,14 @@ initCarousel(location.images);
 document.getElementById("full-type").textContent = location.form || '정보 없음';
 
   document.getElementById("review-list").innerHTML = `
-    <li>🔥 공간 넓고 깔끔했어요</li>
-    <li>😷 환기가 약간 부족한 느낌</li>
-  `;
+     <li class="review positive">[긍정적] 공간 넓고 깔끔했어요</li>
+  <li class="review negative">[부정적] 환기가 약간 부족한 느낌</li>
+`;
+
+ // 리뷰 링크 자동 설정!
+ const encodedTitle = encodeURIComponent(location.title);
+ const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?usp=pp_url&entry.1819958639=${encodedTitle}`;
+ document.getElementById("review-button").href = formURL;
 
   document.getElementById("info-full-card").classList.remove("hidden");
   document.getElementById("info-preview-card").classList.add("hidden");
@@ -398,3 +413,5 @@ document.getElementById("carousel-next").addEventListener("click", () => {
   currentSlide = (currentSlide + 1) % total;
   updateCarousel();
 });
+
+
