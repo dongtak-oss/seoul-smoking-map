@@ -6,17 +6,13 @@ function isStandaloneApp() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro-screen");
-
-  // ✅ 세션 스토리지에 인트로 표시 여부 확인
   const hasSeenIntro = sessionStorage.getItem("hasSeenIntro");
 
-  // ✅ PWA로 실행 중이고, 인트로가 아직 안 보인 경우에만 표시
   if (isStandaloneApp() && intro && !hasSeenIntro) {
-    intro.classList.remove("hidden"); // 인트로 표시
-    
+    intro.classList.remove("hidden");
     setTimeout(() => {
-      intro.classList.add("hidden"); // 2초 후 인트로 숨김
-      sessionStorage.setItem("hasSeenIntro", "true"); // ✅ 이 줄이 중요! 다시 안 뜨게
+      intro.classList.add("hidden");
+      sessionStorage.setItem("hasSeenIntro", "true");
     }, 2000);
   }
 });
@@ -29,23 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   kakao.maps.load(() => {
     console.log("✅ kakao.maps.load 안의 initMapApp 실행됨");
-    initMapApp(); // 지도 및 마커 초기화
+    initMapApp();
   });
 });
 
-
-// ✅ 관리자 여부 확인 - localhost:3000 환경에서만 true
 const isAdmin = location.hostname === "localhost" && location.port === "3000";
 
 let map;
-let currentInfoWindow = null; // 현재 열려있는 카카오맵 정보창
-let markers = []; // 현재 표시 중인 마커
-let allMarkers = []; // 모든 마커 정보 (marker 객체 + location 데이터)
-let userMarker = null; // 내 위치 마커
-let nearbyMode = false; // 근처 보기 모드 여부
-let activeType = null; // 현재 활성화된 필터 타입
+let currentInfoWindow = null;
+let markers = [];
+let allMarkers = [];
+let userMarker = null;
+let nearbyMode = false;
+let activeType = null;
+let reviewData = {}; // ✅ 리뷰 데이터를 담는 전역 변수
 
-// ✅ 마커 타입별 이미지 경로
+
 const iconUrls = {
   public: 'images/marker_public.png',
   building: 'images/marker_building.png',
@@ -53,11 +48,9 @@ const iconUrls = {
   current: 'images/marker_current_v2.png'
 };
 
-// ✅ ✨ 여기! (hidePreviewCard 함수 추가)
 function hidePreviewCard() {
   const previewCard = document.getElementById("info-preview-card");
   const fullCard = document.getElementById("info-full-card");
-
   if (previewCard) previewCard.classList.add("hidden");
   if (fullCard) fullCard.classList.add("hidden");
 }
@@ -65,16 +58,27 @@ function hidePreviewCard() {
 function initMapApp() {
   const container = document.getElementById('map');
   const options = {
-    center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울 중심
+    center: new kakao.maps.LatLng(37.5665, 126.9780),
     level: 7
   };
   map = new kakao.maps.Map(container, options);
 
-  // ✅ 위치 데이터 가져오기 및 마커 생성
+  // ✅ 리뷰 데이터 가져오기
+fetch("review.json")
+.then(res => res.json())
+.then(data => {
+  reviewData = data;
+  console.log("✅ 리뷰 데이터 불러오기 성공", reviewData);
+})
+.catch(err => {
+  console.error("❌ 리뷰 데이터 불러오기 실패", err);
+});
+
+
   fetch("locations.json")
     .then(res => res.json())
     .then(locations => {
-      markers.forEach(m => m.setMap(null)); // 기존 마커 제거
+      markers.forEach(m => m.setMap(null));
       markers = [];
       allMarkers = [];
 
@@ -93,7 +97,6 @@ function initMapApp() {
           draggable: isAdmin
         });
 
-        // ✅ 관리자 모드일 경우 드래그 후 저장
         if (isAdmin) {
           kakao.maps.event.addListener(marker, "dragend", function () {
             const newPos = marker.getPosition();
@@ -107,16 +110,11 @@ function initMapApp() {
               })
             })
               .then(res => res.json())
-              .then(data => {
-                console.log("📍 저장됨:", data.message);
-              })
-              .catch(err => {
-                console.error("❌ 저장 오류:", err);
-              });
+              .then(data => console.log("📍 저장됨:", data.message))
+              .catch(err => console.error("❌ 저장 오류:", err));
           });
         }
 
-        // ✅ 정보창 내용 구성 (기본 InfoWindow용)
         const infoContent = `
           <div style="max-width:200px; position:relative;">
             <div style="text-align:right;">
@@ -130,33 +128,25 @@ function initMapApp() {
 
         const infoWindow = new kakao.maps.InfoWindow({ content: infoContent });
 
-        // ✅ 마커 클릭 시 카드 정보창 표시
         kakao.maps.event.addListener(marker, 'click', () => {
-          showPreviewCard(location); // 절반 카드
+          showPreviewCard(location);
           document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
           document.getElementById("info-full-card").dataset.locationData = JSON.stringify(location);
 
           const encodedTitle = encodeURIComponent(location.title);
-  const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?entry.1743852912=${encodedTitle}`;
-  document.getElementById("review-button").href = formURL;
+          const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?entry.1743852912=${encodedTitle}`;
+          document.getElementById("review-button").href = formURL;
         });
 
         markers.push(marker);
         allMarkers.push({ marker, data: location });
       });
-    }); 
+    });
 
-
-
-
-    
-
-  // ✅ 내 위치 버튼 이벤트
   document.getElementById("findMe").addEventListener("click", () => {
     getUserLocation();
   });
 
-  // ✅ 근처 보기 버튼 이벤트
   document.getElementById("findNearby").addEventListener("click", () => {
     getUserLocation().then(({ lat, lng }) => {
       let nearbyCount = 0;
@@ -164,7 +154,6 @@ function initMapApp() {
       allMarkers.forEach(({ marker, data }) => {
         const distance = haversine(lat, lng, data.lat, data.lng);
         const isNearby = distance <= 1;
-
         if (isNearby) nearbyCount++;
         marker.setMap(nearbyMode ? map : (isNearby ? map : null));
       });
@@ -175,10 +164,9 @@ function initMapApp() {
 
       nearbyMode = !nearbyMode;
 
-      // ✅ 전체 보기로 전환 시 지도 중심을 초기 위치로
-    if (!nearbyMode) {
-      map.setLevel(7);
-    }
+      if (!nearbyMode) {
+        map.setLevel(7);
+      }
 
       const btn = document.getElementById("findNearby");
       const icon = btn.querySelector("img");
@@ -200,15 +188,14 @@ function initMapApp() {
     });
   });
 
-  // ✅ 필터바 (카페, 공공, 빌딩) 클릭 이벤트
   ["filter-cafe-top", "filter-public-top", "filter-building-top"].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
       el.addEventListener("click", () => {
-        hidePreviewCard(); // ✅ 요기! 카드형 정보창 닫기 추가
+        hidePreviewCard();
         const type = id.split("-")[1];
         if (currentInfoWindow) currentInfoWindow.close();
-        
+
         if (activeType === type) {
           activeType = null;
           allMarkers.forEach(({ marker }) => marker.setMap(map));
@@ -223,7 +210,6 @@ function initMapApp() {
   });
 }
 
-// ✅ 현재 위치 요청 및 마커 표시
 function getUserLocation() {
   return new Promise((resolve, reject) => {
     if (!navigator.geolocation) {
@@ -255,15 +241,13 @@ function getUserLocation() {
   });
 }
 
-// ✅ 거리 계산 함수 (하버사인 공식)
 function haversine(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const dLat = deg2rad(lat2 - lat1);
   const dLon = deg2rad(lon2 - lon1);
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
-    Math.sin(dLon / 2) ** 2;
+  const a = Math.sin(dLat / 2) ** 2 +
+            Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+            Math.sin(dLon / 2) ** 2;
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
@@ -271,52 +255,48 @@ function deg2rad(deg) {
   return deg * Math.PI / 180;
 }
 
-// ✅ 기존 카카오맵 정보창 닫기용 글로벌 함수
 window.closeInfoWindow = function () {
   if (currentInfoWindow) currentInfoWindow.close();
 };
 
-// ✅ 카드형 정보 미리보기 표시
 function showPreviewCard(location) {
   document.getElementById("preview-title").textContent = location.title;
   document.getElementById("preview-description").textContent = location.description || '';
-  // ✅ images 배열의 첫 번째 이미지를 사용
   document.getElementById("preview-image").src =
     location.images && location.images.length > 0 ? location.images[0] : '';
-
   document.getElementById("preview-image").style.objectPosition = "center bottom";
   document.getElementById("info-preview-card").dataset.locationData = JSON.stringify(location);
-
   document.getElementById("info-preview-card").classList.remove("hidden");
   document.getElementById("info-full-card").classList.add("hidden");
 }
 
-// ✅ 카드형 전체 정보창 표시
 function showFullCard(location) {
   document.getElementById("full-title").textContent = location.title;
   document.getElementById("full-description").textContent = location.description || '';
-  // ✅ 이미지 슬라이더 적용
-initCarousel(location.images);
-document.getElementById("full-type").textContent = location.form || '정보 없음';
+  initCarousel(location.images);
+  document.getElementById("full-type").textContent = location.form || '정보 없음';
 
-  document.getElementById("review-list").innerHTML = `
-     <li class="review positive">[긍정적] 공간 넓고 깔끔했어요</li>
-  <li class="review negative">[부정적] 환기가 약간 부족한 느낌</li>
-`;
+  const reviews = reviewData[location.id] || {};
+const positive = reviews.positive?.length
+  ? reviews.positive.map(r => `<li class="review positive">[긍정적] ${r}</li>`).join('')
+  : '<li>아직 긍정적인 리뷰가 없습니다.</li>';
 
- // 리뷰 링크 자동 설정!
- const encodedTitle = encodeURIComponent(location.title);
- const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?usp=pp_url&entry.1819958639=${encodedTitle}`;
- document.getElementById("review-button").href = formURL;
+const negative = reviews.negative?.length
+  ? reviews.negative.map(r => `<li class="review negative">[부정적] ${r}</li>`).join('')
+  : '<li>아직 부정적인 리뷰가 없습니다.</li>';
+
+document.getElementById("review-list").innerHTML = positive + negative;
+
+
+  const encodedTitle = encodeURIComponent(location.title);
+  const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?usp=pp_url&entry.1819958639=${encodedTitle}`;
+  document.getElementById("review-button").href = formURL;
 
   document.getElementById("info-full-card").classList.remove("hidden");
   document.getElementById("info-preview-card").classList.add("hidden");
 }
 
-
-// ✅ 카드 전환 관련 이벤트 연결 (DOM 로드 후)
 document.addEventListener("DOMContentLoaded", () => {
-  // 닫기 버튼
   const closeBtn = document.getElementById("close-preview");
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
@@ -324,7 +304,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 전체 보기 → 미리보기
   const backButton = document.getElementById("back-to-preview");
   if (backButton) {
     backButton.addEventListener("click", () => {
@@ -337,7 +316,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 미리보기 → 전체 보기
   const viewFullBtn = document.getElementById("view-full-button");
   if (viewFullBtn) {
     viewFullBtn.addEventListener("click", () => {
@@ -347,13 +325,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const location = JSON.parse(locationData);
         showFullCard(location);
       }
-
-      // ✅ 리뷰 접고/펼치기 버튼 토글은 여기에 들어가도 되지만...
-      // 더 좋은 위치는 아래와 같아 👇
     });
   }
 
-  // ✅ 💡 리뷰 접기/펼치기 기능은 viewFullBtn이 아닌 전역으로 둬야 재사용도 쉬움!
   const toggleBtn = document.getElementById("toggle-reviews");
   const reviewSection = document.getElementById("review-section");
 
@@ -371,17 +345,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-
-
-// ✅ 현재 슬라이드 위치를 기억하는 변수
 let currentSlide = 0;
 
-// ✅ 슬라이더 초기화 함수 - 이미지 배열을 받아서 DOM에 이미지 생성
 function initCarousel(images) {
   const container = document.getElementById("carousel-images");
-  container.innerHTML = ""; // 이전 이미지 제거
-
+  container.innerHTML = "";
   images.forEach((src) => {
     const img = document.createElement("img");
     img.src = src;
@@ -392,14 +360,12 @@ function initCarousel(images) {
   updateCarousel();
 }
 
-// ✅ 슬라이더 위치 이동 함수 - currentSlide 값을 기반으로 transform 적용
 function updateCarousel() {
   const container = document.getElementById("carousel-images");
-  const total = container.children.length; // ✅ 총 슬라이드 수 계산
+  const total = container.children.length;
   container.style.transform = `translateX(-${currentSlide * 100}%)`;
-   // ✅ 버튼 표시 제어
-   document.getElementById("carousel-prev").style.display = currentSlide === 0 ? "none" : "block";
-   document.getElementById("carousel-next").style.display = currentSlide === total - 1 ? "none" : "block";
+  document.getElementById("carousel-prev").style.display = currentSlide === 0 ? "none" : "block";
+  document.getElementById("carousel-next").style.display = currentSlide === total - 1 ? "none" : "block";
 }
 
 document.getElementById("carousel-prev").addEventListener("click", () => {

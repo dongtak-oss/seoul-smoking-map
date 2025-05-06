@@ -1,16 +1,6 @@
-[
-    {
-      "locationId": "loc001",
-      "reviews": [
-        {
-          "id": "r1",
-          "text": "깔끔하고 넓은 흡연구역입니다.",
-          "date": "2025-04-28"
-        }
-      ]
-    },
-    {
-      "locationId": "loc002",
-      "reviews": []
-    }
-  ]
+{
+  "sdgp-5": {
+    "positive": ["넓고 조용했어요"],
+    "negative": ["환기가 부족해요"]
+  }
+}
