@@ -134,7 +134,10 @@ fetch("review.json")
           document.getElementById("info-full-card").dataset.locationData = JSON.stringify(location);
 
           const encodedTitle = encodeURIComponent(location.title);
-          const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?entry.1743852912=${encodedTitle}`;
+          const encodedAddress = encodeURIComponent(location.address);
+          const encodedId = encodeURIComponent(location.id);
+
+         const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?entry.1819958639=${encodedTitle}&entry.844881344=${encodedAddress}&entry.443612047=${encodedId}`;
           document.getElementById("review-button").href = formURL;
         });
 
@@ -289,7 +292,11 @@ document.getElementById("review-list").innerHTML = positive + negative;
 
 
   const encodedTitle = encodeURIComponent(location.title);
-  const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?usp=pp_url&entry.1819958639=${encodedTitle}`;
+  const encodedAddress = encodeURIComponent(location.address);
+  const encodedId = encodeURIComponent(location.id);
+
+const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRyWzG9WW77iTZm1qJhqc0HdObb5Dg/viewform?entry.1819958639=${encodedTitle}&entry.844881344=${encodedAddress}&entry.443612047=${encodedId}`;
+
   document.getElementById("review-button").href = formURL;
 
   document.getElementById("info-full-card").classList.remove("hidden");
