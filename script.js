@@ -274,6 +274,15 @@ function showPreviewCard(location) {
 }
 
 function showFullCard(location) {
+   // ✅ 리뷰 상태 초기화 (존재할 때만)
+const toggleBtn = document.getElementById("toggle-reviews"); // ✅ ID 수정
+const reviewSection = document.getElementById("review-section");
+
+if (toggleBtn && reviewSection) {
+  toggleBtn.textContent = "리뷰 보기 ⬇"; // ✅ 버튼 초기 텍스트도 정확히 설정
+  reviewSection.classList.add("hidden");
+}
+
   document.getElementById("full-title").textContent = location.title;
   document.getElementById("full-description").textContent = location.description || '';
   initCarousel(location.images);
