@@ -20,7 +20,7 @@ html, body {
 
 .filter-bar {
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
   right: 0;
   display: flex;
@@ -553,7 +553,13 @@ display: block;
 
 
 #search-bar-container {
-  margin: 56px 12px 8px; /* 필터바와 여백 조절 */
+  position: fixed;       /* ✅ 항상 화면 최상단에 고정 */
+  top: 0;                /* ✅ 맨 위에 붙이기 */
+  left: 12px;
+  right: 12px;
+  z-index: 1001;
+  background: none;     /* ✅ 흰 배경 제거 */
+  box-shadow: none;     /* ✅ 그림자 제거 (불필요 시) */
 }
 
 #search-input {
@@ -562,7 +568,7 @@ display: block;
   font-size: 15px;
   border-radius: 10px;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);  /* ✅ 약간 투명한 배경 */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
