@@ -44,11 +44,11 @@ body {
 }
 
 #map {
-width: 100%;
-height: calc(100vh - 60px);
-margin-top: 0;
-display: block;
+  width: 100%;
+  height: 100dvh;       /* ✅ 안전한 뷰포트 높이 (최신 CSS 단위) */
+  display: block;
 }
+
 
 /* ✅ 필터 항목 */
 .filter-item {
