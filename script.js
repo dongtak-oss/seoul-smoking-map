@@ -359,6 +359,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // ✅ ⬇︎ 이 아래에 검색창 기능 삽입!
+  const searchInput = document.getElementById("search-input");
+
+  if (searchInput) {
+    searchInput.addEventListener("input", function (e) {
+      const keyword = e.target.value.trim().toLowerCase();
+
+      allMarkers.forEach(({ marker, data }) => {
+        const { title, address, description } = data;
+        const text = `${title} ${address} ${description}`.toLowerCase();
+
+        if (text.includes(keyword)) {
+          marker.setMap(map);
+        } else {
+          marker.setMap(null);
+        }
+      });
+    });
+  }
 });
 
 let currentSlide = 0;

@@ -552,6 +552,21 @@ display: block;
 }
 
 
+#search-bar-container {
+  margin: 56px 12px 8px; /* 필터바와 여백 조절 */
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
 
 
 
