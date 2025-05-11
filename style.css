@@ -20,7 +20,7 @@ html, body {
 
 .filter-bar {
   position: fixed;
-  top: 54px;
+  top: 50px;
   left: 0;
   right: 0;
   display: flex;
