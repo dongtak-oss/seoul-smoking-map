@@ -28,18 +28,22 @@
     <img src="https://dongtak-oss.github.io/seoul-smoking-map/images/logo_v2.png" alt="인트로 로고" />
   </div>
 
-  <!-- ✅ 필터바 위에 검색창 삽입 -->
+  <!-- ✅ 필터바 위에 검색창 + 길찾기 버튼 삽입 -->
 <div id="search-bar-container">
-  <input
-    type="search"
-    id="search-input"
-    placeholder="장소명, 주소로 검색"
-    inputmode="search"
-    autocomplete="off"
-    autocorrect="off"
-    spellcheck="false"
-  />
+  <div id="search-bar-wrapper">
+    <input
+      type="search"
+      id="search-input"
+      placeholder="장소명, 주소로 검색"
+      inputmode="search"
+      autocomplete="off"
+      autocorrect="off"
+      spellcheck="false"
+    />
+    <a id="route-btn" class="route-button disabled" target="_blank" title="길찾기">🧭</a>
+  </div>
 </div>
+
 
   <!-- ✅ 상단 필터 바: 유형별 마커 필터링 -->
   <div class="filter-bar">
