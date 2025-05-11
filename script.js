@@ -364,6 +364,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search-input");
 
   if (searchInput) {
+    // ✅ [추가] 모바일 클로즈업 방지
+    searchInput.addEventListener("focus", (e) => {
+      setTimeout(() => {
+        e.target.scrollIntoView({
+          block: "nearest",
+          behavior: "smooth"
+        });
+      }, 50);
+    });
+    
     searchInput.addEventListener("input", function (e) {
       const keyword = e.target.value.trim().toLowerCase();
 
