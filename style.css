@@ -20,7 +20,7 @@ html, body {
 
 .filter-bar {
   position: fixed;
-  top: 60px;
+  top: 54px;
   left: 0;
   right: 0;
   display: flex;
@@ -554,7 +554,7 @@ display: block;
 
 #search-bar-container {
   position: fixed;       /* ✅ 항상 화면 최상단에 고정 */
-  top: 0;                /* ✅ 맨 위에 붙이기 */
+  top: 12px;                /* ✅ 맨 위에 붙이기 */
   left: 12px;
   right: 12px;
   z-index: 1001;
