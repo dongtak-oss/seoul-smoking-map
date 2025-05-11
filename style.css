@@ -44,10 +44,16 @@ body {
 }
 
 #map {
+  position: absolute;  /* 전체 화면에 덮이도록 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  height: 100dvh;       /* ✅ 안전한 뷰포트 높이 (최신 CSS 단위) */
+  height: 100%;
   display: block;
 }
+
 
 
 /* ✅ 필터 항목 */
@@ -573,6 +579,10 @@ body {
 }
 
 html, body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   overscroll-behavior: none;
 }
 
