@@ -66,7 +66,7 @@ function initMapApp() {
   };
   map = new kakao.maps.Map(container, options);
 
-  kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+ kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
   if (!isReporting) return;
 
   const lat = mouseEvent.latLng.getLat();
@@ -76,24 +76,57 @@ function initMapApp() {
     reportMarker.setMap(null);
   }
 
-  // ✅ 먼저 마커 생성
+  // ✅ 마커 생성
   reportMarker = new kakao.maps.Marker({
     position: new kakao.maps.LatLng(lat, lng),
     map: map
   });
 
-  // ✅ 약간의 지연 후 메시지 띄우기 (300ms)
-  setTimeout(() => {
+  // ✅ 마커 클릭 시에도 confirm 메시지 뜨도록
+  kakao.maps.event.addListener(reportMarker, 'click', () => {
     const confirmMsg = "이 위치를 제보하시겠습니까?";
     if (confirm(confirmMsg)) {
+      // ✅ 지도 상태 초기화
       isReporting = false;
+      const text = document.querySelector("#report-button span");
+      if (text) text.textContent = "제보";
+      if (reportMarker) {
+        reportMarker.setMap(null);
+        reportMarker = null;
+      }
+      allMarkers.forEach(({ marker }) => marker.setMap(map));
+
+      // ✅ 구글폼 열기
       const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSc3_-JBMHCq4XA2Js7EXyc524-mQT-at3za3r33kaoYb0QMiw/viewform?entry.87466096=${lat}&entry.1277009563=${lng}`;
       window.open(formURL, "_blank");
     } else {
-      console.log("❎ 제보 취소됨");
+      console.log("❎ 제보 취소됨 (마커 클릭)");
     }
-  }, 300); // 300ms 정도면 마커 렌더링 충분
+  });
+
+  // ✅ 지도 클릭 직후에도 confirm
+  setTimeout(() => {
+    const confirmMsg = "이 위치를 제보하시겠습니까?";
+    if (confirm(confirmMsg)) {
+      // ✅ 지도 상태 초기화
+      isReporting = false;
+      const text = document.querySelector("#report-button span");
+      if (text) text.textContent = "제보";
+      if (reportMarker) {
+        reportMarker.setMap(null);
+        reportMarker = null;
+      }
+      allMarkers.forEach(({ marker }) => marker.setMap(map));
+
+      // ✅ 구글폼 열기
+      const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSc3_-JBMHCq4XA2Js7EXyc524-mQT-at3za3r33kaoYb0QMiw/viewform?entry.87466096=${lat}&entry.1277009563=${lng}`;
+      window.open(formURL, "_blank");
+    } else {
+      console.log("❎ 제보 취소됨 (지도 클릭)");
+    }
+  }, 300);
 });
+
 
 
 
@@ -429,6 +462,24 @@ if (reportBtn) {
     }
   });
 }
+
+document.addEventListener("visibilitychange", () => {
+  // 페이지가 다시 보일 때
+  if (document.visibilityState === "visible") {
+    if (!isReporting) {
+      const reportBtn = document.getElementById("report-button");
+      const icon = reportBtn.querySelector("img");
+      const text = reportBtn.querySelector("span");
+
+      if (text) text.textContent = "제보";
+      if (icon) {
+        icon.src = "images/icon_report.png";
+        icon.alt = "제보하기";
+      }
+    }
+  }
+});
+
 
 
 
