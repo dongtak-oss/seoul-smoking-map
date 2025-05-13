@@ -39,6 +39,9 @@ let userMarker = null;
 let nearbyMode = false;
 let activeType = null;
 let reviewData = {}; // ✅ 리뷰 데이터를 담는 전역 변수
+let isReporting = false;
+let reportMarker = null;
+
 
 
 const iconUrls = {
@@ -62,6 +65,39 @@ function initMapApp() {
     level: 7
   };
   map = new kakao.maps.Map(container, options);
+
+  kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+  if (!isReporting) return;
+
+  const lat = mouseEvent.latLng.getLat();
+  const lng = mouseEvent.latLng.getLng();
+
+  if (reportMarker) {
+    reportMarker.setMap(null);
+  }
+
+  // ✅ 먼저 마커 생성
+  reportMarker = new kakao.maps.Marker({
+    position: new kakao.maps.LatLng(lat, lng),
+    map: map
+  });
+
+  // ✅ 약간의 지연 후 메시지 띄우기 (300ms)
+  setTimeout(() => {
+    const confirmMsg = "이 위치를 제보하시겠습니까?";
+    if (confirm(confirmMsg)) {
+      isReporting = false;
+      const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSc3_-JBMHCq4XA2Js7EXyc524-mQT-at3za3r33kaoYb0QMiw/viewform?entry.87466096=${lat}&entry.1277009563=${lng}`;
+      window.open(formURL, "_blank");
+    } else {
+      console.log("❎ 제보 취소됨");
+    }
+  }, 300); // 300ms 정도면 마커 렌더링 충분
+});
+
+
+
+
 
   // ✅ 리뷰 데이터 가져오기
 fetch("review.json")
@@ -359,6 +395,43 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // ✅ 제보 버튼 기능 추가
+const reportBtn = document.getElementById("report-button");
+
+if (reportBtn) {
+  reportBtn.addEventListener("click", () => {
+    isReporting = !isReporting;
+
+    const icon = reportBtn.querySelector("img");  // ✅ 아이콘 요소
+    const text = reportBtn.querySelector("span");
+
+    if (isReporting) {
+      hidePreviewCard();
+      markers.forEach(marker => marker.setMap(null));
+      alert("제보할 위치를 지도에서 클릭해주세요.");
+
+      // ✅ 텍스트 + 아이콘 변경
+      text.textContent = "취소";
+      icon.src = "images/icon_cancel.png";
+      icon.alt = "제보 취소";
+    } else {
+      allMarkers.forEach(({ marker }) => marker.setMap(map));
+      if (reportMarker) {
+        reportMarker.setMap(null);
+        reportMarker = null;
+      }
+
+      // ✅ 원래대로 복귀
+      text.textContent = "제보";
+      icon.src = "images/icon_report.png";
+      icon.alt = "제보하기";
+    }
+  });
+}
+
+
+
 
   // ✅ ⬇︎ 이 아래에 검색창 기능 삽입!
   const searchInput = document.getElementById("search-input");
