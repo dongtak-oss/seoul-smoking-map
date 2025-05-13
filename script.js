@@ -464,21 +464,40 @@ if (reportBtn) {
 }
 
 document.addEventListener("visibilitychange", () => {
-  // 페이지가 다시 보일 때
   if (document.visibilityState === "visible") {
-    if (!isReporting) {
-      const reportBtn = document.getElementById("report-button");
-      const icon = reportBtn.querySelector("img");
-      const text = reportBtn.querySelector("span");
+    // ✅ 전체 지도 초기화
+    isReporting = false;
+    activeType = null;
+    nearbyMode = false;
 
-      if (text) text.textContent = "제보";
-      if (icon) {
-        icon.src = "images/icon_report.png";
-        icon.alt = "제보하기";
-      }
+    // ✅ 지도 위치/줌 초기화
+    map.setCenter(new kakao.maps.LatLng(37.5665, 126.9780)); // 원하는 기본 중심 좌표
+    map.setLevel(7); // 원하는 초기 줌 레벨
+
+    // ✅ 제보 마커 제거
+    if (reportMarker) {
+      reportMarker.setMap(null);
+      reportMarker = null;
     }
+
+    // ✅ 전체 마커 복원
+    allMarkers.forEach(({ marker }) => marker.setMap(map));
+
+    // ✅ 제보 버튼 상태 복원
+    const reportBtn = document.getElementById("report-button");
+    const icon = reportBtn.querySelector("img");
+    const text = reportBtn.querySelector("span");
+
+    if (text) text.textContent = "제보";
+    if (icon) {
+      icon.src = "images/icon_report.png";
+      icon.alt = "제보하기";
+    }
+
+    console.log("✅ 연지도 상태 완전 초기화 완료 (폼에서 복귀)");
   }
 });
+
 
 
 
