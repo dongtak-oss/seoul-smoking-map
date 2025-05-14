@@ -41,6 +41,9 @@ let activeType = null;
 let reviewData = {}; // ✅ 리뷰 데이터를 담는 전역 변수
 let isReporting = false;
 let reportMarker = null;
+let isEditingLocation = false;
+
+
 
 
 
@@ -67,10 +70,74 @@ function initMapApp() {
   map = new kakao.maps.Map(container, options);
 
  kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
-  if (!isReporting) return;
-
   const lat = mouseEvent.latLng.getLat();
   const lng = mouseEvent.latLng.getLng();
+
+  // ✅ 1. 위치 수정 요청 모드일 때 (isEditingLocation)
+if (isEditingLocation) {
+  if (reportMarker) reportMarker.setMap(null);
+
+  reportMarker = new kakao.maps.Marker({
+    position: new kakao.maps.LatLng(lat, lng),
+    map: map
+  });
+
+  // ✅ 마커 클릭 시에도 confirm 메시지
+  kakao.maps.event.addListener(reportMarker, 'click', () => {
+    const confirmMsg = "이 위치로 수정 요청하시겠습니까?";
+    if (confirm(confirmMsg)) {
+      isEditingLocation = false;
+
+      // ✅ 마커 제거
+      if (reportMarker) {
+        reportMarker.setMap(null);
+        reportMarker = null;
+      }
+
+      // ✅ 전체 마커 복원
+      allMarkers.forEach(({ marker }) => marker.setMap(map));
+
+      // ✅ 종료 버튼 숨기기
+      const cancelBtn = document.getElementById("cancel-edit-button");
+      if (cancelBtn) cancelBtn.classList.add("hidden");
+
+      // ✅ 구글폼 열기
+      const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform?entry.2071247198=${lat}&entry.424300870=${lng}`;
+      window.open(formURL, "_blank");
+    } else {
+      console.log("❎ 위치 수정 요청 취소됨 (마커 클릭)");
+    }
+  });
+
+  // ✅ 지도 클릭 직후에도 confirm 메시지
+  setTimeout(() => {
+    const confirmMsg = "이 위치로 수정 요청하시겠습니까?";
+    if (confirm(confirmMsg)) {
+      isEditingLocation = false;
+
+      if (reportMarker) {
+        reportMarker.setMap(null);
+        reportMarker = null;
+      }
+
+      allMarkers.forEach(({ marker }) => marker.setMap(map));
+
+      const cancelBtn = document.getElementById("cancel-edit-button");
+      if (cancelBtn) cancelBtn.classList.add("hidden");
+
+      const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform?entry.87466096=${lat}&entry.1277009563=${lng}`;
+      window.open(formURL, "_blank");
+    } else {
+      console.log("❎ 위치 수정 요청 취소됨 (지도 클릭)");
+    }
+  }, 300);
+
+  return; // ✅ 아래 일반 제보 처리와 겹치지 않도록
+}
+
+
+   // ✅ 2. 일반 제보 모드일 때
+  if (!isReporting) return;
 
   if (reportMarker) {
     reportMarker.setMap(null);
@@ -377,14 +444,108 @@ const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRy
 
   document.getElementById("review-button").href = formURL;
 
+  document.getElementById("info-full-card").dataset.locationId = location.id;
+
+
   document.getElementById("info-full-card").classList.remove("hidden");
   document.getElementById("info-preview-card").classList.add("hidden");
+
+  // ✅ 정보 수정 팝업 관련
+  const editBtn = document.getElementById("edit-info-button");
+  const popup = document.getElementById("edit-options-popup");
+  const closeEditPopupBtn = document.getElementById("close-edit-popup");
+  const infoEditBtn = document.getElementById("request-info-edit");
+  const locationEditBtn = document.getElementById("request-location-edit");
+
+  if (editBtn && popup && closeEditPopupBtn && infoEditBtn && locationEditBtn) {
+    // ✅ 이전 이벤트 제거 후 새로 등록
+    editBtn.onclick = () => {
+      popup.classList.remove("hidden");
+    };
+
+    closeEditPopupBtn.onclick = () => {
+      popup.classList.add("hidden");
+    };
+
+    infoEditBtn.onclick = () => {
+      window.open(
+        'https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform',
+        '_blank'
+      );
+      popup.classList.add("hidden");
+    };
+
+    locationEditBtn.onclick = () => {
+      popup.classList.add("hidden");
+
+      document.getElementById("cancel-edit-button").classList.remove("hidden");
+
+
+      // ✅ 정보창 닫기
+  document.getElementById("info-full-card").classList.add("hidden");
+
+  // ✅ 현재 보고 있는 흡연구역의 ID 추출
+  const targetId = document.getElementById("info-full-card").dataset.locationId;
+
+  // ✅ 해당 마커만 남기고 나머지 숨김
+  allMarkers.forEach(({ marker, data }) => {
+    if (data.id === targetId) {
+      marker.setMap(map); // 현재 마커는 유지
+    } else {
+      marker.setMap(null); // 나머지는 숨김
+    }
+  });
+
+  // ✅ 해당 마커 위치로 중심 이동 및 줌인
+  const targetLatLng = new kakao.maps.LatLng(location.lat, location.lng);
+  map.setCenter(targetLatLng);
+  map.setLevel(3); // 숫자가 작을수록 확대됨
+
+  // ✅ 위치 수정 모드로 전환
+  isEditingLocation = true;
+      
+  // ✅ 다음 단계로 위치 수정 모드 전환 플래그 설정 필요
+      alert("위치 수정 요청 모드로 전환되었습니다. 지도에서 수정할 위치를 클릭하세요.");
+    };
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const closeBtn = document.getElementById("close-preview");
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
+
+  // ✅ 위치 수정 모드 종료 버튼
+const cancelEditBtn = document.getElementById("cancel-edit-button");
+
+if (cancelEditBtn) {
+  cancelEditBtn.addEventListener("click", () => {
+    // 플래그 초기화
+    isEditingLocation = false;
+
+    // 마커 제거
+    if (reportMarker) {
+      reportMarker.setMap(null);
+      reportMarker = null;
+    }
+
+    // 전체 마커 복원
+    allMarkers.forEach(({ marker }) => marker.setMap(map));
+
+    // 버튼 숨기기
+    cancelEditBtn.classList.add("hidden");
+
+    // 정보창 다시 표시
+    const locationId = document.getElementById("info-full-card").dataset.locationId;
+    const locationData = allMarkers.find(({ data }) => data.id === locationId)?.data;
+
+    if (locationData) {
+      showFullCard(locationData); // ✅ 이전 정보창 복원
+    }
+  });
+}
+
+
+  const closePreviewBtn = document.getElementById("close-preview");
+  if (closePreviewBtn) {
+    closePreviewBtn.addEventListener("click", () => {
       document.getElementById("info-preview-card").classList.add("hidden");
     });
   }
@@ -493,6 +654,10 @@ document.addEventListener("visibilitychange", () => {
       icon.src = "images/icon_report.png";
       icon.alt = "제보하기";
     }
+
+     // ✅ ✅ ✅ 여기 추가: X 버튼 숨기기
+    const cancelEditBtn = document.getElementById("cancel-edit-button");
+    if (cancelEditBtn) cancelEditBtn.classList.add("hidden");
 
     console.log("✅ 연지도 상태 완전 초기화 완료 (폼에서 복귀)");
   }
