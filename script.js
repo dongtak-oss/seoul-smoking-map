@@ -102,7 +102,7 @@ if (isEditingLocation) {
       if (cancelBtn) cancelBtn.classList.add("hidden");
 
       // ✅ 구글폼 열기
-      const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform?entry.2071247198=${lat}&entry.424300870=${lng}`;
+      const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform?usp=pp_url&entry.2071247198=${lat}&entry.424300870=${lng}`;
       window.open(formURL, "_blank");
     } else {
       console.log("❎ 위치 수정 요청 취소됨 (마커 클릭)");
@@ -125,7 +125,7 @@ if (isEditingLocation) {
       const cancelBtn = document.getElementById("cancel-edit-button");
       if (cancelBtn) cancelBtn.classList.add("hidden");
 
-      const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform?entry.87466096=${lat}&entry.1277009563=${lng}`;
+      const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform?usp=pp_url&entry.2071247198=${lat}&entry.424300870=${lng}`;
       window.open(formURL, "_blank");
     } else {
       console.log("❎ 위치 수정 요청 취소됨 (지도 클릭)");
