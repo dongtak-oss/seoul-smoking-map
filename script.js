@@ -47,6 +47,36 @@ function showConfirmModal(callback) {
   };
 }  
 
+function showLocationConfirmModal(callback) {
+  const modal = document.getElementById("location-confirm-modal");
+  const yesBtn = document.getElementById("location-confirm-yes");
+  const noBtn = document.getElementById("location-confirm-no");
+
+  if (!modal || !yesBtn || !noBtn) {
+    console.error("❌ 위치 수정 모달 요소가 없습니다.");
+    return;
+  }
+
+  modal.classList.remove("hidden");
+
+  const cleanUp = () => {
+    modal.classList.add("hidden");
+    yesBtn.onclick = null;
+    noBtn.onclick = null;
+  };
+
+  yesBtn.onclick = () => {
+    cleanUp();
+    callback(true);
+  };
+
+  noBtn.onclick = () => {
+    cleanUp();
+    callback(false);
+  };
+}
+
+
 
 // ✅ script.js 시작점 - kakao map 초기화
 console.log("✅ script.js 실행 확인");
@@ -112,35 +142,33 @@ if (isEditingLocation) {
 
   // ✅ 마커 클릭 시에도 confirm 메시지
   kakao.maps.event.addListener(reportMarker, 'click', () => {
-    const confirmMsg = "이 위치로 수정 요청하시겠습니까?";
-    if (confirm(confirmMsg)) {
+  showLocationConfirmModal((confirmed) => {
+    if (confirmed) {
       isEditingLocation = false;
 
-      // ✅ 마커 제거
       if (reportMarker) {
         reportMarker.setMap(null);
         reportMarker = null;
       }
 
-      // ✅ 전체 마커 복원
       allMarkers.forEach(({ marker }) => marker.setMap(map));
 
-      // ✅ 종료 버튼 숨기기
       const cancelBtn = document.getElementById("cancel-edit-button");
       if (cancelBtn) cancelBtn.classList.add("hidden");
 
-      // ✅ 구글폼 열기
       const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform?usp=pp_url&entry.2071247198=${lat}&entry.424300870=${lng}`;
       window.open(formURL, "_blank");
     } else {
       console.log("❎ 위치 수정 요청 취소됨 (마커 클릭)");
     }
   });
+});
+
 
   // ✅ 지도 클릭 직후에도 confirm 메시지
   setTimeout(() => {
-    const confirmMsg = "이 위치로 수정 요청하시겠습니까?";
-    if (confirm(confirmMsg)) {
+  showLocationConfirmModal((confirmed) => {
+    if (confirmed) {
       isEditingLocation = false;
 
       if (reportMarker) {
@@ -158,7 +186,9 @@ if (isEditingLocation) {
     } else {
       console.log("❎ 위치 수정 요청 취소됨 (지도 클릭)");
     }
-  }, 300);
+  });
+}, 300);
+
 
   return; // ✅ 아래 일반 제보 처리와 겹치지 않도록
 }
