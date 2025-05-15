@@ -468,14 +468,17 @@ body {
 
 .popup-box {
   position: fixed; /* ✅ 화면 기준 고정 */
-  top: 150px;
-  right: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* 정확한 중앙으로 이동 */
   background: white;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 12px;
   z-index: 9999;
+  width: 280px;         /* 카드 폭 지정 */
+  text-align: center;   /* 버튼 가운데 정렬 */
 }
 
 .popup-box button {
@@ -498,9 +501,18 @@ body {
   display: none;
 }
 
+#popup-backdrop {
+  position: fixed;
+  inset: 0;  /* top, right, bottom, left: 0 */
+  background: rgba(0, 0, 0, 0.3);  /* 어두운 반투명 배경 */
+  backdrop-filter: blur(2px);     /* 흐림 효과 (지원되는 브라우저만) */
+  z-index: 9998;  /* 팝업보다 한 단계 뒤 */
+}
+
+
 .cancel-edit-button {
   position: absolute;
-  top: 80px;
+  top: 120px;
   right: 20px;
   z-index: 9999;
   background: white;

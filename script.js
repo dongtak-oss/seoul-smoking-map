@@ -453,6 +453,7 @@ const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRy
   // ✅ 정보 수정 팝업 관련
   const editBtn = document.getElementById("edit-info-button");
   const popup = document.getElementById("edit-options-popup");
+  const backdrop = document.getElementById("popup-backdrop"); // ✅ 이 줄을 추가!
   const closeEditPopupBtn = document.getElementById("close-edit-popup");
   const infoEditBtn = document.getElementById("request-info-edit");
   const locationEditBtn = document.getElementById("request-location-edit");
@@ -461,10 +462,12 @@ const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRy
     // ✅ 이전 이벤트 제거 후 새로 등록
     editBtn.onclick = () => {
       popup.classList.remove("hidden");
+      backdrop.classList.remove("hidden"); // ✅ 추가
     };
 
     closeEditPopupBtn.onclick = () => {
       popup.classList.add("hidden");
+       backdrop.classList.add("hidden"); // ✅ 추가
     };
 
     infoEditBtn.onclick = () => {
@@ -473,10 +476,12 @@ const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRy
         '_blank'
       );
       popup.classList.add("hidden");
+      backdrop.classList.add("hidden"); // ✅ 추가
     };
 
     locationEditBtn.onclick = () => {
       popup.classList.add("hidden");
+      backdrop.classList.add("hidden"); // ✅ 추가
 
       document.getElementById("cancel-edit-button").classList.remove("hidden");
 
@@ -507,6 +512,11 @@ const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRy
   // ✅ 다음 단계로 위치 수정 모드 전환 플래그 설정 필요
       alert("위치 수정 요청 모드로 전환되었습니다. 지도에서 수정할 위치를 클릭하세요.");
     };
+    // ✅ 배경 클릭 시에도 닫히도록
+  backdrop.onclick = () => {
+    popup.classList.add("hidden");
+    backdrop.classList.add("hidden");
+  };
   }
 }
 
