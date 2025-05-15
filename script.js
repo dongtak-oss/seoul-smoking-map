@@ -17,6 +17,37 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+function showConfirmModal(callback) {
+  const modal = document.getElementById("confirm-modal");
+  const yesBtn = document.getElementById("confirm-yes");
+  const noBtn = document.getElementById("confirm-no");
+
+  if (!modal || !yesBtn || !noBtn) {
+    console.error("❌ 모달 요소가 존재하지 않습니다.");
+    return;
+  }
+
+  modal.classList.remove("hidden");
+
+  const cleanUp = () => {
+    modal.classList.add("hidden");
+    yesBtn.onclick = null;
+    noBtn.onclick = null;
+  };
+
+  yesBtn.onclick = () => {
+    cleanUp();
+    callback(true);
+  };
+
+  noBtn.onclick = () => {
+    cleanUp();
+    callback(false);
+  };
+}  
+
+
 // ✅ script.js 시작점 - kakao map 초기화
 console.log("✅ script.js 실행 확인");
 
@@ -42,9 +73,6 @@ let reviewData = {}; // ✅ 리뷰 데이터를 담는 전역 변수
 let isReporting = false;
 let reportMarker = null;
 let isEditingLocation = false;
-
-
-
 
 
 const iconUrls = {
@@ -151,9 +179,8 @@ if (isEditingLocation) {
 
   // ✅ 마커 클릭 시에도 confirm 메시지 뜨도록
   kakao.maps.event.addListener(reportMarker, 'click', () => {
-    const confirmMsg = "이 위치를 제보하시겠습니까?";
-    if (confirm(confirmMsg)) {
-      // ✅ 지도 상태 초기화
+  showConfirmModal((confirmed) => {
+    if (confirmed) {
       isReporting = false;
       const text = document.querySelector("#report-button span");
       if (text) text.textContent = "제보";
@@ -163,19 +190,19 @@ if (isEditingLocation) {
       }
       allMarkers.forEach(({ marker }) => marker.setMap(map));
 
-      // ✅ 구글폼 열기
       const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSc3_-JBMHCq4XA2Js7EXyc524-mQT-at3za3r33kaoYb0QMiw/viewform?entry.87466096=${lat}&entry.1277009563=${lng}`;
       window.open(formURL, "_blank");
     } else {
       console.log("❎ 제보 취소됨 (마커 클릭)");
     }
   });
+});
+
 
   // ✅ 지도 클릭 직후에도 confirm
   setTimeout(() => {
-    const confirmMsg = "이 위치를 제보하시겠습니까?";
-    if (confirm(confirmMsg)) {
-      // ✅ 지도 상태 초기화
+  showConfirmModal((confirmed) => {
+    if (confirmed) {
       isReporting = false;
       const text = document.querySelector("#report-button span");
       if (text) text.textContent = "제보";
@@ -185,13 +212,14 @@ if (isEditingLocation) {
       }
       allMarkers.forEach(({ marker }) => marker.setMap(map));
 
-      // ✅ 구글폼 열기
       const formURL = `https://docs.google.com/forms/d/e/1FAIpQLSc3_-JBMHCq4XA2Js7EXyc524-mQT-at3za3r33kaoYb0QMiw/viewform?entry.87466096=${lat}&entry.1277009563=${lng}`;
       window.open(formURL, "_blank");
     } else {
       console.log("❎ 제보 취소됨 (지도 클릭)");
     }
-  }, 300);
+  });
+}, 300);
+
 });
 
 
