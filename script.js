@@ -472,8 +472,8 @@ const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRy
 
     infoEditBtn.onclick = () => {
       window.open(
-        'https://docs.google.com/forms/d/e/1FAIpQLSfNb8DGeHtuLI1RTn3WuYbBnvyi_uDH4jyWOPkBHvzGJ5GY-A/viewform',
-        '_blank'
+        'https://docs.google.com/forms/d/e/1FAIpQLSfsRIn5BGRF-UIuXi8Ya_my2jj3KS1ZZNynb_Uts9czxs7YZA/viewform?usp=preview',
+    '_blank'
       );
       popup.classList.add("hidden");
       backdrop.classList.add("hidden"); // ✅ 추가
@@ -504,7 +504,7 @@ const formURL = `https://docs.google.com/forms/d/e/1FAIpQLScRA9YMa1AcckQ9RvhfuRy
   // ✅ 해당 마커 위치로 중심 이동 및 줌인
   const targetLatLng = new kakao.maps.LatLng(location.lat, location.lng);
   map.setCenter(targetLatLng);
-  map.setLevel(3); // 숫자가 작을수록 확대됨
+  map.setLevel(2); // 숫자가 작을수록 확대됨
 
   // ✅ 위치 수정 모드로 전환
   isEditingLocation = true;
