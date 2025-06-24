@@ -4308,5 +4308,66 @@
     ],
     "source": "서울시 미래한강본부(한강공원) 누리집",
     "manage": ""
+  },
+  {
+    "id": "cll-1",
+    "title": "청량리역 흡연구역",
+    "address": "서울특별시 동대문구 전농1동",
+    "lat": 37.580224,
+    "lng": 127.046923,
+    "type": "public",
+    "description": "청량리역 4번 출구 부근에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [
+      "images/청량리역4번출구흡연구역_1.jpg","청량리역4번출구흡연구역_2.jpg"
+    ],
+    "source": "",
+    "manage": ""
+  },
+  {
+    "id": "cll-2",
+    "title": "청량리역 광장 흡연구역",
+    "address": "서울특별시 동대문구 전농1동",
+    "lat": 37.580516,
+    "lng": 127.046736,
+    "type": "public",
+    "description": "청량리역 광장에 위치한 스마트 흡연부스입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/청량리역광장_흡연구역.jpg"
+    ],
+    "source": "",
+    "manage": ""
+  },
+  {
+    "id": "ghm-1",
+    "title": "종로타워빌딩 뒷쪽 흡연구역",
+    "address": "서울특별시 종로구 공평동 70-3",
+    "lat": 37.571003,
+    "lng": 126.983982,
+    "type": "public",
+    "description": "종로타워빌딩 주자장 입구 부근에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/종로타워빌딩_흡연구역.jpg"
+    ],
+    "source": "",
+    "manage": ""
+  },
+  {
+    "id": "ghm-2",
+    "title": "sc제일은행본점빌딩 부근 흡연구역",
+    "address": "서울특별시 종로구 청진동 70-8",
+    "lat": 37.571439,
+    "lng": 126.981778,
+    "type": "public",
+    "description": "sc제일은행본점빌딩 부근에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/sc제일은행본점빌딩_흡연구역.jpg"
+    ],
+    "source": "",
+    "manage": ""
   }
+
 ]
