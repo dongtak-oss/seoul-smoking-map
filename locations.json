@@ -4369,6 +4369,52 @@
     ],
     "source": "",
     "manage": ""
+  },
+  {
+    "id": "nwc-2",
+    "title": "coffee vesco",
+    "address": "서울특별시 노원구 덕릉로 127",
+    "lat": 37.656045,
+    "lng": 127.061216,
+    "type": "cafe",
+    "description": "흡연실이 있는 'coffee vesco'입니다.",
+    "form": "밀폐형",
+    "images": [
+      "images/커피베스코_1.jpg"
+    ],
+    "source": "",
+    "manage": ""
+  },
+  {
+    "id": "nwp-4",
+    "title": "롯데백화점 1층 야외 흡연구역",
+    "address": "서울특별시 노원구 상계동 606-19",
+    "lat": 37.655221,
+    "lng": 127.062181,
+    "type": "building",
+    "description": "롯데백화점 1층 외부에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/롯데백화점노원_1층_1.jpg"
+    ],
+    "source": "",
+    "manage": ""
+  },
+  {
+    "id": "nwc-3",
+    "title": "탐앤탐스 티티클럽 노원점",
+    "address": "서울특별시 노원구 상계동 292-1",
+    "lat": 37.655364,
+    "lng": 127.063969,
+    "type": "cafe",
+    "description": "흡연실이 있는 탐앤탐스 티티클럽 노원점입니다.",
+    "form": "밀폐형",
+    "images": [
+      "images/탐앤탐스노원_1.jpg"
+    ],
+    "source": "",
+    "manage": ""
   }
+
 
 ]
