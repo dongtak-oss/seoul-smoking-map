@@ -1897,13 +1897,13 @@
     "id": "jrp-1",
     "title": "낙원악기상가 흡연구역",
     "address": "서울특별시 종로구 낙원동 260-1",
-    "lat": 37.5731678199056,
-    "lng": 126.988099945425,
+    "lat": 37.573474,
+    "lng": 126.987847,
     "type": "public",
     "description": "낙원악기상가 도로일부에 위치한 흡연구역입니다.",
     "form": "반개방형",
     "images": [
-      "images/흡연구역_이미지_예시.jpg"
+      "images/낙원악기상가.jpg"
     ],
     "source": "공공데이터",
     "manage": "종로구청, 민간",
@@ -1911,244 +1911,65 @@
   },
   {
     "id": "jrp-2",
-    "title": "돈화문로 흡연구역",
-    "address": "서울특별시 종로구 돈화문로 32-1",
-    "lat": 37.5714908635651,
-    "lng": 126.992109219536,
+    "title": "종로타워빌딩 뒷쪽 흡연구역",
+    "address": "서울특별시 종로구 공평동 70-3",
+    "lat": 37.571003,
+    "lng": 126.983963,
     "type": "public",
-    "description": "돈화문로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
+    "description": "종로타워빌딩 뒷쪽에 위치한 담배꽁초수거함입니다.",
+    "form": "",
     "images": [
-      "images/흡연구역_이미지_예시.jpg"
+      "images/종로타워빌딩_흡연구역.jpg"
     ],
-    "source": "공공데이터",
+    "source": "관리자 등록",
     "manage": "",
     "district": "종로구"
   },
   {
     "id": "jrp-3",
-    "title": "돈화문로 흡연구역",
-    "address": "서울특별시 종로구 돈화문로 35",
-    "lat": 37.5715959778406,
-    "lng": 126.991646116288,
+    "title": "sc제일은행본점빌딩 부근 흡연구역",
+    "address": "서울특별시 종로구 청진동 70-8",
+    "lat": 37.571444,
+    "lng": 126.981792,
     "type": "public",
-    "description": "돈화문로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
+    "description": "sc제일은행본점빌딩 부근에 위치한 흡연구역입니다.",
+    "form": "",
     "images": [
-      "images/흡연구역_이미지_예시.jpg"
+      "images/sc제일은행본점빌딩_흡연구역.jpg"
     ],
-    "source": "공공데이터",
+    "source": "관리자 등록",
     "manage": "",
     "district": "종로구"
   },
   {
     "id": "jrp-4",
-    "title": "보성사 터 흡연구역",
-    "address": "서울특별시 종로구 수송동 80-7",
-    "lat": 37.57404,
-    "lng": 126.981105,
-    "type": "public",
-    "description": "보성사 터 흡연구역",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-5",
-    "title": "서순라길 흡연구역",
-    "address": "서울특별시 종로구 서순라길 3",
-    "lat": 37.5708133214043,
-    "lng": 126.993714079293,
-    "type": "public",
-    "description": "서순라길 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-6",
-    "title": "서순라길 흡연구역",
-    "address": "서울특별시 종로구 서순라길 7",
-    "lat": 37.5709889233704,
-    "lng": 126.993676369977,
-    "type": "public",
-    "description": "서순라길 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-7",
     "title": "세종문화회관 흡연구역",
-    "address": "서울특별시 종로구",
-    "lat": 37.572422,
-    "lng": 126.974947,
+    "address": "서울특별시 종로구 세종대로 175",
+    "lat": 37.572518,
+    "lng": 126.974901,
     "type": "public",
-    "description": "세종문화회관 흡연구역입니다.",
-    "form": "반개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "관리자",
+    "description": "세종문화회관 뒷쪽에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "관리자 등록",
     "manage": "",
     "district": "종로구"
   },
   {
-    "id": "jrp-8",
-    "title": "수표로 흡연구역",
-    "address": "서울특별시 종로구 종로3가 2-1",
-    "lat": 37.5705098406404,
-    "lng": 126.989542260835,
-    "type": "public",
-    "description": "수표로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
+    "id": "jrb-1",
+    "title": "박문각종로고시학원 부근 흡연구역",
+    "address": "서울특별시 종로구 관수동 20",
+    "lat": 37.569671,
+    "lng": 126.989685,
+    "type": "building",
+    "description": "24시 찜질방 간판으로 들어가면 바로 있습니다.",
+    "form": "",
+    "images": ["images/박문각_1.jpg", "images/박문각_2.jpg"],
+    "source": "관리자 등록",
     "manage": "",
     "district": "종로구"
-  },
-  {
-    "id": "jrp-9",
-    "title": "종로 흡연구역",
-    "address": "서울특별시 종로구 종로 1",
-    "lat": 37.57095068465957,
-    "lng": 126.9782265930449,
-    "type": "public",
-    "description": "교보생명 앞에 위치한 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-10",
-    "title": "종로 흡연구역",
-    "address": "서울특별시 종로구 종로 289",
-    "lat": 37.5717545176917,
-    "lng": 127.009969690098,
-    "type": "public",
-    "description": "종로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-11",
-    "title": "종로 흡연구역",
-    "address": "서울특별시 종로구 종로 294",
-    "lat": 37.5712625089941,
-    "lng": 127.010715368227,
-    "type": "public",
-    "description": "종로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-12",
-    "title": "종로 흡연구역",
-    "address": "서울특별시 종로구 종로 307",
-    "lat": 37.5722159232795,
-    "lng": 127.011854397226,
-    "type": "public",
-    "description": "종로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-13",
-    "title": "종로 흡연구역",
-    "address": "서울특별시 종로구 종로 359",
-    "lat": 37.5733722075697,
-    "lng": 127.01675118037,
-    "type": "public",
-    "description": "종로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-14",
-    "title": "종로 흡연구역",
-    "address": "서울특별시 종로구 종로 398",
-    "lat": 37.5746707539542,
-    "lng": 127.021548537943,
-    "type": "public",
-    "description": "종로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-15",
-    "title": "청계천로 흡연구역",
-    "address": "서울특별시 종로구 청계천로 35",
-    "lat": 37.5693392529284,
-    "lng": 126.981377714314,
-    "type": "public",
-    "description": "청계천로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-16",
-    "title": "필운대로 흡연구역",
-    "address": "서울특별시 종로구 필운대로 9-2",
-    "lat": 37.5771335165691,
-    "lng": 126.969059394981,
-    "type": "public",
-    "description": "필운대로 흡연구역입니다.",
-    "form": "담배꽁초 수거함",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "종로구"
-  },
+  }
+,
   {
     "id": "jgp-1",
     "title": "서울역 8번 출구 흡연구역",
