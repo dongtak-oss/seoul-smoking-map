@@ -3667,7 +3667,7 @@
     "district": "중구"
   },
   {
-    "id": "jnp-1",
+    "id": "jlp-1",
     "title": "면일체육문화센터 흡연구역",
     "address": "서울특별시 중랑구 용마산로100길 13",
     "lat": 37.5920415995378,
@@ -3681,7 +3681,7 @@
     "district": "중랑구"
   },
   {
-    "id": "jnp-2",
+    "id": "jlp-2",
     "title": "중랑구청 흡연구역",
     "address": "서울특별시 중랑구 봉화산로 179",
     "lat": 37.6065635856848,
@@ -3704,6 +3704,31 @@
     "description": "면목5동 주민센터 흡연구역입니다.",
     "form": "",
     "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중랑구"
+  },
+  {
+    "id": "jlp-4",
+    "title": "사가정역 식당거리 담배꽁초 수거함",
+    "address": "서울특별시 중랑구 면목동 601-17",
+    "lat": 37.581331,
+    "lng": 127.087905,
+    "type": "public",
+    "description": "사가정역 뒷편 식당거리에 설치된 담배꽁초 수거함입니다.",
+    "form": "",
+    "images": 
+    ["images/jlp_4_1.jpg",
+     "images/jlp_4_2.jpg",
+    "images/jlp_4_3.jpg",
+  "images/jlp_4_4.jpg",
+"images/jlp_4_5.jpg",
+"images/jlp_4_6.jpg",
+"images/jlp_4_7.jpg",
+"images/jlp_4_8.jpg",
+"images/jlp_4_9.jpg",
+"images/jlp_4_10.jpg",
+"images/jlp_4_11.jpg"],
     "source": "공공데이터",
     "manage": "",
     "district": "중랑구"
@@ -3844,7 +3869,7 @@
     "description": "흡연실이 있는 '탐앤탐스 사가정역점'입니다.",
     "form": "폐쇄형",
     "images": [
-      "images/흡연구역_이미지_예시.jpg"
+      "images/jlc_2_1.jpg"
     ],
     "source": "관리자",
     "manage": "탐앤탐스 사가정역점",
@@ -3860,7 +3885,9 @@
     "description": "흡연실이 있는 '탐앤탐스 중랑구청점'입니다.",
     "form": "폐쇄형",
     "images": [
-      "images/흡연구역_이미지_예시.jpg"
+      "images/jlc_3_1.jpg",
+      "images/jlc_3_2.jpg",
+      "images/jlc_3_3.jpg"
     ],
     "source": "관리자",
     "manage": "탐앤탐스 중랑구청점",
