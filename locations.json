@@ -991,7 +991,7 @@
     "type": "cafe",
     "description": "흡연실이 있는 'coffee vesco'입니다.",
     "form": "밀폐형",
-    "images": [],
+    "images": ["images/nwc_2_1.jpg"],
     "source": "관리자 등록",
     "manage": "",
     "district": "노원구"
@@ -1005,10 +1005,7 @@
     "type": "cafe",
     "description": "흡연실이 있는 탐앤탐스 티티클럽 노원점입니다.",
     "form": "반개방형",
-    "images": [
-      "images/nwc_2_1.jpg",
-      ""
-    ],
+    "images": [ ],
     "source": "관리자 등록",
     "manage": "",
     "district": "노원구"
@@ -1066,7 +1063,7 @@
     "type": "public",
     "description": "청량리역 광장에 위치한 흡연구역입니다.",
     "form": "밀폐형",
-    "images": [],
+    "images": ["images/ddmp_1_1.jpg"],
     "source": "공공데이터",
     "manage": "",
     "district": "동대문구"
@@ -1080,7 +1077,7 @@
     "type": "public",
     "description": "청량리역 부근에 위치한 흡연구역입니다.",
     "form": "반개방형",
-    "images": [],
+    "images": ["images/ddmp_2_1.jpg","images/ddmp_2_2.jpg", "images/ddmp_2_3.jpg"],
     "source": "관리자등록",
     "manage": "",
     "district": "동대문구"
@@ -2401,7 +2398,7 @@
     "description": "롯데월드몰 잔디광장에 위치한 흡연구역입니다.",
     "form": "반개방형",
     "images": [
-      "images/흡연구역_이미지_예시.jpg"
+      "images/spp_1_1.jpg"
     ],
     "source": "공공데이터",
     "manage": "",
