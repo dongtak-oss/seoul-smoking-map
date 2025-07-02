@@ -7,12 +7,38 @@
     "lng": 127.036079668809,
     "type": "public",
     "description": "강북문화정보도서관 주차장 옆에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "form": "반개방형",
+    "images": [],
     "source": "공공데이터",
     "manage": "강북문화정보도서관",
+    "district": "강북구"
+  },
+  {
+    "id": "kbb-1",
+    "title": "롯데백화점 미아점 흡연구역",
+    "address": "서울특별시 강북구 도봉로 62",
+    "lat": 37.6145929759749,
+    "lng": 127.030517678336,
+    "type": "building",
+    "description": "롯데백화점 미아점 옥상에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "롯데백화점",
+    "district": "강북구"
+  },
+  {
+    "id": "kbc-1",
+    "title": "미즐 카페 엠",
+    "address": "서울특별시 강북구 4.19로 107",
+    "lat": 37.6435578967693,
+    "lng": 127.003794761375,
+    "type": "cafe",
+    "description": "흡연실이 있는 카페 '미즐 카페 엠'입니다.",
+    "form": "페쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "미즐 카페 엠",
     "district": "강북구"
   },
   {
@@ -22,17 +48,29 @@
     "lat": 37.5534364240863,
     "lng": 126.843648918555,
     "type": "public",
-    "description": "강서구민회관 1층에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "description": "강서구민회관에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
     "source": "공공데이터",
-    "manage": "강서구시설관리공단",
+    "manage": "",
     "district": "강서구"
   },
   {
     "id": "gsp-2",
+    "title": "마곡레포츠센터 흡연구역",
+    "address": "서울특별시 강서구 양천로 251",
+    "lat": 37.5731554994777,
+    "lng": 126.832148803205,
+    "type": "public",
+    "description": "마곡레포츠센터에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "강서구"
+  },
+  {
+    "id": "gsp-3",
     "title": "강서구청 흡연구역",
     "address": "서울특별시 강서구 화곡로 302",
     "lat": 37.5509655144007,
@@ -40,31 +78,41 @@
     "type": "public",
     "description": "강서구청 주차장 뒤편에 위치한 흡연구역입니다.",
     "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "강서구청",
     "district": "강서구"
   },
   {
-    "id": "gsp-3",
-    "title": "김포공항국내선 흡연구역",
+    "id": "gsp-4",
+    "title": "김포공항화물청사 흡연구역",
     "address": "서울특별시 강서구 하늘길 111",
-    "lat": 37.5605245028427,
-    "lng": 126.804595865582,
+    "lat": 37.55424523220979,
+    "lng": 126.80797062250126,
     "type": "public",
-    "description": "김포공항국내선 옥외에 위치한 흡연구역입니다.",
+    "description": "김포공항화물청사 1층 옥외에 위치한 흡연구역입니다.",
     "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "공항공사",
     "district": "강서구"
   },
   {
-    "id": "gsp-4",
+    "id": "gsp-5",
+    "title": "김포공항국내선 흡연구역",
+    "address": "서울특별시 강서구 하늘길 111",
+    "lat": 37.56047452702954,
+    "lng": 126.80455921234028,
+    "type": "public",
+    "description": "김포공항국내선 옥외에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "공항공사",
+    "district": "강서구"
+  },
+  {
+    "id": "gap-6",
     "title": "김포공항국제선 흡연구역",
     "address": "서울특별시 강서구 하늘길 38",
     "lat": 37.5713695798026,
@@ -72,95 +120,27 @@
     "type": "public",
     "description": "김포공항국제선 옥외에 위치한 흡연구역입니다.",
     "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "공항공사",
-    "district": "강서구"
-  },
-  {
-    "id": "gsp-5",
-    "title": "김포공항화물청사 흡연구역",
-    "address": "서울특별시 강서구 하늘길 111",
-    "lat": 37.5605245028427,
-    "lng": 126.804595865582,
-    "type": "public",
-    "description": "김포공항화물청사 1층 옥외에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "공항공사",
-    "district": "강서구"
-  },
-  {
-    "id": "gsp-6",
-    "title": "마곡실내배드민턴장 흡연구역",
-    "address": "서울특별시 강서구 양천로 251 ",
-    "lat": 37.5731554994777,
-    "lng": 126.832148803205,
-    "type": "public",
-    "description": "마곡실내배드민턴장 1층 주차장 뒤편에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "강서구시설관리공단",
     "district": "강서구"
   },
   {
     "id": "gap-1",
-    "title": "관악구 보건소 흡연구역",
+    "title": "관악구청 흡연구역",
     "address": "서울특별시 관악구 관악로 145",
-    "lat": 37.4782106746327,
-    "lng": 126.951501244173,
+    "lat": 37.47820251802855,
+    "lng": 126.95138559238352,
     "type": "public",
-    "description": "관악구의회 6층 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "description": "관악구청 2층 테라스에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
     "source": "공공데이터",
     "manage": "관악구청",
     "district": "관악구"
   },
   {
     "id": "gap-2",
-    "title": "관악구의회 흡연구역",
-    "address": "서울특별시 관악구 관악로 145",
-    "lat": 37.4782106746327,
-    "lng": 126.951501244173,
-    "type": "public",
-    "description": "관악구 보건소 6층 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "관악구청",
-    "district": "관악구"
-  },
-  {
-    "id": "gap-3",
-    "title": "관악구청 흡연구역",
-    "address": "서울특별시 관악구 관악로 145",
-    "lat": 37.4782106746327,
-    "lng": 126.951501244173,
-    "type": "public",
-    "description": "관악구청 2층 테라스에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "관악구청",
-    "district": "관악구"
-  },
-  {
-    "id": "gap-4",
     "title": "관악구청 흡연구역",
     "address": "서울특별시 관악구 관악로 145",
     "lat": 37.4782106746327,
@@ -168,31 +148,41 @@
     "type": "public",
     "description": "관악구청 9층 옥상에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
+    "source": "공공데이터",
+    "manage": "관악구청",
+    "district": "관악구"
+  },
+  {
+    "id": "gap-3",
+    "title": "관악구 보건소 흡연구역",
+    "address": "서울특별시 관악구 봉천동 661",
+    "lat": 37.488180654319,
+    "lng": 126.932669477715,
+    "type": "public",
+    "description": "관악구의회 6층 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "관악구청",
+    "district": "관악구"
+  },
+  {
+    "id": "gap-4",
+    "title": "관악구의회 흡연구역",
+    "address": "서울특별시 관악구 봉천동 1570-1",
+    "lat": 37.478454709667574,
+    "lng": 126.95116496759996,
+    "type": "public",
+    "description": "관악구 보건소 6층 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
     "source": "공공데이터",
     "manage": "관악구청",
     "district": "관악구"
   },
   {
     "id": "gap-5",
-    "title": "관악문화관도서관 흡연구역",
-    "address": "서울특별시 관악구 신림로3길 35",
-    "lat": 37.4675533645757,
-    "lng": 126.944962394132,
-    "type": "public",
-    "description": "관악문화관도서관 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "관악구청",
-    "district": "관악구"
-  },
-  {
-    "id": "gap-6",
     "title": "싱글벙글센터 흡연구역",
     "address": "서울특별시 관악구 남부순환로 234길 73",
     "lat": 37.4760962512417,
@@ -200,47 +190,157 @@
     "type": "public",
     "description": "싱글벙글센터 뒷편에 위치한 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "관악구청",
     "district": "관악구"
   },
   {
-    "id": "gjp-1",
-    "title": "광진구청 흡연구역",
-    "address": "서울특별시 광진구 자양1동 777",
-    "lat": 37.53849053594529,
-    "lng": 127.08202926538516,
+    "id": "gap-6",
+    "title": "관악문화관도서관 흡연구역",
+    "address": "서울특별시 관악구 신림로3길 35",
+    "lat": 37.4675533645757,
+    "lng": 126.944962394132,
     "type": "public",
-    "description": "광진구청 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "description": "관악문화관도서관 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
     "source": "공공데이터",
-    "manage": "",
+    "manage": "관악구청",
+    "district": "관악구"
+  },
+  {
+    "id": "gab-1",
+    "title": "강남고려병원 흡연구역",
+    "address": "서울특별시 관악구 관악로 242",
+    "lat": 37.4856188363947,
+    "lng": 126.956781703053,
+    "type": "building",
+    "description": "강남고려병원 주차장에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "강남고려병원",
+    "district": "관악구"
+  },
+  {
+    "id": "gab-2",
+    "title": "타임스트림 흡연구역",
+    "address": "서울특별시 관악구 신림로 330",
+    "lat": 37.4838513393186,
+    "lng": 126.930234545397,
+    "type": "building",
+    "description": "타임스트림 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "타임스트림",
+    "district": "관악구"
+  },
+  {
+    "id": "gab-2",
+    "title": "르네상스쇼핑몰 흡연구역",
+    "address": "서울특별시 관악구 신림로 340",
+    "lat": 37.4847625375982,
+    "lng": 126.930096548294,
+    "type": "building",
+    "description": "르네상스쇼핑몰 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "르네상스쇼핑몰",
+    "district": "관악구"
+  },
+  {
+    "id": "gab-3",
+    "title": "에이치플러스양지병원 흡연구역",
+    "address": "서울특별시 관악구 남부순환로 1636",
+    "lat": 37.48411740697721,
+    "lng": 126.932561980664,
+    "type": "building",
+    "description": "에이치플러스양지병원 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "양지병원",
+    "district": "관악구"
+  },
+  {
+    "id": "gab-4",
+    "title": "롯데백화점 관악점 흡연구역",
+    "address": "서울특별시 관악구 봉천로 209",
+    "lat": 37.4904954867064,
+    "lng": 126.924981674031,
+    "type": "building",
+    "description": "롯데백화점 관악점 건물 뒷편에 위치한 흡연구역입니다.",
+    "form": "페쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "롯데백화점 관악점",
+    "district": "관악구"
+  },
+  {
+    "id": "gjp-1",
+    "title": "동서울종합터미널 흡연구역",
+    "address": "서울특별시 광진구 구의동 546-1",
+    "lat": 37.5339176560567,
+    "lng": 127.093585434282,
+    "type": "public",
+    "description": "동서울종합터미널 앞 전면보도에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "청소과",
     "district": "광진구"
   },
   {
     "id": "gjp-2",
-    "title": "광진구청 흡연구역",
-    "address": "서울특별시 광진구 자양1동 778",
-    "lat": 0,
-    "lng": 0,
-    "type": "public",
-    "description": "광진구청 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "title": "아차산배수지 체육공원 흡연구역",
+    "address": "서울특별시 광진구 천호대로 731",
+    "lat": "",
+    "lng": "",
+    "type": "public ",
+    "description": "아차산배수지 체육공원에 위치한 흡연구역입니다.",
+    "form": "밀폐형",
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "광진구"
   },
   {
     "id": "gjp-3",
+    "title": "광진구청 흡연구역",
+    "address": "서울특별시 광진구 자양1동 777",
+    "lat": 37.5383979954125,
+    "lng": 127.082428688031,
+    "type": "public",
+    "description": "광진구청 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjp-4",
+    "title": "광진구청 흡연구역",
+    "address": "서울특별시 광진구 자양1동 778",
+    "lat": "",
+    "lng": "",
+    "type": "public",
+    "description": "광진구청 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjp-5",
     "title": "광진구청 흡연구역",
     "address": "서울특별시 광진구 자양1동 779",
     "lat": 37.5375239543766,
@@ -256,55 +356,7 @@
     "district": "광진구"
   },
   {
-    "id": "gjp-4",
-    "title": "국립정신건강센터 흡연구역",
-    "address": "서울특별시 광진구 용마산로 127",
-    "lat": 37.5650862337223,
-    "lng": 127.085776641765,
-    "type": "public",
-    "description": "국립정신건강센터 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjp-5",
-    "title": "보건복지행정타운 흡연구역",
-    "address": "서울특별시 광진구 용마산로 127",
-    "lat": 37.5650862337223,
-    "lng": 127.085776641765,
-    "type": "public",
-    "description": "보건복지행정타운 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
     "id": "gjp-6",
-    "title": "아차산배수지체육공원 흡연구역",
-    "address": "서울특별시 광진구 천호대로 731",
-    "lat": 37.548817,
-    "lng": 127.095794,
-    "type": "public",
-    "description": "아차산배수지체육공원 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjp-7",
     "title": "화양동 주민자치센터 흡연구역",
     "address": "서울특별시 광진구 화양동 132-68",
     "lat": 37.5462710059779,
@@ -320,50 +372,517 @@
     "district": "광진구"
   },
   {
-    "id": "grp-1",
-    "title": "신도림역 2번 출구 흡연구역",
-    "address": "서울특별시 구로구 신도림동 460-26",
-    "lat": 37.5087389965473,
-    "lng": 126.891109048536,
+    "id": "gjp-7",
+    "title": "보건복지행정타운 흡연구역",
+    "address": "서울특별시 광진구 용마산로 127",
+    "lat": 37.5650862337223,
+    "lng": 127.085776641765,
     "type": "public",
-    "description": "신도림역 2번 출구에 위치한 흡연구역입니다.",
-    "form": "",
+    "description": "보건복지행정타운 흡연구역입니다.",
+    "form": "개방형",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjp-8",
+    "title": "국립정신건강센터 흡연구역",
+    "address": "서울특별시 광진구 용마산로 127",
+    "lat": 37.5650862337223,
+    "lng": 127.085776641765,
+    "type": "public",
+    "description": "국립정신건강센터 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-1",
+    "title": "세종대학교 흡연구역",
+    "address": "서울특별시 광진구 능동로 213",
+    "lat": "",
+    "lng": "",
+    "type": "building",
+    "description": "세종대학교 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-2",
+    "title": "건국대학교 인문학관 흡연구역",
+    "address": "서울특별시 광진구 능동로 120",
+    "lat": 37.539182674872,
+    "lng": 127.074711902268,
+    "type": "building",
+    "description": "건국대학교 인문학관 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-3",
+    "title": "세종대학교 대양홀 흡연구역",
+    "address": "서울특별시 광진구 능동로 209",
+    "lat": 37.5516093089619,
+    "lng": 127.07318364213,
+    "type": "building",
+    "description": "세종대학교 대양홀 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-4",
+    "title": "유니버설아트센터 흡연구역",
+    "address": "서울특별시 광진구 천호대로 664",
+    "lat": 37.5509798002896,
+    "lng": 127.087095159462,
+    "type": "building",
+    "description": "유니버설아트센터 흡연구역입니다.",
+    "form": "페쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-5",
+    "title": "건국대학교새천년관 대공연장 흡연구역",
+    "address": "서울특별시 광진구 능동로 120",
+    "lat": 37.539182674872,
+    "lng": 127.074711902268,
+    "type": "building",
+    "description": "건국대학교새천년관 대공연장 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-6",
+    "title": "세종대학교 학생회관 대공연장 흡연구역",
+    "address": "서울특별시 광진구 능동로 209",
+    "lat": 37.5516093089619,
+    "lng": 127.07318364213,
+    "type": "building",
+    "description": "세종대학교 학생회관 대공연장 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-7",
+    "title": "이마트 자양점 흡연구역",
+    "address": "서울특별시 광진구 아차산로 272",
+    "lat": 37.5385582736952,
+    "lng": 127.072996184863,
+    "type": "building",
+    "description": "이마트 자양점 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-8",
+    "title": "롯데백화점 건대스타시티점",
+    "address": "서울특별시 광진구 능동로 92",
+    "lat": 37.5390373908314,
+    "lng": 127.071432147214,
+    "type": "building",
+    "description": "롯데백화점 건대스타시티점입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-9",
+    "title": "커먼그라운드 흡연구역",
+    "address": "서울특별시 광진구 아차산로 200",
+    "lat": 37.5410566332301,
+    "lng": 127.065669226745,
+    "type": "building",
+    "description": "커먼그라운드 3층에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjb-10",
+    "title": "테크노마트 흡연구역",
+    "address": "서울특별시 광진구 광나루로 85",
+    "lat": "",
+    "lng": "",
+    "type": "building",
+    "description": "테크노마트 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-1",
+    "title": "탐앤탐스 블랙그레이트점",
+    "address": "서울특별시 광진구 아차산로 426",
+    "lat": 37.537808088884,
+    "lng": 127.089750551178,
+    "type": "cafe",
+    "description": "흡연실이 있는 '탐앤탐스 블랙그레이트점'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-2",
+    "title": "꽃빙(동서울종합터미널 2층)",
+    "address": "서울특별시 광진구 강변역로 50",
+    "lat": 37.5345385101597,
+    "lng": 127.094184050922,
+    "type": "cafe",
+    "description": "흡연실이 있는 '꽃빙'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-3",
+    "title": "투썸플레이스 군자역점",
+    "address": "서울특별시 광진구 능동로 289",
+    "lat": 37.55581918269861,
+    "lng": 127.07843517977837,
+    "type": "cafe",
+    "description": "흡연실이 있는 '투썸플레이스 군자역점'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-4",
+    "title": "카페오로시",
+    "address": "서울특별시 광진구 자양로 131",
+    "lat": 37.5394776891691,
+    "lng": 127.082907026695,
+    "type": "cafe",
+    "description": "흡연실이 있는 '카페오로시'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-5",
+    "title": "다트프린스 건대점",
+    "address": "서울특별시 광진구 아차산로 242",
+    "lat": 37.5399325479221,
+    "lng": 127.069903667359,
+    "type": "cafe",
+    "description": "흡연실이 있는 '다트프린스 건대점'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-6",
+    "title": "더이퀄리브리엄커피",
+    "address": "서울특별시 광진구 아차산로30길 7",
+    "lat": 37.5403541616654,
+    "lng": 127.067833632739,
+    "type": "cafe",
+    "description": "흡연실이 있는 '더이퀄리브리엄커피'입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-7",
+    "title": "카페온더플랜 건대점",
+    "address": "서울특별시 광진구 능동로 161",
+    "lat": 37.5452314740878,
+    "lng": 127.072789501681,
+    "type": "cafe",
+    "description": "흡연실이 있는 '카페온더플랜 건대점'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-8",
+    "title": "꿈꾸다 917",
+    "address": "서울특별시 광진구 아차산로 31길 15",
+    "lat": 37.5417865132484,
+    "lng": 127.069482546667,
+    "type": "cafe",
+    "description": "흡연실이 있는 '꿈꾸다 917'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-9",
+    "title": "커피마켓",
+    "address": "서울특별시 광진구 아차산로33길 60",
+    "lat": 37.5428701496604,
+    "lng": 127.071139792136,
+    "type": "cafe",
+    "description": "흡연실이 있는 '커피마켓'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-10",
+    "title": "탐앤탐스 광진화양점",
+    "address": "서울특별시 광진구 능동로 13길 26",
+    "lat": 37.5432286879772,
+    "lng": 127.070788900119,
+    "type": "cafe",
+    "description": "흡연실이 있는 '탐앤탐스 광진화양점'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-11",
+    "title": "놀숲 건대점",
+    "address": "서울특별시 광진구 아차산로 224",
+    "lat": 37.5405711604806,
+    "lng": 127.068080611331,
+    "type": "cafe",
+    "description": "흡연실이 있는 '놀숲 건대점'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "gjc-12",
+    "title": "만화카페 라이브러리",
+    "address": "서울특별시 광진구 아차산로 370",
+    "lat": 37.5364473570775,
+    "lng": 127.084052089481,
+    "type": "cafe",
+    "description": "흡연실이 있는 '만화카페 라이브러리'입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "광진구"
+  },
+  {
+    "id": "grp-1",
+    "title": "신도림역 남측광장 흡연구역",
+    "address": "서울특별시 구로구 구로동 3-78",
+    "lat": 37.5076285774197,
+    "lng": 126.891086005465,
+    "type": "public",
+    "description": "신도림역 남측광장에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "구로구"
+  },
+  {
+    "id": "grp-2",
+    "title": "신도림역 2번 출구 흡연구역",
+    "address": "서울특별시 구로구 신도림동 460-26",
+    "lat": 37.50782638773846,
+    "lng": 126.89181567433944,
+    "type": "public",
+    "description": "신도림역 2번 출구에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "구로구"
+  },
+  {
+    "id": "grb-1",
+    "title": "고척돔구장 흡연구역",
+    "address": "서울특별시 구로구 경인로 430",
+    "lat": 37.4982125677913,
+    "lng": 126.867088741096,
+    "type": "building",
+    "description": "고척돔구장 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "구로구"
+  },
+  {
+    "id": "grb-2",
+    "title": "구로성심병원 흡연구역",
+    "address": "서울특별시 구로구 경인로 427",
+    "lat": 37.4996468654605,
+    "lng": 126.866358244952,
+    "type": "building",
+    "description": "구로성심병원 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "구로구"
+  },
+  {
+    "id": "grb-3",
+    "title": "고대구로병원 흡연구역",
+    "address": "서울특별시 구로구 구로동로 148",
+    "lat": 37.4911503253664,
+    "lng": 126.884511034177,
+    "type": "building",
+    "description": "고대구로병원 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "구로구"
+  },
+  {
+    "id": "grb-4",
+    "title": "지하이시티 흡연구역",
+    "address": "서울특별시 구로구 구로동 237",
+    "lat": 37.4819554025522,
+    "lng": 126.892280813777,
+    "type": "building",
+    "description": "지하이시티 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "구로구"
+  },
+  {
+    "id": "grb-5",
+    "title": "신도림테크노마트 흡연구역",
+    "address": "서울특별시 구로구 구로동 3-25",
+    "lat": 37.5069739187173,
+    "lng": 126.890319120085,
+    "type": "building",
+    "description": "신도림테크노마트 북서족 철로변측 인도공간에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "구로구"
   },
   {
     "id": "nwp-1",
-    "title": "노원구 문화의 거리 흡연구역",
-    "address": "서울특별시 노원구 상계동 616-20",
-    "lat": 37.655841,
-    "lng": 127.062833,
+    "title": "중계근린공원 흡연구역",
+    "address": "서울특별시 노원구 중계동 507",
+    "lat": 37.63895930569047,
+    "lng": 127.06541936759473,
     "type": "public",
-    "description": "노원구 문화의 거리 흡연구역입니다.",
-    "form": "재떨이형",
+    "description": "중계근린공원 주차장에 위치한 흡연구역입니다.",
+    "form": "반개방형",
     "images": [
-      "images/노원구_문화의거리.jpg"
+      "images/nwp_1_1.jpg",
+      "images/nwp_1_2.jpg"
     ],
-    "source": "관리자",
-    "manage": "노원구청",
+    "source": "공공데이터",
+    "manage": "",
     "district": "노원구"
   },
   {
     "id": "nwp-2",
     "title": "등나무문화공원 흡연구역",
     "address": "서울특별시 노원구 중계동 508-1",
-    "lat": 37.639566058320725,
-    "lng": 127.06791818263885,
+    "lat": 37.63984532097788,
+    "lng": 127.0679920826698,
     "type": "public",
     "description": "등나무문화공원 주차장에 위치한 흡연구역입니다.",
     "form": "폐쇄형",
     "images": [
-      "images/등나무문화공원 흡연구역.jpg",
-      "images/등나무문화공원_2.jpg",
-      "images/등나무문화공원_3.jpg"
+      "images/nwp_2_1.jpg",
+      "images/nwp_2_2.jpg",
+      "images/nwp_2_3.jpg"
     ],
     "source": "공공데이터",
     "manage": "",
@@ -371,22 +890,203 @@
   },
   {
     "id": "nwp-3",
-    "title": "중계근린공원 흡연구역",
-    "address": "서울특별시 노원구 중계동 507",
-    "lat": 37.638963810611855,
-    "lng": 127.06541937154475,
+    "title": "불암산스포츠타운 흡연구역",
+    "address": "서울특별시 노원구 공릉동 141",
+    "lat": 37.63861962670001,
+    "lng": 127.08266040220036,
     "type": "public",
-    "description": "중계근린공원 주차장에 위치한 흡연구역입니다.",
-    "form": "반개방형",
+    "description": "불암산스포츠타운 흡연구역입니다.",
+    "form": "밀폐형",
     "images": [
-      "images/중계근린공원 흡연구역.jpg"
+      "images/nwp_3_1.jpg",
+      "images/nwp_3_2.jpg"
     ],
     "source": "공공데이터",
     "manage": "",
     "district": "노원구"
   },
   {
+    "id": "nwp-4",
+    "title": "수락산스포츠타운 흡연구역",
+    "address": "서울특별시 노원구 상계동 121",
+    "lat": 37.6685784594935,
+    "lng": 127.07134790683,
+    "type": "public",
+    "description": "수락산스포츠타운 흡연구역입니다.",
+    "form": "밀폐형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
+    "id": "nwp-5",
+    "title": "육군사관학교 체육관 흡연구역",
+    "address": "서울특별시 노원구 공릉동 1-1",
+    "lat": 37.6237395490484,
+    "lng": 127.101093310976,
+    "type": "public",
+    "description": "육군사관학교 체육관 흡연구역입니다.",
+    "form": "밀폐형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
+    "id": "nwp-6",
+    "title": "마들스포츠타운 흡연구역",
+    "address": "서울특별시 노원구 상계동 770-2",
+    "lat": 37.6441600064637,
+    "lng": 127.058299587221,
+    "type": "public",
+    "description": "마들스포츠타운에 위치한 흡연구역입니다.",
+    "form": "밀폐형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
+    "id": "nwp-7",
+    "title": "노원구 문화의 거리 담배꽁초수거함",
+    "address": "서울특별시 노원구 상계동 616-20",
+    "lat": 37.6558447760889,
+    "lng": 127.062841404124,
+    "type": "public",
+    "description": "노원구 문화의 거리에 설치된 담배꽁초수거함입니다.",
+    "form": "개방형",
+    "images": [
+      "images/nwp_7_1.jpg"
+    ],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
+    "id": "nwc-1",
+    "title": "투썸플레이스 노원문화의거리점",
+    "address": "서울특별시 노원구 상계동 593-14",
+    "lat": 37.65639257155359,
+    "lng": 127.06267516269521,
+    "type": "cafe",
+    "description": "흡연실이 있는 카페 '투썸플레이스 노원문화의 거리점'입니다.",
+    "form": "밀폐형",
+    "images": [
+      "images/nwc_1_1.jpg",
+      "images/nwc_1_2.jpg",
+      "images/nwc_1_3.jpg",
+      "images/nwc_1_4.jpg"
+    ],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
+    "id": "nwc-2",
+    "title": "coffee vesco",
+    "address": "서울특별시 노원구 상계동 693-2",
+    "lat": 37.656048748979835,
+    "lng": 127.06114497456392,
+    "type": "cafe",
+    "description": "흡연실이 있는 'coffee vesco'입니다.",
+    "form": "밀폐형",
+    "images": [],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
+    "id": "nwc-3",
+    "title": "탐앤탐스 티티클럽 노원점",
+    "address": "서울특별시 노원구 상계동 292-1",
+    "lat": 37.6553400927192,
+    "lng": 127.063761516004,
+    "type": "cafe",
+    "description": "흡연실이 있는 탐앤탐스 티티클럽 노원점입니다.",
+    "form": "반개방형",
+    "images": [
+      "images/nwc_2_1.jpg",
+      ""
+    ],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
+    "id": "nwc-4",
+    "title": "할리스 노원문화의거리점",
+    "address": "서울특별시 노원구 상계동 332-1 광장교회",
+    "lat": 37.6558130080977,
+    "lng": 127.06394675429776,
+    "type": "cafe",
+    "description": "흡연실이 있는 '할리스 노원문화의거리점'입니다.",
+    "form": "밀폐형",
+    "images": [],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
+    "id": "nwc-5",
+    "title": "보드게임카페 레드버튼 노원점",
+    "address": "서울특별시 노원구 상계동 617",
+    "lat": 37.65546917948607,
+    "lng": 127.06245906907245,
+    "type": "cafe",
+    "description": "흡연실이 있는 '레드버튼 노원점'입니다.",
+    "form": "밀폐형",
+    "images": [],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
+    "id": "nwb-1",
+    "title": "롯데백화점 1층 야외 흡연구역",
+    "address": "서울특별시 노원구 상계동 606-19",
+    "lat": 37.6552714471279,
+    "lng": 127.062225681252,
+    "type": "building",
+    "description": "롯데백화점 1층 외부에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/nwb_1_1.jpg"
+    ],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "노원구"
+  },
+  {
     "id": "ddmp-1",
+    "title": "청량리역 광장 흡연구역",
+    "address": "서울특별시 동대문구 전농동 591-52",
+    "lat": 37.580570596317145,
+    "lng": 127.04666289772435,
+    "type": "public",
+    "description": "청량리역 광장에 위치한 흡연구역입니다.",
+    "form": "밀폐형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "동대문구"
+  },
+  {
+    "id": "ddmp-2",
+    "title": "청량리역 흡연구역",
+    "address": "서울특별시 동대문구 전농1동",
+    "lat": 37.58018756072303,
+    "lng": 127.0469485159075,
+    "type": "public",
+    "description": "청량리역 부근에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "관리자등록",
+    "manage": "",
+    "district": "동대문구"
+  },
+  {
+    "id": "ddmp-3",
     "title": "동대문구청 흡연구역",
     "address": "서울특별시 동대문구 천호대로 145",
     "lat": 37.5743917161622,
@@ -394,9 +1094,35 @@
     "type": "public",
     "description": "동대문구청 1층과 5층에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "동대문구"
+  },
+  {
+    "id": "ddmb-1",
+    "title": "경희의료원 흡연구역",
+    "address": "서울특별시 동대문구 경희대로 23",
+    "lat": 37.5937762050989,
+    "lng": 127.050741696591,
+    "type": "building",
+    "description": "경희의료원 1층에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "동대문구"
+  },
+  {
+    "id": "ddmb-2",
+    "title": "삼육서울병원 흡연구역",
+    "address": "서울특별시 동대문구 망우로82",
+    "lat": 37.5862119387672,
+    "lng": 127.06355328121,
+    "type": "building",
+    "description": "삼육서울병원 1층에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "동대문구"
@@ -410,25 +1136,35 @@
     "type": "public",
     "description": "노량진컵밥거리 흡연구역입니다.",
     "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "동작구 보건소 건강증진과",
     "district": "동작구"
   },
   {
-    "id": "mpp-1",
-    "title": "마포구청 흡연구역",
-    "address": "서울특별시 마포구 월드컵로 212",
-    "lat": 37.5663128370109,
-    "lng": 126.901615668932,
+    "id": "djp-2",
+    "title": "JH빌딩 앞 흡연구역",
+    "address": "서울특별시 동작구 노량진로 196",
+    "lat": 37.5130128722104,
+    "lng": 126.947502604328,
     "type": "public",
-    "description": "마포구청 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "description": "JH빌딩 앞에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "동작구"
+  },
+  {
+    "id": "mpp-1",
+    "title": "상암동 흡연구역",
+    "address": "서울특별시 마포구 상암산로 66-82",
+    "lat": "",
+    "lng": "",
+    "type": "public",
+    "description": "상암동 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "마포구"
@@ -442,31 +1178,13 @@
     "type": "public",
     "description": "마포농수산물시장 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "마포구"
   },
   {
     "id": "mpp-3",
-    "title": "상암동 흡연구역",
-    "address": "서울특별시 마포구 상암산로 66",
-    "lat": 37.5783960630744,
-    "lng": 126.891522106224,
-    "type": "public",
-    "description": "상암동 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "마포구"
-  },
-  {
-    "id": "mpp-4",
     "title": "서부운전면허시험장 흡연구역",
     "address": "서울특별시 마포구 월드컵로42길 13",
     "lat": 37.5787580201272,
@@ -474,9 +1192,21 @@
     "type": "public",
     "description": "서부운전면허시험장 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "마포구"
+  },
+  {
+    "id": "mpp-4",
+    "title": "마포구청 흡연구역",
+    "address": "서울특별시 마포구 월드컵로 212",
+    "lat": 37.5663128370109,
+    "lng": 126.901615668932,
+    "type": "public",
+    "description": "마포구청 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "마포구"
@@ -490,9 +1220,7 @@
     "type": "public",
     "description": "서대문구청 옥상에 위치한 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "서대문구"
@@ -506,9 +1234,63 @@
     "type": "public",
     "description": "서대문구청 1층 정자에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "서대문구"
+  },
+  {
+    "id": "sdmb-1",
+    "title": "연세세브란스병원 흡연구역",
+    "address": "서울특별시 서대문구 연세로 50-1",
+    "lat": 37.563674036531,
+    "lng": 126.941917689273,
+    "type": "building",
+    "description": "세브란스병원 장례식장 1층에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "서대문구"
+  },
+  {
+    "id": "sdmb-2",
+    "title": "명지대학교 기숙사 흡연구역",
+    "address": "서울특별시 서대문구 거북골로34",
+    "lat": 37.5803770223812,
+    "lng": 126.921348530876,
+    "type": "building",
+    "description": "명지대학교 1층 기숙사 옆에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "서대문구"
+  },
+  {
+    "id": "sdmb-3",
+    "title": "현대백화점 유플렉스 신촌점 흡연구역",
+    "address": "서울특별시 서대문구 연세로 13",
+    "lat": 37.5567378385686,
+    "lng": 126.936559696179,
+    "type": "building",
+    "description": "현대백화점 유플렉스 신촌점 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "서대문구"
+  },
+  {
+    "id": "sdmb-4",
+    "title": "현대백화점 신촌점 흡연구역",
+    "address": "서울특별시 서대문구 신촌로83",
+    "lat": 37.5560830579515,
+    "lng": 126.935844876509,
+    "type": "building",
+    "description": "현대백화점 신촌점 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "서대문구"
@@ -1122,1722 +1904,6 @@
     "district": "서초구"
   },
   {
-    "id": "sdp-1",
-    "title": "SKV1 화양사거리 흡연구역",
-    "address": "서울특별시 성동구 성수동2가 280",
-    "lat": 37.5466716767266,
-    "lng": 127.066124755547,
-    "type": "public",
-    "description": "SKV1 화양사거리에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sdp-2",
-    "title": "디타워 흡연구역",
-    "address": "서울특별시 성동구 성수동1가 686-709",
-    "lat": 37.544255,
-    "lng": 127.044216,
-    "type": "public",
-    "description": "디타워 앞에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sdp-3",
-    "title": "서울숲 IT벨리 흡연구역",
-    "address": "서울특별시 성동구 성수동1가 13-164",
-    "lat": 37.5474783851249,
-    "lng": 127.049895535769,
-    "type": "public",
-    "description": "서울숲 IT벨리 앞에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sdp-4",
-    "title": "서울숲 포휴 흡연구역",
-    "address": "서울특별시 성동구 성수동1가 656-3",
-    "lat": 37.5426630844554,
-    "lng": 127.04519847143,
-    "type": "public",
-    "description": "서울숲 호퓨 앞에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sdp-5",
-    "title": "성수역 3번 출구 흡연구역",
-    "address": "서울특별시 성동구 성수동2가 276-5",
-    "lat": 37.54414340195302,
-    "lng": 127.05673655078424,
-    "type": "public",
-    "description": "성수역 3번 출구에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/성수역 3번 출구 흡연구역.jpg",
-      "images/성수역_3번출구_2.jpg",
-      "images/성수역_3번출구_3.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sdp-6",
-    "title": "성수역 SKV1타워 흡연구역",
-    "address": "서울특별시 성동구 성수동2가 315-61",
-    "lat": 37.5435923219192,
-    "lng": 127.055661269808,
-    "type": "public",
-    "description": "성수역 SKV1타워 앞에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/성수역 SKV1타워 앞 흡연구역.jpg",
-      "images/성수_SK타워_2.jpg",
-      "images/성수_SK타워_3.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sdp-7",
-    "title": "세신빌딩 흡연구역",
-    "address": "서울특별시 성동구 도선동 58-1",
-    "lat": 37.5628017191711,
-    "lng": 127.03397786808,
-    "type": "public",
-    "description": "세신빌딩 뒤에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sdp-8",
-    "title": "아크벨리 흡연구역",
-    "address": "서울특별시 성동구 성수동2가 277-43",
-    "lat": 37.5438726245303,
-    "lng": 127.061297770805,
-    "type": "public",
-    "description": "아크벨리 앞에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sdp-9",
-    "title": "왕십리역 6번 출구 흡연구역",
-    "address": "서울특별시 성동구 행당동 1-182",
-    "lat": 37.5612035478284,
-    "lng": 127.039160880606,
-    "type": "public",
-    "description": "왕십리역 6번 출구 뒤에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sdp-10",
-    "title": "한라시그마벨리 흡연구역",
-    "address": "서울특별시 성동구 성수동2가 325-2",
-    "lat": 37.5402640310949,
-    "lng": 127.055081162801,
-    "type": "public",
-    "description": "한라시그마벨리 뒤에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성동구 보건소",
-    "district": "성동구"
-  },
-  {
-    "id": "sbp-1",
-    "title": "성북구 보건소 흡연구역",
-    "address": "서울특별시 성북구 하월곡동 46-1",
-    "lat": 37.602693004394,
-    "lng": 127.039534243994,
-    "type": "public",
-    "description": "성북구 보건소 10층 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성북구 보건소",
-    "district": "성북구"
-  },
-  {
-    "id": "sbp-2",
-    "title": "성북구청 흡연구역",
-    "address": "서울특별시 성북구 삼선동5가 411",
-    "lat": 37.5894488967331,
-    "lng": 127.016828945008,
-    "type": "public",
-    "description": "성북구청 12층 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성북구청",
-    "district": "성북구"
-  },
-  {
-    "id": "sbp-3",
-    "title": "성북구청 흡연구역",
-    "address": "서울특별시 성북구 삼선동5가 411",
-    "lat": 37.5894488967331,
-    "lng": 127.016828945008,
-    "type": "public",
-    "description": "성북구청 5층 휴게공간에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성북구청",
-    "district": "성북구"
-  },
-  {
-    "id": "spp-1",
-    "title": "롯데월드몰 흡연구역",
-    "address": "서울특별시 송파구 올림픽로 300",
-    "lat": 37.51321024185362,
-    "lng": 127.10529932088494,
-    "type": "public",
-    "description": "롯데월드몰 잔디광장에 위치한 흡연구역입니다.",
-    "form": "반개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "송파구"
-  },
-  {
-    "id": "ycp-1",
-    "title": "남부지방법원 흡연구역",
-    "address": "서울특별시 양천구 신정동 313-1",
-    "lat": 37.5216143644477,
-    "lng": 126.864176313245,
-    "type": "public",
-    "description": "남부지방법원 후문 옆에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "남부지방법원",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-2",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 목동동로 293",
-    "lat": 37.5281783139269,
-    "lng": 126.875771989415,
-    "type": "public",
-    "description": "현대41타워 앞 인도에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-3",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 목동서로 57",
-    "lat": 37.5366321308561,
-    "lng": 126.879863427781,
-    "type": "public",
-    "description": "파리지앙A앞 공영주차장에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-4",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 신정중앙로 95",
-    "lat": 37.5266158393896,
-    "lng": 126.862552997981,
-    "type": "public",
-    "description": "금별맥주 앞(버스 안 다니는 길)에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-5",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 중앙로 276",
-    "lat": 37.5208361584987,
-    "lng": 126.85288429171,
-    "type": "public",
-    "description": "신정네거리역 뒤 먹자골목에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-6",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 오목로 325",
-    "lat": 37.5251074073334,
-    "lng": 126.873626981623,
-    "type": "public",
-    "description": "농협 오목교역점 옆 골목에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-7",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 오목로 329",
-    "lat": 37.5249139528398,
-    "lng": 126.874124388629,
-    "type": "public",
-    "description": "오목교역 2번 출구 옆에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-8",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 목동동로 67",
-    "lat": 37.515709326427,
-    "lng": 126.862500271377,
-    "type": "public",
-    "description": "국민은행 양천지점 뒤에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-9",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 신정중앙로 103",
-    "lat": 37.5265013713269,
-    "lng": 126.863371926417,
-    "type": "public",
-    "description": "버스 안 다니는 길 먹자골목에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-10",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 오목로 151-1",
-    "lat": 37.5249243144373,
-    "lng": 126.85429770672,
-    "type": "public",
-    "description": "건물 뒤쪽 주차장에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-11",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 등촌로 32",
-    "lat": 37.5328851583631,
-    "lng": 126.864166285292,
-    "type": "public",
-    "description": "건물과 건물 사이 길 골목에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-12",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 오목로 299",
-    "lat": 37.5260837006075,
-    "lng": 126.87035534357,
-    "type": "public",
-    "description": "트라팰리스 B동과 닥터로빈 사잇길에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-13",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 중앙로43길 14",
-    "lat": 37.5204176021651,
-    "lng": 126.851340568488,
-    "type": "public",
-    "description": "아델리체 110동과 122동 사잇길에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-14",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 남부순환로83길 53",
-    "lat": 37.5180156016829,
-    "lng": 126.845086473562,
-    "type": "public",
-    "description": "신월6동 주민센터 주차장 입구에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-15",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 중앙로34길 15",
-    "lat": 37.5195212776081,
-    "lng": 126.853643186754,
-    "type": "public",
-    "description": "고기요리와, GS25 사이 전봇대에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-16",
-    "title": "양천구 흡연구역",
-    "address": "서울특별시 양천구 중앙로 209",
-    "lat": 37.5151471525982,
-    "lng": 126.854789187328,
-    "type": "public",
-    "description": "아델리체 정문 앞 상가 거리에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-17",
-    "title": "양천구청 흡연구역",
-    "address": "서울특별시 양천구 신정동 321-4",
-    "lat": 37.5170484539307,
-    "lng": 126.866476530571,
-    "type": "public",
-    "description": "양천구청 부지에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "양천구청",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-18",
-    "title": "양천구청 흡연구역",
-    "address": "서울특별시 양천구 신정동 321-4",
-    "lat": 37.5170484539307,
-    "lng": 126.866476530571,
-    "type": "public",
-    "description": "양천구청 해누리타운 4층 옥외정원에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "양천구청",
-    "district": "양천구"
-  },
-  {
-    "id": "ycp-19",
-    "title": "양천세무서 흡연구역",
-    "address": "서울특별시 양천구 신정동 319-12",
-    "lat": 37.5203475660724,
-    "lng": 126.870031451004,
-    "type": "public",
-    "description": "양천세무서 부지 우측에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "양천세무서",
-    "district": "양천구"
-  },
-  {
-    "id": "ydpp-1",
-    "title": "여의도역 3번 출구 흡연구역",
-    "address": "서울특별시 영등포구 ",
-    "lat": 37.5225,
-    "lng": 126.9238,
-    "type": "public",
-    "description": "여의도역 3번 출구 뒤쪽에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "한국일보, 영등포구",
-    "district": "영등포구"
-  },
-  {
-    "id": "ysp-1",
-    "title": "서울역 광장 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.55353694271051,
-    "lng": 126.96930251039797,
-    "type": "public",
-    "description": "서울역 광장 15번 출구에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "한국철도공사",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-2",
-    "title": "서울역 광장 흡연구역 ",
-    "address": "서울특별시 용산구",
-    "lat": 37.554902500543655,
-    "lng": 126.97148052148954,
-    "type": "public",
-    "description": "서울역 광장 1번 출구에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "한국철도공사",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-3",
-    "title": "서울지방보훈청 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.534923,
-    "lng": 126.974192,
-    "type": "public",
-    "description": "서울지방보훈청 실외에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "서울지방보훈청",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-4",
-    "title": "용산구 흡연구역",
-    "address": "서울특별시 용산구 항강로2가 424-5",
-    "lat": 37.527798,
-    "lng": 126.967138,
-    "type": "public",
-    "description": "LS타워 인근 보도에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "용산구 보건소",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-5",
-    "title": "용산구 흡연구역",
-    "address": "서울특별시 용산구 한강로3가 12-6",
-    "lat": 37.532293,
-    "lng": 126.964512,
-    "type": "public",
-    "description": "용산전자상가1 공영주차장 인근 보도에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "용산구 보건소",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-6",
-    "title": "용산구 흡연구역",
-    "address": "서울특별시 용산구 한강로3가 17-1",
-    "lat": 37.532324,
-    "lng": 126.964955,
-    "type": "public",
-    "description": "신용산지하차도 인근 보도에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "용산구 보건소",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-7",
-    "title": "용산구 흡연구역",
-    "address": "서울특별시 용산구 동자동 14-151",
-    "lat": 37.553105,
-    "lng": 126.97281,
-    "type": "public",
-    "description": "서울역 11번 출구 인근 보도에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "용산구 보건소",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-8",
-    "title": "용산구청 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.532709,
-    "lng": 126.99,
-    "type": "public",
-    "description": "용산구청 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "용산구청",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-9",
-    "title": "용산구청 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.532709,
-    "lng": 126.99,
-    "type": "public",
-    "description": "용산구청 2층 외부에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "용산구청",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-10",
-    "title": "용산세무서 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.523302,
-    "lng": 126.96868,
-    "type": "public",
-    "description": "용산세무서 1층 외부에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "용산세무서",
-    "district": "용산구"
-  },
-  {
-    "id": "ysp-11",
-    "title": "용산역 광장 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.52885748568957,
-    "lng": 126.9654208459938,
-    "type": "public",
-    "description": "용산역 앞 광장에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "현대아이파크몰",
-    "district": "용산구"
-  },
-  {
-    "id": "epp-1",
-    "title": "은평구립도서관 흡연구역",
-    "address": "서울특별시 은평구 통일로78가길 13-84",
-    "lat": 37.6189785221501,
-    "lng": 126.928271924743,
-    "type": "public",
-    "description": "은평구립도서관 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
-  },
-  {
-    "id": "epp-2",
-    "title": "은평구청 흡연구역",
-    "address": "서울특별시 은평구 은평로195",
-    "lat": 37.6024574203071,
-    "lng": 126.928822870137,
-    "type": "public",
-    "description": "은평구청 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
-  },
-  {
-    "id": "epp-3",
-    "title": "진관동 주민센터 흡연구역",
-    "address": "서울특별시 은평구 진관2로 31",
-    "lat": 37.6349631473395,
-    "lng": 126.920735778649,
-    "type": "public",
-    "description": "진관동 주민센터 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
-  },
-  {
-    "id": "jrp-1",
-    "title": "낙원악기상가 흡연구역",
-    "address": "서울특별시 종로구 낙원동 260-1",
-    "lat": 37.573474,
-    "lng": 126.987847,
-    "type": "public",
-    "description": "낙원악기상가 도로일부에 위치한 흡연구역입니다.",
-    "form": "반개방형",
-    "images": [
-      "images/낙원악기상가.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "종로구청, 민간",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-2",
-    "title": "종로타워빌딩 뒷쪽 흡연구역",
-    "address": "서울특별시 종로구 공평동 70-3",
-    "lat": 37.571003,
-    "lng": 126.983963,
-    "type": "public",
-    "description": "종로타워빌딩 뒷쪽에 위치한 담배꽁초수거함입니다.",
-    "form": "",
-    "images": [
-      "images/종로타워빌딩_흡연구역.jpg"
-    ],
-    "source": "관리자 등록",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-3",
-    "title": "sc제일은행본점빌딩 부근 흡연구역",
-    "address": "서울특별시 종로구 청진동 70-8",
-    "lat": 37.571444,
-    "lng": 126.981792,
-    "type": "public",
-    "description": "sc제일은행본점빌딩 부근에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/sc제일은행본점빌딩_흡연구역.jpg"
-    ],
-    "source": "관리자 등록",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrp-4",
-    "title": "세종문화회관 흡연구역",
-    "address": "서울특별시 종로구 세종대로 175",
-    "lat": 37.572518,
-    "lng": 126.974901,
-    "type": "public",
-    "description": "세종문화회관 뒷쪽에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [],
-    "source": "관리자 등록",
-    "manage": "",
-    "district": "종로구"
-  },
-  {
-    "id": "jrb-1",
-    "title": "박문각종로고시학원 부근 흡연구역",
-    "address": "서울특별시 종로구 관수동 20",
-    "lat": 37.569671,
-    "lng": 126.989685,
-    "type": "building",
-    "description": "24시 찜질방 간판으로 들어가면 바로 있습니다.",
-    "form": "",
-    "images": ["images/박문각_1.jpg", "images/박문각_2.jpg"],
-    "source": "관리자 등록",
-    "manage": "",
-    "district": "종로구"
-  }
-,
-  {
-    "id": "jgp-1",
-    "title": "서울역 8번 출구 흡연구역",
-    "address": "서울특별시 중구 한강대로 416",
-    "lat": 37.55610134725966,
-    "lng": 126.97372091663368,
-    "type": "public",
-    "description": "서울역 8번 출구에 위치한 흡연구역입니다.",
-    "form": "반개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "중구청, 한국일보",
-    "district": "중구"
-  },
-  {
-    "id": "jgp-2",
-    "title": "을지로입구역 8번 출구 흡연구역",
-    "address": "서울특별시 중구 남대문로 81",
-    "lat": 37.56574356669473,
-    "lng": 126.98200861904328,
-    "type": "public",
-    "description": "을지로입구역 8번 출구에 위치한 흡연구역입니다.",
-    "form": "반개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "중구청, 한국일보, 롯데백화점",
-    "district": "중구"
-  },
-  {
-    "id": "jlp-1",
-    "title": "동대문구청 흡연구역",
-    "address": "서울특별시 중랑구 봉화산로 179",
-    "lat": 37.6065635856848,
-    "lng": 127.09272484193,
-    "type": "public",
-    "description": "동대문구청 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "중랑구"
-  },
-  {
-    "id": "jlp-2",
-    "title": "면목동 흡연구역",
-    "address": "서울특별시 중랑구 신내로 156",
-    "lat": 37.6130913124974,
-    "lng": 127.099186989431,
-    "type": "public",
-    "description": "면목동 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "중랑구"
-  },
-  {
-    "id": "jlp-3",
-    "title": "면일체육문화센터 흡연구역",
-    "address": "서울특별시 중랑구 용마산로100길 13",
-    "lat": 37.59128192206681,
-    "lng": 127.09985540699557,
-    "type": "public",
-    "description": "면일체육문화센터 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "중랑구"
-  },
-  {
-    "id": "kbc-1",
-    "title": "미즐 카페 엠",
-    "address": "서울특별시 강북구 한천로 1289",
-    "lat": 37.643536363584154,
-    "lng": 127.00378444935517,
-    "type": "cafe",
-    "description": "흡연실이 있는 '미즐 카페 엠'입니다.",
-    "form": "페쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "미즐 카페 엠",
-    "district": "강북구"
-  },
-  {
-    "id": "gjc-1",
-    "title": "꽃빙(동서울종합터미널 2층)",
-    "address": "서울특별시 광진구 강변역로 50",
-    "lat": 37.5345385101597,
-    "lng": 127.094184050922,
-    "type": "cafe",
-    "description": "흡연실이 있는 '꽃빙'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-2",
-    "title": "꿈꾸다 917",
-    "address": "서울특별시 광진구 아차산로 31길 15",
-    "lat": 37.541771468900635,
-    "lng": 127.06947857236263,
-    "type": "cafe",
-    "description": "흡연실이 있는 '꿈꾸다 917'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-3",
-    "title": "놀숲 건대점",
-    "address": "서울특별시 광진구 아차산로 224",
-    "lat": 37.5405711604806,
-    "lng": 127.068080611331,
-    "type": "cafe",
-    "description": "흡연실이 있는 '놀숲 건대점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-4",
-    "title": "다트프린스 건대점",
-    "address": "서울특별시 광진구 아차산로 242",
-    "lat": 37.5399325479221,
-    "lng": 127.069903667359,
-    "type": "cafe",
-    "description": "흡연실이 있는 '다트프린스 건대점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-5",
-    "title": "더이퀄리브리엄커피",
-    "address": "서울특별시 광진구 아차산로30길 7",
-    "lat": 37.5403541616654,
-    "lng": 127.067833632739,
-    "type": "cafe",
-    "description": "흡연실이 있는 '더이퀄리브리엄커피'입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-6",
-    "title": "만화카페 라이브러리",
-    "address": "서울특별시 광진구 아차산로 370",
-    "lat": 37.5364473570775,
-    "lng": 127.084052089481,
-    "type": "cafe",
-    "description": "흡연실이 있는 '만화카페 라이브러리'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-7",
-    "title": "카페오로시",
-    "address": "서울특별시 광진구 자양로 131",
-    "lat": 37.5394776891691,
-    "lng": 127.082907026695,
-    "type": "cafe",
-    "description": "흡연실이 있는 '카페오로시'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-8",
-    "title": "카페온더플랜 건대점",
-    "address": "서울특별시 광진구 능동로 161",
-    "lat": 37.54514370505191,
-    "lng": 127.07280854000442,
-    "type": "cafe",
-    "description": "흡연실이 있는 '카페온더플랜 건대점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-9",
-    "title": "커피마켓",
-    "address": "서울특별시 광진구 아차산로33길 60",
-    "lat": 37.54285843136404,
-    "lng": 127.07114860703734,
-    "type": "cafe",
-    "description": "흡연실이 있는 '커피마켓'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-10",
-    "title": "탐앤탐스 광진화양점",
-    "address": "서울특별시 광진구 능동로 13길 26",
-    "lat": 37.54318526106111,
-    "lng": 127.07078682227214,
-    "type": "cafe",
-    "description": "흡연실이 있는 '탐앤탐스 광진화양점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-11",
-    "title": "탐앤탐스 블랙그레이트점",
-    "address": "서울특별시 광진구 아차산로 426",
-    "lat": 37.537808088884,
-    "lng": 127.089750551178,
-    "type": "cafe",
-    "description": "흡연실이 있는 '탐앤탐스 블랙그레이트점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjc-12",
-    "title": "투썸플레이스 군자역점",
-    "address": "서울특별시 광진구 능동로 289",
-    "lat": 37.555816935845044,
-    "lng": 127.0784266893816,
-    "type": "cafe",
-    "description": "흡연실이 있는 '투썸플레이스 군자역점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "nwc-1",
-    "title": "투썸플레이스 노원문화의거리점",
-    "address": "서울특별시 노원구 상계동 593-14",
-    "lat": 37.65639483002828,
-    "lng": 127.06266383195496,
-    "type": "cafe",
-    "description": "흡연실이 있는 '투썸플레이스 노원문화의거리점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/투썸플레이스_노원문화의거리점_1.jpg",
-      "images/투썸플레이스_노원문화의거리점_2.jpg",
-      "images/투썸플레이스_노원문화의거리점_3.jpg",
-      "images/투썸플레이스_노원문화의거리점_4.jpg"
-    ],
-    "source": "관리자",
-    "manage": "투썸플레이스 노원문화의거리점",
-    "district": "노원구"
-  },
-  {
-    "id": "epc-1",
-    "title": "놀숲 연신내로데오점",
-    "address": "서울특별시 은평구 연서로29길 6",
-    "lat": 37.6188077691384,
-    "lng": 126.919582181082,
-    "type": "cafe",
-    "description": "흡연실이 있는 '놀숲 연신내로데오점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
-  },
-  {
-    "id": "epc-2",
-    "title": "더홀릭보드게임카페 연신내점",
-    "address": "서울특별시 은평구 연서로29길 13",
-    "lat": 37.6189645255796,
-    "lng": 126.918639609689,
-    "type": "cafe",
-    "description": "흡연실이 있는 '더홀릭보드게임카페 연신내점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
-  },
-  {
-    "id": "epc-3",
-    "title": "아로이 커피 연신내점",
-    "address": "서울특별시 은평구 통일로 838-4",
-    "lat": 37.6183447019915,
-    "lng": 126.922332954683,
-    "type": "cafe",
-    "description": "흡연실이 있는 '아로이 커피 연신내점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
-  },
-  {
-    "id": "epc-4",
-    "title": "읍천리382 응암점",
-    "address": "서울특별시 은평구 응암로 302-1",
-    "lat": 37.5983100949703,
-    "lng": 126.921068643841,
-    "type": "cafe",
-    "description": "흡연실이 있는 '읍천리382 응암점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
-  },
-  {
-    "id": "epc-5",
-    "title": "이디야 연신내역점 ",
-    "address": "서울특별시 은평구 통일로 855-9",
-    "lat": 37.6188948297727,
-    "lng": 126.919884176889,
-    "type": "cafe",
-    "description": "흡연실이 있는 '이디야 연신내역점'입니다. ",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
-  },
-  {
-    "id": "jlc-1",
-    "title": "탐앤탐스 사가정역점",
-    "address": "서울 중랑구 면목동 496-17",
-    "lat": 37.58121585591543,
-    "lng": 127.08820090523852,
-    "type": "cafe",
-    "description": "흡연실이 있는 '탐앤탐스 사가정역점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "관리자",
-    "manage": "탐앤탐스 사가정역점",
-    "district": "중랑구"
-  },
-  {
-    "id": "jlc-2",
-    "title": "탐앤탐스 중랑구청점",
-    "address": "서울특별시 중랑구 신내동 565-1",
-    "lat": 37.60547111767368,
-    "lng": 127.09612582746244,
-    "type": "cafe",
-    "description": "흡연실이 있는 '탐앤탐스 중랑구청점'입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "관리자",
-    "manage": "탐앤탐스 중랑구청점",
-    "district": "중랑구"
-  },
-  {
-    "id": "kbb-1",
-    "title": "롯데백화점 미아점 흡연구역",
-    "address": "서울특별시 강북구 도봉로 62",
-    "lat": 37.6145929759749,
-    "lng": 127.030517678336,
-    "type": "building",
-    "description": "롯데백화점 미아점 옥상에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "롯데백화점",
-    "district": "강북구"
-  },
-  {
-    "id": "gab-1",
-    "title": "강남고려병원 흡연구역",
-    "address": "서울특별시 관악구 관악로 242",
-    "lat": 37.4856188363947,
-    "lng": 126.956781703053,
-    "type": "building",
-    "description": "강남고려병원 주차장에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "강남고려병원",
-    "district": "관악구"
-  },
-  {
-    "id": "gab-2",
-    "title": "롯데백화점 관악점 흡연구역",
-    "address": "서울특별시 관악구 봉천로 209",
-    "lat": 37.4904954867064,
-    "lng": 126.924981674031,
-    "type": "building",
-    "description": "롯데백화점 관악점 건물 뒷편에 위치한 흡연구역입니다.",
-    "form": "페쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "롯데백화점 관악점",
-    "district": "관악구"
-  },
-  {
-    "id": "gab-3",
-    "title": "르네상스쇼핑몰 흡연구역",
-    "address": "서울특별시 관악구 신림로 340",
-    "lat": 37.4847625375982,
-    "lng": 126.930096548294,
-    "type": "building",
-    "description": "르네상스쇼핑몰 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "르네상스쇼핑몰",
-    "district": "관악구"
-  },
-  {
-    "id": "gab-4",
-    "title": "에이치플러스양지병원 흡연구역",
-    "address": "서울특별시 관악구 남부순환로 1636",
-    "lat": 37.4843693309109,
-    "lng": 126.932565485407,
-    "type": "building",
-    "description": "에이치플러스양지병원 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "양지병원",
-    "district": "관악구"
-  },
-  {
-    "id": "gab-5",
-    "title": "타임스트림 흡연구역",
-    "address": "서울특별시 관악구 신림로 330",
-    "lat": 37.4838513393186,
-    "lng": 126.930234545397,
-    "type": "building",
-    "description": "타임스트림 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "타임스트림",
-    "district": "관악구"
-  },
-  {
-    "id": "gjb-1",
-    "title": "건국대학교 인문학관 흡연구역",
-    "address": "서울특별시 광진구 능동로 120",
-    "lat": 37.539182674872,
-    "lng": 127.074711902268,
-    "type": "building",
-    "description": "건국대학교 인문학관 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-2",
-    "title": "건국대학교새천년관 대공연장 흡연구역",
-    "address": "서울특별시 광진구 능동로 120",
-    "lat": 37.539182674872,
-    "lng": 127.074711902268,
-    "type": "building",
-    "description": "건국대학교새천년관 대공연장 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-3",
-    "title": "동서울종합터미널 흡연구역",
-    "address": "서울특별시 광진구 구의동 546-1",
-    "lat": 37.5339176560567,
-    "lng": 127.093585434282,
-    "type": "building",
-    "description": "동서울종합터미널 앞에 위치한 흡연구역입니다.",
-    "form": "반개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "청소과",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-4",
-    "title": "롯데백화점 건대스타시티점",
-    "address": "서울특별시 광진구 능동로 92",
-    "lat": 37.5390373908314,
-    "lng": 127.071432147214,
-    "type": "building",
-    "description": "롯데백화점 건대스타시티점입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-5",
-    "title": "세종대학교 대양홀 흡연구역",
-    "address": "서울특별시 광진구 능동로 209",
-    "lat": 37.5516093089619,
-    "lng": 127.07318364213,
-    "type": "building",
-    "description": "세종대학교 대양홀 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-6",
-    "title": "세종대학교 학생회관 대공연장 흡연구역",
-    "address": "서울특별시 광진구 능동로 209",
-    "lat": 37.5516093089619,
-    "lng": 127.07318364213,
-    "type": "building",
-    "description": "세종대학교 학생회관 대공연장 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-7",
-    "title": "세종대학교 흡연구역",
-    "address": "서울특별시 광진구 능동로 213",
-    "lat": 37.550876,
-    "lng": 127.073605,
-    "type": "building",
-    "description": "세종대학교 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-8",
-    "title": "유니버설아트센터 흡연구역",
-    "address": "서울특별시 광진구 천호대로 664",
-    "lat": 37.5509798002896,
-    "lng": 127.087095159462,
-    "type": "building",
-    "description": "유니버설아트센터 흡연구역입니다.",
-    "form": "페쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-9",
-    "title": "이마트 자양점 흡연구역",
-    "address": "서울특별시 광진구 아차산로 272",
-    "lat": 37.53838585532667,
-    "lng": 127.07337902122217,
-    "type": "building",
-    "description": "이마트 자양점 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-10",
-    "title": "커먼그라운드 흡연구역",
-    "address": "서울특별시 광진구 아차산로 200",
-    "lat": 37.5410566332301,
-    "lng": 127.065669226745,
-    "type": "building",
-    "description": "커먼그라운드 3층에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "gjb-11",
-    "title": "테크노마트 흡연구역",
-    "address": "서울특별시 광진구 광나루로 85",
-    "lat": 37.53572,
-    "lng": 127.095602,
-    "type": "building",
-    "description": "테크노마트 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "광진구"
-  },
-  {
-    "id": "grb-1",
-    "title": "고대구로병원 흡연구역",
-    "address": "서울특별시 구로구 구로동로 148",
-    "lat": 37.4911503253664,
-    "lng": 126.884511034177,
-    "type": "building",
-    "description": "고대구로병원 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "구로구"
-  },
-  {
-    "id": "grb-2",
-    "title": "고척돔구장 흡연구역",
-    "address": "서울특별시 구로구 경인로 430",
-    "lat": 37.4982125677913,
-    "lng": 126.867088741096,
-    "type": "building",
-    "description": "고척돔구장 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "구로구"
-  },
-  {
-    "id": "grb-3",
-    "title": "구로성심병원 흡연구역",
-    "address": "서울특별시 구로구 경인로 427",
-    "lat": 37.4996468654605,
-    "lng": 126.866358244952,
-    "type": "building",
-    "description": "구로성심병원 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "구로구"
-  },
-  {
-    "id": "grb-4",
-    "title": "신도림테크노마트 흡연구역",
-    "address": "서울특별시 구로구 구로동 3-25",
-    "lat": 37.5069739187173,
-    "lng": 126.890319120085,
-    "type": "building",
-    "description": "신도림테크노마트 북서족 철로변측 인도공간에 위치한 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "구로구"
-  },
-  {
-    "id": "grb-5",
-    "title": "지하이시티 흡연구역",
-    "address": "서울특별시 구로구 구로동 237",
-    "lat": 37.4819554025522,
-    "lng": 126.892280813777,
-    "type": "building",
-    "description": "지하이시티 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "구로구"
-  },
-  {
-    "id": "ddmb-1",
-    "title": "경희의료원 흡연구역",
-    "address": "서울특별시 동대문구 경희대로 23",
-    "lat": 37.5937762050989,
-    "lng": 127.050741696591,
-    "type": "building",
-    "description": "경희의료원 1층에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "동대문구"
-  },
-  {
-    "id": "ddmb-2",
-    "title": "삼육서울병원 흡연구역",
-    "address": "서울특별시 동대문구 망우로82",
-    "lat": 37.586243014869055,
-    "lng": 127.06439951352542,
-    "type": "building",
-    "description": "삼육서울병원 1층에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "동대문구"
-  },
-  {
-    "id": "sdmb-1",
-    "title": "명지대학교 기숙사 흡연구역",
-    "address": "서울특별시 서대문구 거북골로34",
-    "lat": 37.5803770223812,
-    "lng": 126.921348530876,
-    "type": "building",
-    "description": "명지대학교 1층 기숙사 옆에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "서대문구"
-  },
-  {
-    "id": "sdmb-2",
-    "title": "연세세브란스병원 흡연구역",
-    "address": "서울특별시 서대문구 연세로 50-1",
-    "lat": 37.563674036531,
-    "lng": 126.941917689273,
-    "type": "building",
-    "description": "세브란스병원 장례식장 1층에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "서대문구"
-  },
-  {
-    "id": "sdmb-3",
-    "title": "현대백화점 신촌점 흡연구역",
-    "address": "서울특별시 서대문구 신촌로83",
-    "lat": 37.5560830579515,
-    "lng": 126.935844876509,
-    "type": "building",
-    "description": "현대백화점 신촌점 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "서대문구"
-  },
-  {
-    "id": "sdmb-4",
-    "title": "현대백화점 유플렉스 신촌점 흡연구역",
-    "address": "서울특별시 서대문구 연세로 13",
-    "lat": 37.5567378385686,
-    "lng": 126.936559696179,
-    "type": "building",
-    "description": "현대백화점 유플렉스 신촌점 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "서대문구"
-  },
-  {
     "id": "scb-1",
     "title": "고속버스터미널역 3번출구 흡연구역",
     "address": "서울특별시 서초구 반포동 19-11",
@@ -2982,6 +2048,238 @@
     "district": "서초구"
   },
   {
+    "id": "sdp-1",
+    "title": "디타워 포레스트 흡연구역",
+    "address": "서울특별시 성동구 성수동1가 685-709",
+    "lat": 37.544181018104,
+    "lng": 127.044672532018,
+    "type": "public",
+    "description": "디타워 앞에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-2",
+    "title": "서울숲 포휴 흡연구역",
+    "address": "서울특별시 성동구 성수동1가 656-3",
+    "lat": 37.5426630844554,
+    "lng": 127.04519847143,
+    "type": "public",
+    "description": "서울숲 호퓨 앞에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-3",
+    "title": "왕십리역6번출구 인근 자전거보관소 흡연구역",
+    "address": "서울특별시 성동구 행당동 168-151",
+    "lat": 37.56121082759014,
+    "lng": 127.03948639604762,
+    "type": "public",
+    "description": "왕십리역 6번 출구 뒤에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-4",
+    "title": "세신빌딩 흡연구역",
+    "address": "서울특별시 성동구 도선동 58-1",
+    "lat": 37.5628017191711,
+    "lng": 127.03397786808,
+    "type": "public",
+    "description": "세신빌딩 뒤에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-5",
+    "title": "성수역 3번 출구 교각하부 흡연구역",
+    "address": "서울특별시 성동구 성수동2가 276-5",
+    "lat": 37.544163679865264,
+    "lng": 127.05672525052314,
+    "type": "public",
+    "description": "성수역 3번 출구에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/sdp_5_1.jpg",
+      "images/sdp_5_2.jpg",
+      "images/sdp_5_3.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-6",
+    "title": "한라시그마벨리 1차 흡연구역",
+    "address": "서울특별시 성동구 성수동2가 325-2",
+    "lat": 37.5402640310949,
+    "lng": 127.055081162801,
+    "type": "public",
+    "description": "한라시그마벨리 뒤에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-7",
+    "title": "아크벨리 흡연구역",
+    "address": "서울특별시 성동구 성수동2가 277-43",
+    "lat": 37.5438726245303,
+    "lng": 127.061297770805,
+    "type": "public",
+    "description": "아크벨리 앞에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-8",
+    "title": "성수역 SKV1타워 흡연구역",
+    "address": "서울특별시 성동구 성수동2가 315-61",
+    "lat": 37.543605517281335,
+    "lng": 127.05576583524682,
+    "type": "public",
+    "description": "성수역 SKV1타워 앞에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [
+      "images/sdp_8_1.jpg",
+      "images/sdp_8_2.jpg",
+      "images/sdp_8_3.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-9",
+    "title": "서울숲 IT벨리 흡연구역",
+    "address": "서울특별시 성동구 성수동1가 13-164",
+    "lat": 37.5474783851249,
+    "lng": 127.049895535769,
+    "type": "public",
+    "description": "서울숲 IT벨리 앞에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-10",
+    "title": "성수 SKV1센터 흡연구역",
+    "address": "서울특별시 성동구 성수동2가 280",
+    "lat": 37.5466716767266,
+    "lng": 127.066124755547,
+    "type": "public",
+    "description": "성수 SKV1센터에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-11",
+    "title": "왕십리역 6번출구 흡연구역",
+    "address": "서울특별시 성동구 행당동 1-182",
+    "lat": 37.5612035478284,
+    "lng": 127.039160880606,
+    "type": "public",
+    "description": "왕십리역 6번출구에 위치한 흡연구역입니다.",
+    "form": "밀폐형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-12",
+    "title": "왕십리 광장 흡연구역",
+    "address": "서울특별시 성동구 왕십리광장로 17",
+    "lat": 37.5615584314433,
+    "lng": 127.03727103019085,
+    "type": "public",
+    "description": "왕십리 광장 흡연구역에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sdp-13",
+    "title": "성수역 2번출구 흡연구역",
+    "address": "서울특별시 성동구 성수동2가 289-30",
+    "lat": 37.54445411714374,
+    "lng": 127.05700553347785,
+    "type": "public",
+    "description": "성수역 2번출구에 위치한 흡염구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성동구 보건소",
+    "district": "성동구"
+  },
+  {
+    "id": "sbp-1",
+    "title": "성북구 보건소 흡연구역",
+    "address": "서울특별시 성북구 하월곡동 46-1",
+    "lat": 37.602693004394,
+    "lng": 127.039534243994,
+    "type": "public",
+    "description": "성북구 보건소 10층 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성북구 보건소",
+    "district": "성북구"
+  },
+  {
+    "id": "sbp-2",
+    "title": "성북구청 흡연구역",
+    "address": "서울특별시 성북구 삼선동5가 411",
+    "lat": 37.5894488967331,
+    "lng": 127.016828945008,
+    "type": "public",
+    "description": "성북구청 12층 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성북구청",
+    "district": "성북구"
+  },
+  {
+    "id": "sbp-3",
+    "title": "성북구청 흡연구역",
+    "address": "서울특별시 성북구 삼선동5가 411",
+    "lat": 37.5894488967331,
+    "lng": 127.016828945008,
+    "type": "public",
+    "description": "성북구청 5층 휴게공간에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "성북구청",
+    "district": "성북구"
+  },
+  {
     "id": "sbb-1",
     "title": "고대안암병원 흡연구역",
     "address": "서울특별시 성북구 안암동5가 126-1",
@@ -2990,27 +2288,23 @@
     "type": "building",
     "description": "고대안암병원 출입구 앞 통행로에 위치한 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "고대병원",
     "district": "성북구"
   },
   {
     "id": "sbb-2",
-    "title": "국민대학교 흡연구역",
-    "address": "서울특별시 성북구 정릉동 861-1",
-    "lat": 37.6109536602917,
-    "lng": 126.997665424874,
+    "title": "성북중앙병원 흡연구역",
+    "address": "서울특별시 성북구 종암동 10-125",
+    "lat": 37.5968749251616,
+    "lng": 127.035639921355,
     "type": "building",
-    "description": "국민대학교 북악관 뒤에 위치한 흡연구역입니다.",
+    "description": "성북중앙병원 옥상에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
-    "manage": "국민대학교",
+    "manage": "성북중앙병원",
     "district": "성북구"
   },
   {
@@ -3020,17 +2314,29 @@
     "lat": 37.6109536602917,
     "lng": 126.997665424874,
     "type": "building",
-    "description": "국민대학교 도서관 옆에 위치한 흡연구역입니다.",
+    "description": "국민대학교 북악관 뒤에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "국민대학교",
     "district": "성북구"
   },
   {
     "id": "sbb-4",
+    "title": "국민대학교 흡연구역",
+    "address": "서울특별시 성북구 정릉동 861-1",
+    "lat": 37.6109536602917,
+    "lng": 126.997665424874,
+    "type": "building",
+    "description": "국민대학교 도서관 옆에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "국민대학교",
+    "district": "성북구"
+  },
+  {
+    "id": "sbb-5",
     "title": "서경대학교 흡연구역",
     "address": "서울특별시 성북구 정릉동 산16-1",
     "lat": 37.6148685290897,
@@ -3038,47 +2344,13 @@
     "type": "building",
     "description": "서경대학교 북악관 앞에 위치한 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "서경대학교",
     "district": "성북구"
   },
   {
-    "id": "sbb-5",
-    "title": "성북중앙병원 흡연구역",
-    "address": "서울특별시 성북구 종암동 10-125",
-    "lat": 37.5968749251616,
-    "lng": 127.035639921355,
-    "type": "building",
-    "description": "성북중앙병원 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "성북중앙병원",
-    "district": "성북구"
-  },
-  {
     "id": "sbb-6",
-    "title": "이마트 미아점 흡연구역",
-    "address": "서울특별시 성북구 길음동 25-2",
-    "lat": 37.6108563263258,
-    "lng": 127.029727880853,
-    "type": "building",
-    "description": "이마트 미아점 주차동 1층에 위치한 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "이마트",
-    "district": "성북구"
-  },
-  {
-    "id": "sbb-7",
     "title": "한성대학교 흡연구역",
     "address": "서울특별시 성북구 삼선동2가 389",
     "lat": 37.5827636526186,
@@ -3086,15 +2358,13 @@
     "type": "building",
     "description": "한성대학교 학송관 옆에 위치한 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "한성대학교",
     "district": "성북구"
   },
   {
-    "id": "sbb-8",
+    "id": "sbb-7",
     "title": "현대백화점 미아점 흡연구역",
     "address": "서울특별시 성북구 길음동 20-1",
     "lat": 37.6083911092525,
@@ -3102,22 +2372,34 @@
     "type": "building",
     "description": "현대백화점 미아점 옥상에 위치한 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "현대백화점",
     "district": "성북구"
   },
   {
-    "id": "spb-1",
-    "title": "가든파이브 흡연구역",
-    "address": "서울특별시 송파구 충민로66",
-    "lat": 37.4776148442516,
-    "lng": 127.124961768886,
+    "id": "sbb-8",
+    "title": "이마트 미아점 흡연구역",
+    "address": "서울특별시 성북구 길음동 25-2",
+    "lat": 37.6108563263258,
+    "lng": 127.029727880853,
     "type": "building",
-    "description": "가든파이브 흡연구역입니다.",
+    "description": "이마트 미아점 주차동 1층에 위치한 흡연구역입니다.",
     "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "이마트",
+    "district": "성북구"
+  },
+  {
+    "id": "spp-1",
+    "title": "롯데월드몰 흡연구역",
+    "address": "서울특별시 송파구 올림픽로 300",
+    "lat": 37.51321024185362,
+    "lng": 127.10529932088494,
+    "type": "public",
+    "description": "롯데월드몰 잔디광장에 위치한 흡연구역입니다.",
+    "form": "반개방형",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ],
@@ -3126,23 +2408,7 @@
     "district": "송파구"
   },
   {
-    "id": "spb-2",
-    "title": "문정 SK V1 GL 메트로시티 흡연구역",
-    "address": "서울특별시 송파구 법원로 128",
-    "lat": 37.485385,
-    "lng": 127.118205,
-    "type": "building",
-    "description": "문정 SK V1 GL 메트로시티 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "송파구"
-  },
-  {
-    "id": "spb-3",
+    "id": "spb-1",
     "title": "문정 현대지식산업센터 흡연구역",
     "address": "서울특별시 송파구 법원로 11길 7",
     "lat": 37.4852991782959,
@@ -3150,63 +2416,345 @@
     "type": "building",
     "description": "문정 현대지식산업센터 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "송파구"
   },
   {
+    "id": "spb-2",
+    "title": "가든파이브 흡연구역",
+    "address": "서울특별시 송파구 충민로66",
+    "lat": 37.4776148442516,
+    "lng": 127.124961768886,
+    "type": "building",
+    "description": "가든파이브 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "송파구"
+  },
+  {
+    "id": "spb-3",
+    "title": "문정 SK V1 GL 메트로시티 흡연구역",
+    "address": "서울특별시 송파구 128",
+    "lat": "",
+    "lng": "",
+    "type": "building",
+    "description": "문정 SK V1 GL 메트로시티 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "송파구"
+  },
+  {
+    "id": "ycp-1",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 목동서로 57",
+    "lat": 37.5366321308561,
+    "lng": 126.879863427781,
+    "type": "public",
+    "description": "파리지앙A앞 공영주차장에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-2",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 신정중앙로 95",
+    "lat": 37.5266158393896,
+    "lng": 126.862552997981,
+    "type": "public",
+    "description": "금별맥주 앞(버스 안 다니는 길)에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-3",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 중앙로 276",
+    "lat": 37.5208361584987,
+    "lng": 126.85288429171,
+    "type": "public",
+    "description": "신정네거리역 뒤 먹자골목에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-4",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 오목로 325",
+    "lat": 37.5251074073334,
+    "lng": 126.873626981623,
+    "type": "public",
+    "description": "농협 오목교역점 옆 골목에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-5",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 오목로 329",
+    "lat": 37.5249139528398,
+    "lng": 126.874124388629,
+    "type": "public",
+    "description": "오목교역 2번 출구 옆에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-6",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 목동동로 67",
+    "lat": 37.515709326427,
+    "lng": 126.862500271377,
+    "type": "public",
+    "description": "국민은행 양천지점 뒤에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-7",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 신정중앙로 103",
+    "lat": 37.5265013713269,
+    "lng": 126.863371926417,
+    "type": "public",
+    "description": "버스 안 다니는 길 먹자골목에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-8",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 오목로 151-1",
+    "lat": 37.5249243144373,
+    "lng": 126.85429770672,
+    "type": "public",
+    "description": "건물 뒤쪽 주차장에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-9",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 등촌로 32",
+    "lat": 37.5328851583631,
+    "lng": 126.864166285292,
+    "type": "public",
+    "description": "건물과 건물 사이 길 골목에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-10",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 오목로 299",
+    "lat": 37.5260837006075,
+    "lng": 126.87035534357,
+    "type": "public",
+    "description": "트라팰리스 B동과 닥터로빈 사잇길에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-11",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 중앙로43길 14",
+    "lat": 37.5204176021651,
+    "lng": 126.851340568488,
+    "type": "public",
+    "description": "아델리체 110동과 122동 사잇길에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-12",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 남부순환로83길 53",
+    "lat": 37.5180156016829,
+    "lng": 126.845086473562,
+    "type": "public",
+    "description": "신월6동 주민센터 주차장 입구에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-13",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 중앙로34길 15",
+    "lat": 37.5195212776081,
+    "lng": 126.853643186754,
+    "type": "public",
+    "description": "고기요리와, GS25 사이 전봇대에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-14",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 중앙로 209",
+    "lat": 37.5151471525982,
+    "lng": 126.854789187328,
+    "type": "public",
+    "description": "아델리체 정문 앞 상가 거리에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-15",
+    "title": "양천구청 흡연구역",
+    "address": "서울특별시 양천구 신정동 321-4",
+    "lat": 37.5170484539307,
+    "lng": 126.866476530571,
+    "type": "public",
+    "description": "양천구청 부지에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "양천구청",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-16",
+    "title": "양천구청 흡연구역",
+    "address": "서울특별시 양천구 신정동 321-4",
+    "lat": 37.5170484539307,
+    "lng": 126.866476530571,
+    "type": "public",
+    "description": "양천구청 해누리타운 4층 옥외정원에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "양천구청",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-17",
+    "title": "남부지방법원 흡연구역",
+    "address": "서울특별시 양천구 신정동 313-1",
+    "lat": 37.5216143644477,
+    "lng": 126.864176313245,
+    "type": "public",
+    "description": "남부지방법원 후문 옆에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "남부지방법원",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-18",
+    "title": "양천세무서 흡연구역",
+    "address": "서울특별시 양천구 신정동 319-12",
+    "lat": 37.5203475660724,
+    "lng": 126.870031451004,
+    "type": "public",
+    "description": "양천세무서 부지 우측에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "양천세무서",
+    "district": "양천구"
+  },
+  {
+    "id": "ycp-19",
+    "title": "양천구 흡연구역",
+    "address": "서울특별시 양천구 목동동로 293",
+    "lat": 37.5281783139269,
+    "lng": 126.875771989415,
+    "type": "public",
+    "description": "현대41타워 앞 인도에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "양천구"
+  },
+  {
     "id": "ycb-1",
-    "title": "목동아이스링크 흡연구역",
-    "address": "서울특별시 양천구 목동 914",
-    "lat": 37.5305034439037,
-    "lng": 126.881656501495,
-    "type": "building",
-    "description": "목동아이스링크 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "목동아이스링크",
-    "district": "양천구"
-  },
-  {
-    "id": "ycb-2",
-    "title": "양천차고지 흡연구역",
-    "address": "서울특별시 양천구 신정동 1312",
-    "lat": 37.5076806167566,
-    "lng": 126.836509661819,
-    "type": "building",
-    "description": "양천차고지 1층에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "양천차고지",
-    "district": "양천구"
-  },
-  {
-    "id": "ycb-3",
-    "title": "이대목동병원 흡연구역",
-    "address": "서울특별시 양천구 목동 911-1",
-    "lat": 37.5364912498233,
-    "lng": 126.886268658933,
-    "type": "building",
-    "description": "이대목동병원 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "이대목동병원",
-    "district": "양천구"
-  },
-  {
-    "id": "ycb-4",
     "title": "현대백화점 목동점 흡연구역",
     "address": "서울특별시 양천구 목동 916",
     "lat": 37.5268543255661,
@@ -3222,180 +2770,514 @@
     "district": "양천구"
   },
   {
-    "id": "ydpb-1",
-    "title": "대림중앙시장 흡연구역",
-    "address": "서울특별시 영등포구 ",
-    "lat": 37.491,
-    "lng": 126.8993,
+    "id": "ycb-2",
+    "title": "목동아이스링크 흡연구역",
+    "address": "서울특별시 양천구 목동 914",
+    "lat": 37.5305034439037,
+    "lng": 126.881656501495,
     "type": "building",
-    "description": "대림중앙시장 흡연구역입니다.",
+    "description": "목동아이스링크 흡연구역입니다.",
     "form": "개방형",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ],
+    "source": "공공데이터",
+    "manage": "목동아이스링크",
+    "district": "양천구"
+  },
+  {
+    "id": "ycb-3",
+    "title": "양천차고지 흡연구역",
+    "address": "서울특별시 양천구 신정동 1312",
+    "lat": 37.5076806167566,
+    "lng": 126.836509661819,
+    "type": "building",
+    "description": "양천차고지 1층에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "양천차고지",
+    "district": "양천구"
+  },
+  {
+    "id": "ycb-4",
+    "title": "이대목동병원 흡연구역",
+    "address": "서울특별시 양천구 목동 911-1",
+    "lat": 37.5364912498233,
+    "lng": 126.886268658933,
+    "type": "building",
+    "description": "이대목동병원 흡연구역입니다.",
+    "form": "개방형",
+    "images": [
+      "images/흡연구역_이미지_예시.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "이대목동병원",
+    "district": "양천구"
+  },
+  {
+    "id": "ydpp-1",
+    "title": "오투타워 앞 흡연구역 A",
+    "address": "서울특별시 영등포구 의사당대로 83",
+    "lat": 37.5233667660094,
+    "lng": 126.923451000009,
+    "type": "public",
+    "description": "오투타워 앞에 위치한 흡연구역 A입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ydpp-2",
+    "title": "오투타워 앞 흡연구역 B",
+    "address": "서울특별시 영등포구 여의대로 56",
+    "lat": 37.5240793528555,
+    "lng": 126.922872650933,
+    "type": "public",
+    "description": "오투타워 앞에 위치한 흡연구역 B입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ydpp-3",
+    "title": "오투타워 앞 흡연구역 C",
+    "address": "서울특별시 영등포구 여의대로 58",
+    "lat": "",
+    "lng": "",
+    "type": "public",
+    "description": "오투타워 앞에 위치한 흡연구역 C입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ydpp-4",
+    "title": "여의도역 흡연구역",
+    "address": "서울특별시 영등포구 의시당대로 97",
+    "lat": "",
+    "lng": "",
+    "type": "public",
+    "description": "여의도역 부근에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ydpp-5",
+    "title": "교직원공제회 앞 흡연구역",
+    "address": "서울특별시 영등포구여의나루로 50",
+    "lat": 37.5218052926703,
+    "lng": 126.925651244211,
+    "type": "public",
+    "description": "교직원공제회 앞에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ydpp-6",
+    "title": "국회의사당역 앞 흡연구역 A",
+    "address": "서울특별시 영등포구 은행로 3",
+    "lat": 37.5275117444834,
+    "lng": 126.919665809662,
+    "type": "public",
+    "description": "국회의사당역 앞에 위치한 흡연구역 A입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ydpp-7",
+    "title": "국회의사당역 앞 흡연구역 B",
+    "address": "서울특별시 영등포구 은행로 4",
+    "lat": "",
+    "lng": "",
+    "type": "public",
+    "description": "국회의사당역 앞에 위치한 흡연구역 B입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ydpp-8",
+    "title": "한국투자증권 앞 흡연구역",
+    "address": "서울특별시 영등포구 의사당대로 88",
+    "lat": 37.5220854020269,
+    "lng": 126.922273228945,
+    "type": "public",
+    "description": "한국투자증권 앞에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ydpp-9",
+    "title": "한국거래소 앞 흡연구역 A",
+    "address": "서울특별시 영등포구 여의도동 3-4",
+    "lat": 37.5218241261277,
+    "lng": 126.927539919265,
+    "type": "public",
+    "description": "한국거래소 앞에 위치한 흡연구역 A입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ydpp-10",
+    "title": "한국거래소 앞 흡연구역 B",
+    "address": "서울특별시 영등포구 여의도동 3-5",
+    "lat": 37.5208798440259,
+    "lng": 126.927342304902,
+    "type": "public",
+    "description": "한국거래소 앞에 위치한 흡연구역 B입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "영등포구"
+  },
+  {
+    "id": "ycb-11",
+    "title": "대림중앙시장 흡연구역",
+    "address": "서울특별시 영등포구 ",
+    "lat": 37.5263635705036,
+    "lng": 126.896273923703,
+    "type": "building",
+    "description": "대림중앙시장 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
     "source": "공공데이터",
     "manage": "시장상인회",
     "district": "영등포구"
   },
   {
-    "id": "ydpb-2",
-    "title": "한국거래소 앞 흡연구역",
-    "address": "서울특별시 영등포구 ",
-    "lat": 37.5228,
-    "lng": 126.9268,
-    "type": "building",
-    "description": "한국거래소 앞에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "id": "ysp-1",
+    "title": "LS타워 옆 흡연구역",
+    "address": "서울특별시 용산구 한강로2가 424-5",
+    "lat": 37.5277386923167,
+    "lng": 126.967249001484,
+    "type": "public",
+    "description": "LS타워 옆에 위치한 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
     "source": "공공데이터",
-    "manage": "한국일보, 영등포구",
-    "district": "영등포구"
+    "manage": "용산구 보건소",
+    "district": "용산구"
   },
   {
-    "id": "ydpb-3",
-    "title": "한국거래소 앞 흡연구역",
-    "address": "서울특별시 영등포구 ",
-    "lat": 37.5227,
-    "lng": 126.9268,
-    "type": "building",
-    "description": "한국거래소 앞에 위치한 흡연구역입니다.",
+    "id": "ysp-2",
+    "title": "용산전자상가1 공영주차장 옆 흡연구역",
+    "address": "서울특별시 용산구 한강로3가 12-6",
+    "lat": 37.5325466684597,
+    "lng": 126.964021879379,
+    "type": "public",
+    "description": "용산전자상가1 공영주차장 옆에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
-    "manage": "한국일보, 영등포구",
-    "district": "영등포구"
+    "manage": "용산구 보건소",
+    "district": "용산구"
+  },
+  {
+    "id": "ysp-3",
+    "title": "선인상가 옆 흡연구역",
+    "address": "서울특별시 용산구 한강로3가 17-1",
+    "lat": 37.5322869283945,
+    "lng": 126.964982888138,
+    "type": "public",
+    "description": "선인상가 옆에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "용산구 보건소",
+    "district": "용산구"
+  },
+  {
+    "id": "ysp-4",
+    "title": "서울역 11번 출구 옆 흡연구역",
+    "address": "서울특별시 용산구 동자동 14-151",
+    "lat": 37.553384695285004,
+    "lng": 126.9730824587291,
+    "type": "public",
+    "description": "서울역 11번 출구 옆에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "용산구 보건소",
+    "district": "용산구"
+  },
+  {
+    "id": "ydp-5",
+    "title": "서울역 광장 흡연구역",
+    "address": "서울특별시 용산구 동자동 43-234",
+    "lat": 37.553722,
+    "lng": 126.969293,
+    "type": "public",
+    "description": "서울역 광장 15번 출구에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "한국철도공사",
+    "district": "용산구"
+  },
+  {
+    "id": "ysp-6",
+    "title": "서울역 광장 흡연구역 ",
+    "address": "서울특별시 중구 한강대로 405",
+    "lat": 37.554963,
+    "lng": 126.971411,
+    "type": "public",
+    "description": "서울역 광장 1번 출구에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "한국철도공사",
+    "district": "용산구"
+  },
+  {
+    "id": "ysp-7",
+    "title": "용산역 광장 흡연구역",
+    "address": "서울특별시 용산구",
+    "lat": 37.528703,
+    "lng": 126.965098,
+    "type": "public",
+    "description": "용산역 앞 광장에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "현대아이파크몰",
+    "district": "용산구"
+  },
+  {
+    "id": "ysp-8",
+    "title": "용산구청 흡연구역",
+    "address": "서울특별시 용산구 이태원동 34-87",
+    "lat": 37.532634,
+    "lng": 126.990321,
+    "type": "public",
+    "description": "용산구청 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "용산구청",
+    "district": "용산구"
+  },
+  {
+    "id": "ysp-9",
+    "title": "용산구청 흡연구역",
+    "address": "서울특별시 용산구 녹사평대로 150",
+    "lat": 37.532367,
+    "lng": 126.990478,
+    "type": "public",
+    "description": "용산구청 2층 외부에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "용산구청",
+    "district": "용산구"
+  },
+  {
+    "id": "ysp-10",
+    "title": "서울지방보훈청 흡연구역",
+    "address": "서울특별시 용산구 이태원로 6",
+    "lat": 37.535084,
+    "lng": 126.974210,
+    "type": "public",
+    "description": "서울지방보훈청 실외에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "서울지방보훈청",
+    "district": "용산구"
+  },
+  {
+    "id": "ysp-11",
+    "title": "용산세무서 흡연구역",
+    "address": "서울특별시 용산구 서빙고로24길",
+    "lat": 37.523432,
+    "lng": 126.968709,
+    "type": "public",
+    "description": "용산세무서 1층 외부에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "용산세무서",
+    "district": "용산구"
   },
   {
     "id": "ysb-1",
-    "title": "선인상가 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.533068,
-    "lng": 126.963521,
+    "title": "순천향대학교 서울병원 흡연구역",
+    "address": "서울특별시 용산구 대사관로 59",
+    "lat": 37.534406,
+    "lng": 127.004436,
     "type": "building",
-    "description": "선인상가 21동 1층 외부에 위치한 흡연구역입니다.",
+    "description": "순천향대학교 서울병원 장례식장 외부에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
-    "manage": "선인상가",
+    "manage": "순천향대학교병원",
     "district": "용산구"
   },
   {
     "id": "ysb-2",
-    "title": "선인상가 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.533068,
-    "lng": 126.963521,
+    "title": "순천향대학교 서울병원 흡연구역 ",
+    "address": "서울특별시 용산구 한남동 657-111번지",
+    "lat": 37.533985,
+    "lng": 127.005024,
     "type": "building",
-    "description": "선인상가 21동 옥상에 위치한 흡연구역입니다.",
+    "description": "순천향대학교 서울병원 신관 옥상에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
-    "manage": "선인상가",
+    "manage": "순천향대학교병원",
     "district": "용산구"
   },
   {
     "id": "ysb-3",
-    "title": "순천향대학교 서울병원 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.53395309627537,
-    "lng": 127.00507719656737,
-    "type": "building",
-    "description": "순천향대학교 서울병원 장례식장 외부에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "순천향대학교병원",
-    "district": "용산구"
-  },
-  {
-    "id": "ysb-4",
-    "title": "순천향대학교 서울병원 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.534009,
-    "lng": 127.004334,
-    "type": "building",
-    "description": "순천향대학교 서울병원 신관 옥상에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "순천향대학교병원",
-    "district": "용산구"
-  },
-  {
-    "id": "ysb-5",
     "title": "하얏트호텔 흡연구역 ",
     "address": "서울특별시 용산구",
-    "lat": 37.539372,
-    "lng": 126.997264,
+    "lat": 37.540107,
+    "lng": 126.997823,
     "type": "building",
     "description": "하얏트호텔 1층 외부 주차장 가는 길 휴식장소에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "하얏트호텔",
     "district": "용산구"
   },
   {
-    "id": "ysb-6",
+    "id": "ysb-4",
     "title": "현대아이파크몰 흡연구역",
-    "address": "서울특별시 용산구",
-    "lat": 37.529492,
-    "lng": 126.964318,
+    "address": "서울특별시 용산구 한강로3",
+    "lat": 37.529746,
+    "lng": 126.964976,
     "type": "building",
     "description": "아이파크몰 달 주차장 4.5층에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
+    "source": "공공데이터",
+    "manage": "현대아이파크몰",
+    "district": "용산구"
+  },
+  {
+    "id": "ysb-5",
+    "title": "현대아이파크몰 흡연구역",
+    "address": "서울특별시 용산구 한강대로23길 55",
+    "lat": 37.529337,
+    "lng": 126.963551,
+    "type": "building",
+    "description": "아이파크몰 해 주차장 4.5층에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "현대아이파크몰",
+    "district": "용산구"
+  },
+  {
+    "id": "ysb-6",
+    "title": "현대아이파크몰 흡연구역",
+    "address": "서울특별시 용산구 한강로3가",
+    "lat": 37.529837,
+    "lng": 126.964165,
+    "type": "building",
+    "description": "아이파크몰 8층 옥상에 위치한 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
     "source": "공공데이터",
     "manage": "현대아이파크몰",
     "district": "용산구"
   },
   {
     "id": "ysb-7",
-    "title": "현대아이파크몰 흡연구역",
+    "title": "선인상가 흡연구역",
     "address": "서울특별시 용산구",
-    "lat": 37.529492,
-    "lng": 126.964318,
+    "lat": 37.533557,
+    "lng": 126.965986,
     "type": "building",
-    "description": "아이파크몰 해 주차장 4.5층에 위치한 흡연구역입니다.",
+    "description": "선인상가 21동 1층 외부에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
-    "manage": "현대아이파크몰",
+    "manage": "선인상가",
     "district": "용산구"
   },
   {
     "id": "ysb-8",
-    "title": "현대아이파크몰 흡연구역",
+    "title": "선인상가 흡연구역",
     "address": "서울특별시 용산구",
-    "lat": 37.529492,
-    "lng": 126.964318,
+    "lat": 37.533283,
+    "lng": 126.965782,
     "type": "building",
-    "description": "아이파크몰 8층 옥상에 위치한 흡연구역입니다.",
+    "description": "선인상가 21동 옥상에 위치한 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
-    "manage": "현대아이파크몰",
+    "manage": "선인상가",
     "district": "용산구"
+  },
+  {
+    "id": "epp-1",
+    "title": "진관동 주민센터 흡연구역",
+    "address": "서울특별시 은평구 진관2로 31",
+    "lat": 37.6349631473395,
+    "lng": 126.920735778649,
+    "type": "public",
+    "description": "진관동 주민센터 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "은평구"
+  },
+  {
+    "id": "epp-2",
+    "title": "은평구청 흡연구역",
+    "address": "서울특별시 은평구 은평로195",
+    "lat": 37.6024574203071,
+    "lng": 126.928822870137,
+    "type": "public",
+    "description": "은평구청 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "은평구"
+  },
+  {
+    "id": "epb-3",
+    "title": "은평구립도서관 흡연구역",
+    "address": "서울특별시 은평구 통일로78가길 13-84",
+    "lat": 37.6189785221501,
+    "lng": 126.928271924743,
+    "type": "public",
+    "description": "은평구립도서관 흡연구역입니다.",
+    "form": "개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "은평구"
   },
   {
     "id": "epb-1",
@@ -3406,47 +3288,27 @@
     "type": "building",
     "description": "가톨릭은평성모병원 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "은평구"
   },
   {
     "id": "epb-2",
-    "title": "롯데몰 은평점 흡연구역",
-    "address": "서울특별시 은평구 통일로 1050",
-    "lat": 37.6375366740938,
-    "lng": 126.917900261732,
+    "title": "팜스퀘어 흡연구역",
+    "address": "서울특별시 은평구 불광로 20",
+    "lat": 37.6097357749976,
+    "lng": 126.928938477038,
     "type": "building",
-    "description": "롯데몰 은평점 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "description": "팜스퀘어 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "은평구"
   },
   {
     "id": "epb-3",
-    "title": "범서쇼핑 흡연구역",
-    "address": "서울특별시 은평구 통일로 842",
-    "lat": 37.6186902335511,
-    "lng": 126.922063807625,
-    "type": "building",
-    "description": "범서쇼핑 흡연구역입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
-  },
-  {
-    "id": "epb-4",
     "title": "엔씨백화점 불광점 흡연구역",
     "address": "서울특별시 은평구 불광로 20",
     "lat": 37.6097357749976,
@@ -3454,9 +3316,21 @@
     "type": "building",
     "description": "엔씨백화점 불광점 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "은평구"
+  },
+  {
+    "id": "epb-4",
+    "title": "범서쇼핑 흡연구역",
+    "address": "서울특별시 은평구 통일로 842",
+    "lat": 37.6186902335511,
+    "lng": 126.922063807625,
+    "type": "building",
+    "description": "범서쇼핑 흡연구역입니다.",
+    "form": "폐쇄형",
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "은평구"
@@ -3470,9 +3344,7 @@
     "type": "building",
     "description": "이마트 수색점 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "은평구"
@@ -3486,123 +3358,414 @@
     "type": "building",
     "description": "이마트 은평점 흡연구역입니다.",
     "form": "폐쇄형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "은평구"
   },
   {
     "id": "epb-7",
-    "title": "이마트 은평점 흡연구역",
-    "address": "서울특별시 은평구 은평로 111",
-    "lat": 37.6008254685415,
-    "lng": 126.920513478627,
+    "title": "롯데몰 은평점 흡연구역",
+    "address": "서울특별시 은평구 통일로 1050",
+    "lat": 37.6375366740938,
+    "lng": 126.917900261732,
     "type": "building",
-    "description": "이마트 은평점 흡연구역입니다.",
+    "description": "롯데몰 은평점 흡연구역입니다.",
     "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
+    "images": [],
     "source": "공공데이터",
     "manage": "",
     "district": "은평구"
   },
   {
-    "id": "epb-8",
-    "title": "팜스퀘어 흡연구역",
-    "address": "서울특별시 은평구 불광로 20",
-    "lat": 37.6097357749976,
-    "lng": 126.928938477038,
+    "id": "epc-1",
+    "title": "이디야 연신내역점 ",
+    "address": "서울특별시 은평구 통일로 855-9",
+    "lat": 37.6188948297727,
+    "lng": 126.919884176889,
+    "type": "cafe",
+    "description": "흡연실이 있는 '이디야 연신내역점'입니다. ",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "은평구"
+  },
+  {
+    "id": "epc-2",
+    "title": "더홀릭보드게임카페 연신내점",
+    "address": "서울특별시 은평구 연서로29길 13",
+    "lat": 37.6189645255796,
+    "lng": 126.918639609689,
+    "type": "cafe",
+    "description": "흡연실이 있는 '더홀릭보드게임카페 연신내점'입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "은평구"
+  },
+  {
+    "id": "epc-3",
+    "title": "아로이 커피 연신내점",
+    "address": "서울특별시 은평구 통일로 838-4",
+    "lat": 37.6183447019915,
+    "lng": 126.922332954683,
+    "type": "cafe",
+    "description": "흡연실이 있는 '아로이 커피 연신내점'입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "은평구"
+  },
+  {
+    "id": "epc-4",
+    "title": "읍천리382 응암점",
+    "address": "서울특별시 은평구 응암로 302-1",
+    "lat": 37.5983100949703,
+    "lng": 126.921068643841,
+    "type": "cafe",
+    "description": "흡연실이 있는 '읍천리382 응암점'입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "은평구"
+  },
+  {
+    "id": "epc-5",
+    "title": "놀숲 연신내로데오점",
+    "address": "서울특별시 은평구 연서로29길 6",
+    "lat": 37.6188077691384,
+    "lng": 126.919582181082,
+    "type": "cafe",
+    "description": "흡연실이 있는 '놀숲 연신내로데오점'입니다.",
+    "form": "폐쇄형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "은평구"
+  },
+  {
+    "id": "jrp-1",
+    "title": "낙원악기상가 흡연구역",
+    "address": "서울특별시 종로구 낙원동 260-1",
+    "lat": 37.57353342000437,
+    "lng": 126.9878677125697,
+    "type": "public",
+    "description": "낙원악기상가 도로일부에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [
+      "images/jrp_1_1.jpg"
+    ],
+    "source": "공공데이터",
+    "manage": "종로구청, 민간",
+    "district": "종로구"
+  },
+  {
+    "id": "jrp-2",
+    "title": "종로타워빌딩 뒷쪽 흡연구역",
+    "address": "서울특별시 종로구 공평동 70-3",
+    "lat": 37.5710688268753,
+    "lng": 126.983993379347,
+    "type": "public",
+    "description": "종로타워빌딩 뒷쪽에 위치한 담배꽁초수거함입니다.",
+    "form": "",
+    "images": [
+      "images/jrp_2_1.jpg"
+    ],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "종로구"
+  },
+  {
+    "id": "jrp-3",
+    "title": "sc제일은행본점빌딩 부근 흡연구역",
+    "address": "서울특별시 종로구 청진동 70-8",
+    "lat": 37.5713551243848,
+    "lng": 126.981856490296,
+    "type": "public",
+    "description": "sc제일은행본점빌딩 부근에 위치한 흡연구역입니다.",
+    "form": "",
+    "images": [
+      "images/jrp_3_1.jpg"
+    ],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "종로구"
+  },
+  {
+    "id": "jrp-4",
+    "title": "세종문화회관 흡연구역",
+    "address": "서울특별시 종로구 세종대로 175",
+    "lat": 37.572209170012215,
+    "lng": 126.9749236541365,
+    "type": "public",
+    "description": "세종문화회관 뒷쪽에 위치한 흡연구역입니다. ",
+    "form": "",
+    "images": [],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "종로구"
+  },
+  {
+    "id": "jrb-1",
+    "title": "박문각종로고시학원 부근 흡연구역",
+    "address": "서울특별시 종로구 관수동 20",
+    "lat": 37.569632290097054,
+    "lng": 126.98975869882808,
     "type": "building",
-    "description": "팜스퀘어 흡연구역입니다.",
+    "description": "24시 찜질방 간판으로 들어가면 바로 있습니다.",
+    "form": "",
+    "images": [
+      "images/jrb_1_1.jpg",
+      "images/jrb_1_2.jpg"
+    ],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "종로구"
+  },
+  {
+    "id": "jp-1",
+    "title": "롯데백화점 측면부 흡연구역",
+    "address": "서울특별시 중구 을지로 30",
+    "lat": 37.5653458904198,
+    "lng": 126.9810075639,
+    "type": "public",
+    "description": "롯데백화점 측면부에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중구"
+  },
+  {
+    "id": "jp-2",
+    "title": "KEB하나은행본점 측면부 흡연구역",
+    "address": "서울특별시 중구 을지로 35",
+    "lat": 37.5664918220199,
+    "lng": 126.981865819602,
+    "type": "public",
+    "description": "KEB하나은행본점 측면부에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중구"
+  },
+  {
+    "id": "jp-3",
+    "title": "장교빌딩 전면부 흡연구역",
+    "address": "서울특별시 중구 삼일대로 363",
+    "lat": 37.5671565387212,
+    "lng": 126.987052299704,
+    "type": "public",
+    "description": "장교빌딩 전면부에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중구"
+  },
+  {
+    "id": "jp-4",
+    "title": "두산타워 전면부 흡연구역",
+    "address": "서울특별시 중구 장충단로 275",
+    "lat": 37.5688849422849,
+    "lng": 127.008775114213,
+    "type": "public",
+    "description": "두산타워 전면부에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중구"
+  },
+  {
+    "id": "jp-5",
+    "title": "서울스퀘어 측면부(서울역8번출구) 흡연구역",
+    "address": "서울특별시 중구 한강대로 416",
+    "lat": 37.555503632236,
+    "lng": 126.973751343837,
+    "type": "public",
+    "description": "서울스퀘어 측면부(서울역8번출구)에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중구"
+  },
+  {
+    "id": "jp-6",
+    "title": "한국은행 앞 광장 쉼터 흡연구역",
+    "address": "서울특별시 중구 남대문로3가 110-4",
+    "lat": 37.5614927213131,
+    "lng": 126.980108514802,
+    "type": "public",
+    "description": "한국은행 앞 광장 쉼터에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중구"
+  },
+  {
+    "id": "jp-7",
+    "title": "명동 하나플레이파크 흡연구역",
+    "address": "서울특별시 중구 을지로2가 199-80",
+    "lat": 37.565431866354,
+    "lng": 126.98420749305,
+    "type": "public",
+    "description": "명동 하나플레이파크에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중구"
+  },
+  {
+    "id": "jp-8",
+    "title": "남대문로 쉼터 흡연구역",
+    "address": "서울특별시 중구 봉래동1가 111-3",
+    "lat": 37.5589348682072,
+    "lng": 126.973606742897,
+    "type": "public",
+    "description": "남대문로 쉼터에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중구"
+  },
+  {
+    "id": "jp-9",
+    "title": "국도호텔 옆 흡연구역",
+    "address": "서울특별시 중구 을지로4가 310-5",
+    "lat": 37.5663402476457,
+    "lng": 126.995990929176,
+    "type": "public",
+    "description": "국도호텔 옆에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중구"
+  },
+  {
+    "id": "jp-10",
+    "title": "을지로입구역 8번 출구 흡연구역",
+    "address": "서울특별시 중구 남대문로 81",
+    "lat": 37.5647299033135,
+    "lng": 126.981730421825,
+    "type": "public",
+    "description": "을지로입구역 8번 출구에 위치한 흡연구역입니다.",
+    "form": "반개방형",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "중구청, 한국일보, 롯데백화점",
+    "district": "중구"
+  },
+  {
+    "id": "jnp-1",
+    "title": "면일체육문화센터 흡연구역",
+    "address": "서울특별시 중랑구 용마산로100길 13",
+    "lat": 37.591417068289026,
+    "lng": 127.0998584182545,
+    "type": "public",
+    "description": "면일체육문화센터 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중랑구"
+  },
+  {
+    "id": "jnp-2",
+    "title": "중랑구청 흡연구역",
+    "address": "서울특별시 중랑구 봉화산로 179",
+    "lat": 37.6065635856848,
+    "lng": 127.09272484193,
+    "type": "public",
+    "description": "중랑구청 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중랑구"
+  },
+  {
+    "id": "jnp-3",
+    "title": "면목동 흡연구역",
+    "address": "서울특별시 중랑구 신내로 156",
+    "lat": 37.6130913124974,
+    "lng": 127.099186989431,
+    "type": "public",
+    "description": "면목동 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중랑구"
+  },
+  {
+    "id": "jnp-4",
+    "title": "서울의료원 흡연구역",
+    "address": "서울특별시 중랑구 신내역로 111",
+    "lat": 37.613121773853,
+    "lng": 127.11244192431,
+    "type": "building",
+    "description": "서울의료원 흡연구역입니다.",
+    "form": "",
+    "images": [],
+    "source": "공공데이터",
+    "manage": "",
+    "district": "중랑구"
+  },
+  {
+    "id": "jnc-1",
+    "title": "투썸플레이스 중랑역점",
+    "address": "서울 중랑구 상봉동 130-166",
+    "lat": 37.59352547094142,
+    "lng": 127.07548827041542,
+    "type": "cafe",
+    "description": "흡연실이 있는 카페 '투썸플레이스 중랑역점'입니다.",
+    "form": "밀폐형",
+    "images": [],
+    "source": "관리자 등록",
+    "manage": "",
+    "district": "중랑구"
+  },
+  {
+    "id": "jlc-2",
+    "title": "탐앤탐스 사가정역점",
+    "address": "서울 중랑구 면목동 496-17",
+    "lat": 37.58121585591543,
+    "lng": 127.08820090523852,
+    "type": "cafe",
+    "description": "흡연실이 있는 '탐앤탐스 사가정역점'입니다.",
     "form": "폐쇄형",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ],
-    "source": "공공데이터",
-    "manage": "",
-    "district": "은평구"
+    "source": "관리자",
+    "manage": "탐앤탐스 사가정역점",
+    "district": "중랑구"
   },
   {
-    "id": "jgb-1",
-    "title": "두산타워 흡연구역",
-    "address": "서울특별시 중구 장충단로 275",
-    "lat": 37.5688849422849,
-    "lng": 127.008775114213,
-    "type": "building",
-    "description": "두산타워 전면부에 위치한 흡연구역입니다.",
-    "form": "개방형",
+    "id": "jlc-3",
+    "title": "탐앤탐스 중랑구청점",
+    "address": "서울특별시 중랑구 신내동 565-1",
+    "lat": 37.60547111767368,
+    "lng": 127.09612582746244,
+    "type": "cafe",
+    "description": "흡연실이 있는 '탐앤탐스 중랑구청점'입니다.",
+    "form": "폐쇄형",
     "images": [
       "images/흡연구역_이미지_예시.jpg"
     ],
-    "source": "공공데이터",
-    "manage": "중구청, 한국일보",
-    "district": "중구"
-  },
-  {
-    "id": "jgb-2",
-    "title": "장교빌딩 흡연구역",
-    "address": "서울특별시 중구 삼일대로 363",
-    "lat": 37.56687497799506,
-    "lng": 126.98705664968287,
-    "type": "building",
-    "description": "장교빌딩 전면부에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "중구청, 한국일보",
-    "district": "중구"
-  },
-  {
-    "id": "jgb-3",
-    "title": "하나은행본점 흡연구역",
-    "address": "서울특별시 중구 을지로 35",
-    "lat": 37.5664918220199,
-    "lng": 126.981865819602,
-    "type": "building",
-    "description": "하나은행본점 측면부에 위치한 흡연구역입니다.",
-    "form": "반개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "중구청, 한국일보",
-    "district": "중구"
-  },
-  {
-    "id": "jgb-4",
-    "title": "하나카드본사 흡연구역",
-    "address": "서울특별시 중구 을지로 66",
-    "lat": 37.5651546444578,
-    "lng": 126.985010733916,
-    "type": "building",
-    "description": "하나카드본사 측면부에 위치한 흡연구역입니다.",
-    "form": "반개방형",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "중구청, 한국일보",
-    "district": "중구"
-  },
-  {
-    "id": "jlb-1",
-    "title": "서울의료원 흡연구역",
-    "address": "서울특별시 중랑구 신내역로 111",
-    "lat": 37.61307331615288,
-    "lng": 127.09872927949553,
-    "type": "building",
-    "description": "서울의료원 흡연구역입니다.",
-    "form": "",
-    "images": [
-      "images/흡연구역_이미지_예시.jpg"
-    ],
-    "source": "공공데이터",
-    "manage": "",
+    "source": "관리자",
+    "manage": "탐앤탐스 중랑구청점",
     "district": "중랑구"
   },
   {
@@ -4128,112 +4291,6 @@
       "images/흡연구역_이미지_예시.jpg"
     ],
     "source": "서울시 미래한강본부(한강공원) 누리집",
-    "manage": ""
-  },
-  {
-    "id": "cll-1",
-    "title": "청량리역 흡연구역",
-    "address": "서울특별시 동대문구 전농1동",
-    "lat": 37.580224,
-    "lng": 127.046923,
-    "type": "public",
-    "description": "청량리역 4번 출구 부근에 위치한 흡연구역입니다.",
-    "form": "반개방형",
-    "images": [
-      "images/청량리역4번출구흡연구역_1.jpg",
-      "images/청량리역4번출구흡연구역_2.jpg"
-    ],
-    "source": "",
-    "manage": ""
-  },
-  {
-    "id": "cll-2",
-    "title": "청량리역 광장 흡연구역",
-    "address": "서울특별시 동대문구 전농1동",
-    "lat": 37.580516,
-    "lng": 127.046736,
-    "type": "public",
-    "description": "청량리역 광장에 위치한 스마트 흡연부스입니다.",
-    "form": "폐쇄형",
-    "images": [
-      "images/청량리역광장_흡연구역.jpg"
-    ],
-    "source": "",
-    "manage": ""
-  },
-  {
-    "id": "ghm-1",
-    "title": "종로타워빌딩 뒷쪽 흡연구역",
-    "address": "서울특별시 종로구 공평동 70-3",
-    "lat": 37.571003,
-    "lng": 126.983982,
-    "type": "public",
-    "description": "종로타워빌딩 주자장 입구 부근에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/종로타워빌딩_흡연구역.jpg"
-    ],
-    "source": "",
-    "manage": ""
-  },
-  {
-    "id": "ghm-2",
-    "title": "sc제일은행본점빌딩 부근 흡연구역",
-    "address": "서울특별시 종로구 청진동 70-8",
-    "lat": 37.571439,
-    "lng": 126.981778,
-    "type": "public",
-    "description": "sc제일은행본점빌딩 부근에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/sc제일은행본점빌딩_흡연구역.jpg"
-    ],
-    "source": "",
-    "manage": ""
-  },
-  {
-    "id": "nwc-2",
-    "title": "coffee vesco",
-    "address": "서울특별시 노원구 덕릉로 127",
-    "lat": 37.656012672976296,
-    "lng": 127.06121577360935,
-    "type": "cafe",
-    "description": "흡연실이 있는 'coffee vesco'입니다.",
-    "form": "밀폐형",
-    "images": [
-      "images/커피베스코_1.jpg"
-    ],
-    "source": "",
-    "manage": ""
-  },
-  {
-    "id": "nwp-4",
-    "title": "롯데백화점 1층 야외 흡연구역",
-    "address": "서울특별시 노원구 상계동 606-19",
-    "lat": 37.6552328064873,
-    "lng": 127.06220389067954,
-    "type": "building",
-    "description": "롯데백화점 1층 외부에 위치한 흡연구역입니다.",
-    "form": "개방형",
-    "images": [
-      "images/롯데백화점노원_1층_1.jpg"
-    ],
-    "source": "",
-    "manage": ""
-  },
-  {
-    "id": "nwc-3",
-    "title": "탐앤탐스 티티클럽 노원점",
-    "address": "서울특별시 노원구 상계동 292-1",
-    "lat": 37.65533786898538,
-    "lng": 127.06370836478149,
-    "type": "cafe",
-    "description": "흡연실이 있는 탐앤탐스 티티클럽 노원점입니다.",
-    "form": "밀폐형",
-    "images": [
-      "images/탐앤탐스노원_1.jpg"
-    ],
-    "source": "",
     "manage": ""
   }
 ]
